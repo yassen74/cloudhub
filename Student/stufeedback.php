@@ -1,0 +1,79 @@
+<?php
+if(!isset($_SESSION)){
+  session_start();
+}
+
+define('TITLE', 'Feedback');
+define('PAGE', 'feedback');
+include('./stuInclude/header.php');
+include_once('../dbConnection.php');
+$isLoggedIn = isset($_SESSION['is_login']) && !empty($_SESSION['stuLogEmail']);
+$stuEmail = $isLoggedIn ? $_SESSION['stuLogEmail'] : '';
+
+$stuId = null;
+$msg = '';
+$fContent = '';
+
+if($isLoggedIn){
+  $stuEmailSafe = $conn->real_escape_string($stuEmail);
+  $sql = "SELECT stu_id FROM student WHERE stu_email='$stuEmailSafe' LIMIT 1";
+  $result = $conn->query($sql);
+  if($result && $result->num_rows == 1){
+    $row = $result->fetch_assoc();
+    $stuId = (int)$row['stu_id'];
+  }
+}
+
+if(isset($_POST['submitFeedbackBtn'])){
+  $fContent = trim($_POST['f_content'] ?? '');
+
+  if($fContent === ''){
+    $msg = '<div class="alert alert-warning mt-3" role="alert">Please write your feedback first.</div>';
+  } elseif(!$isLoggedIn) {
+    $msg = '<div class="alert alert-warning mt-3" role="alert">Please login first to submit feedback.</div>';
+  } elseif($stuId === null) {
+    $msg = '<div class="alert alert-danger mt-3" role="alert">Student account not found. Please login again.</div>';
+  } else {
+    $fContentSafe = $conn->real_escape_string($fContent);
+    $insert = "INSERT INTO feedback (f_content, stu_id) VALUES ('$fContentSafe', $stuId)";
+    if($conn->query($insert) === TRUE){
+      $msg = '<div class="alert alert-success mt-3" role="alert">Submitted Successfully</div>';
+      $fContent = '';
+    } else {
+      $msg = '<div class="alert alert-danger mt-3" role="alert">Unable to Submit</div>';
+    }
+  }
+}
+?>
+
+<div class="col-sm-9 col-md-10 mt-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="card feedback-card border-0">
+        <div class="card-body p-4">
+          <h4 class="feedback-title mb-2">Send Feedback</h4>
+          <p class="feedback-subtitle mb-4">Tell us what you liked and what we can improve.</p>
+          <?php if(!$isLoggedIn) { ?>
+            <div class="alert alert-info" role="alert">You can open this page, but you need to login to submit feedback.</div>
+          <?php } ?>
+
+          <form method="POST">
+            <div class="form-group">
+              <label for="f_content" class="feedback-label">Your Feedback</label>
+              <textarea class="form-control feedback-textarea" id="f_content" name="f_content" rows="6" required><?php echo htmlspecialchars($fContent, ENT_QUOTES, 'UTF-8'); ?></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary feedback-btn mt-2" name="submitFeedbackBtn">Submit</button>
+            <button type="reset" class="btn btn-outline-secondary feedback-btn mt-2 ml-2">Reset</button>
+            <?php if($msg !== '') { echo $msg; } ?>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> <!-- Close Row Div from header file -->
+
+<?php
+// footer removed for feedback page');
+?>

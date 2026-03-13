@@ -1,0 +1,376 @@
+body{font-family:"Poppins",sans-serif;}
+body{font-family:"Poppins",sans-serif;}
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.custom-nav .custom-nav-item a {
+  color: #fff !important;
+}
+
+.custom-nav-item:hover {
+  background-color: #dc3545;
+  border: solid #dc3545 1px;
+  border-radius: 10px;
+}
+
+.remove-vid-marg {
+  margin: 0px;
+  padding: 0px;
+}
+
+.vid-parent {
+  position: relative;
+}
+video {
+  width: 100%;
+  height: 100%;
+}
+.vid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #225470;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.vid-content {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  z-index: 2;
+  text-align: center;
+}
+
+.bottom-banner {
+  color: #fff;
+  padding: 10px;
+}
+
+.bottom-banner:first-child {
+  padding-left: 50px;
+}
+
+a.social-hover:hover {
+  padding: 5px 100px;
+  text-decoration: none;
+  background-color: rgb(95, 93, 93);
+}
+
+.stripe {
+  background-image: linear-gradient(240deg, #ed213a, #93291e);
+  padding: 3rem;
+  height: 13rem;
+  margin-top: 4rem;
+  transform: rotate(10deg);
+  z-index: -5;
+}
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  .my-content,
+  .txt-banner,
+  .stripe {
+    display: none;
+  } /* hide it on small screens */
+
+  .vid-content {
+    top: 12%;
+    left: 60%;
+  }
+  .custom-nav .custom-nav-item a {
+    padding: 10px 20px;
+    background-color: #225470;
+  }
+
+  .custom-nav-item:hover {
+    background-color: none;
+    border: none;
+    border-radius: none;
+  }
+}
+
+h1,h2,h3,h4,h5{
+font-weight:600;
+}
+
+.navbar-brand{
+font-weight:700;
+font-size:22px;
+letter-spacing:1px;
+}
+
+.btn{
+font-weight:500;
+letter-spacing:0.5px;
+}
+
+.navbar{
+background:#1f2937 !important;
+box-shadow:0 4px 20px rgba(0,0,0,0.15);
+padding:12px 0;
+}
+.navbar a{
+font-weight:500;
+}
+
+.btn-danger{
+background:#ef4444;
+border:none;
+padding:10px 22px;
+border-radius:6px;
+transition:0.3s;
+}
+.btn-danger:hover{
+background:#dc2626;
+transform:translateY(-2px);
+}
+
+.hero-text h1{
+font-size:48px;
+font-weight:700;
+letter-spacing:1px;
+}
+.hero-text p{
+font-size:18px;
+opacity:0.9;
+}
+
+.card{
+border:none;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+footer{
+background:#111827;
+color:white;
+padding:40px 0;
+}
+footer a{
+color:#9ca3af;
+}
+
+
+.vid-content.hero-right{
+position:absolute;
+top:50%;
+left:auto !important;
+right:8%;
+transform:translateY(-50%);
+text-align:right;
+z-index:2;
+color:#fff;
+}
+
+.brand-accent{
+color:#00e5ff;
+}
+
+
+.vid-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+font-family:'Poppins',sans-serif;
+}
+
+.hero-title{
+font-size:64px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero-title span{
+color:#00e5ff;
+}
+
+.hero-sub{
+font-size:22px;
+margin-bottom:30px;
+opacity:0.9;
+}
+
+.hero-btn{
+background:#ff3c41;
+color:white;
+padding:14px 34px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+font-size:18px;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:#ff1f24;
+transform:translateY(-2px);
+}
+
+
+.navbar-brand{
+font-weight:700;
+font-size:24px;
+letter-spacing:1px;
+}
+
+.custom-nav-item .nav-link{
+font-weight:500;
+font-size:16px;
+margin-left:10px;
+transition:0.3s;
+}
+
+.custom-nav-item .nav-link:hover{
+color:#00e5ff !important;
+}
+
+
+/* Hero polish */
+.vid-content, .hero-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 16px;
+}
+.hero-content h1{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #fff;
+  font-size: clamp(36px, 5vw, 64px);
+  margin-bottom: 10px;
+}
+
+.site-footer {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.site-footer .footer-title {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.site-footer .footer-list li + li {
+  margin-top: 0.5rem;
+}
+
+.site-footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+.site-footer-social {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  gap: 0.75rem;
+}
+
+.site-footer-social a {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer-bottom {
+  background-color: rgba(2, 6, 23, 0.9);
+}
+.hero-content h1 span{ color: #00d4ff; }
+.hero-content p{
+  color: rgba(255,255,255,.85);
+  font-size: clamp(16px, 2vw, 22px);
+  margin-bottom: 18px;
+}
+.hero-btn{
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.fayen-footer{
+  background: linear-gradient(180deg, rgba(15,23,42,0.98), rgba(2,6,23,0.98));
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.fayen-footer .text-muted{
+  color: rgba(255,255,255,0.65) !important;
+}
+
+.fayen-footer-logo{
+  height: 28px;
+  width: auto;
+  display: inline-block;
+}
+
+.fayen-links a{
+  display: inline-block;
+  padding: 6px 0;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: .2s ease;
+}
+.fayen-links a:hover{
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.fayen-contact li{
+  color: rgba(255,255,255,0.75);
+  padding: 6px 0;
+}
+.fayen-contact i{
+  width: 18px;
+  margin-right: 8px;
+  color: rgba(255,255,255,0.85);
+}
+
+.fayen-social{
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  text-decoration: none;
+  transition: .2s ease;
+  margin-right: 8px;
+}
+.fayen-social:hover{
+  background: rgba(255,255,255,0.16);
+  transform: translateY(-2px);
+}
+
+.fayen-footer-bottom{
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.18);
+}

@@ -1,0 +1,174 @@
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.active {
+  background-color: #225470;
+  color: #fff;
+}
+
+.student-feedback-section {
+  min-height: calc(100vh - 210px);
+  padding: 2.25rem 0 1.5rem;
+  background: linear-gradient(180deg, rgba(34, 84, 112, 0.08) 0%, rgba(34, 84, 112, 0.02) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.feedback-card {
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(34, 84, 112, 0.12);
+  background-color: #fff;
+}
+
+.feedback-title {
+  color: #225470;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.feedback-subtitle {
+  color: #5f6b76;
+  font-size: 0.97rem;
+}
+
+.feedback-label {
+  color: #33424f;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-textarea {
+  min-height: 180px;
+  border: 1px solid #d9e1e8;
+  border-radius: 10px;
+  padding: 0.85rem 0.95rem;
+  line-height: 1.55;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-textarea:focus {
+  border-color: #225470;
+  box-shadow: 0 0 0 0.2rem rgba(34, 84, 112, 0.16);
+}
+
+.feedback-actions {
+  margin-top: 0.4rem;
+}
+
+.feedback-btn {
+  border-radius: 9px;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+}
+
+.site-footer {
+  margin-top: 1rem;
+  background: #0f172a;
+  color: #e5e7eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer .footer-brand {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.site-footer .footer-tagline {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.site-footer .footer-head {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer .footer-links li {
+  margin: 0 0 6px 0;
+}
+
+.site-footer .footer-links a,
+.site-footer .footer-contact a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.15s ease;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-contact a:hover {
+  color: #ffffff;
+}
+
+.site-footer .footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 7px;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.site-footer .footer-contact i {
+  width: 16px;
+  opacity: 0.9;
+}
+
+.site-footer .footer-divider {
+  margin: 12px 0 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer .footer-social {
+  display: flex;
+  gap: 8px;
+}
+
+.site-footer .footer-social a {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.site-footer .footer-social a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+.site-footer .footer-copy {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+@media (max-width: 767.98px) {
+  .student-feedback-section {
+    padding-top: 1.5rem;
+    min-height: auto;
+  }
+
+  .feedback-card .card-body {
+    padding: 1.2rem;
+  }
+}

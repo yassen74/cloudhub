@@ -1,0 +1,21 @@
+<?php
+include('./dbConnection.php');
+include('./mainInclude/header.php');
+?>
+
+<!-- Start Video Background-->
+<div class="container-fluid remove-vid-marg">
+  <div class="vid-parent">
+    <video playsinline autoplay muted loop>
+      <source src="video/hero.mp4" />
+    </video>
+    <div class="vid-overlay"></div>
+  </div>
+  <div class="vid-content">
+<div class="hero-content">
+<h1>Welcome to <span>Fayen</span></h1>
+<p>Learn and Implement</p>
+<a href="courses.php" class="hero-btn">Get Started</a>
+</div>
+  </div>
+</div>

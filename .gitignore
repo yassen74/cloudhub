@@ -1,0 +1,25 @@
+.env
+.env.*
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+*.log
+*.bak
+*.backup
+*.swp
+node_modules/
+vendor/
+minikube-linux-amd64
+*.pem
+*.key
+.DS_Store
+
+# Large video assets
+video/banvid.mp4
+video/hero.mp4
+video/hero_mobile.mp4
+
+# Large video assets
+video/banvid.mp4
+video/hero.mp4
+video/hero_mobile.mp4

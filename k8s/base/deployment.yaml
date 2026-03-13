@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fayen-deployment
+  namespace: fayen
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fayen
+  template:
+    metadata:
+      labels:
+        app: fayen
+    spec:
+      containers:
+        - name: fayen
+          image: yassenmeckawy74/fayen:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: fayen-config
+            - secretRef:
+                name: fayen-secret
+          readinessProbe:
+            httpGet:
+              path: /index.php
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /index.php
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

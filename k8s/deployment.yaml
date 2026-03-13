@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fayen-deployment
+  namespace: fayen
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fayen
+  template:
+    metadata:
+      labels:
+        app: fayen
+    spec:
+      containers:
+        - name: fayen
+          image: yassenmeckawy74/fayen-lms:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

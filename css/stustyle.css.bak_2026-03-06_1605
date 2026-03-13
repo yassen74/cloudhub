@@ -1,0 +1,79 @@
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.active {
+  background-color: #225470;
+  color: #fff;
+}
+
+.student-feedback-section {
+  min-height: calc(100vh - 210px);
+  padding: 2.25rem 0 1.5rem;
+  background: linear-gradient(180deg, rgba(34, 84, 112, 0.08) 0%, rgba(34, 84, 112, 0.02) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.feedback-card {
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(34, 84, 112, 0.12);
+  background-color: #fff;
+}
+
+.feedback-title {
+  color: #225470;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.feedback-subtitle {
+  color: #5f6b76;
+  font-size: 0.97rem;
+}
+
+.feedback-label {
+  color: #33424f;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-textarea {
+  min-height: 180px;
+  border: 1px solid #d9e1e8;
+  border-radius: 10px;
+  padding: 0.85rem 0.95rem;
+  line-height: 1.55;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-textarea:focus {
+  border-color: #225470;
+  box-shadow: 0 0 0 0.2rem rgba(34, 84, 112, 0.16);
+}
+
+.feedback-actions {
+  margin-top: 0.4rem;
+}
+
+.feedback-btn {
+  border-radius: 9px;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+}
+
+.site-footer {
+  margin-top: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .student-feedback-section {
+    padding-top: 1.5rem;
+    min-height: auto;
+  }
+
+  .feedback-card .card-body {
+    padding: 1.2rem;
+  }
+}

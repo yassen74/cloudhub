@@ -1,0 +1,43 @@
+<footer class="site-footer mt-5">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <h5 class="footer-title mb-2">Fayen</h5>
+        <p class="mb-0 text-white-50">Learn and Implement</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <h6 class="footer-title mb-3">Quick Links</h6>
+        <ul class="footer-list list-unstyled mb-0">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="courses.php">Courses</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="Student/stufeedback.php">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4">
+        <h6 class="footer-title mb-3">Contact</h6>
+        <ul class="footer-list list-unstyled mb-0">
+          <li><i class="fas fa-envelope mr-2"></i> email@example.com</li>
+          <li><i class="fas fa-phone mr-2"></i> +1 (000) 000-0000</li>
+          <li><i class="fas fa-map-marker-alt mr-2"></i> Your City, Country</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer-social d-flex justify-content-center justify-content-lg-start mt-4 pt-4">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <div class="site-footer-bottom py-3">
+    <div class="container text-center">
+      <small>&copy; <?php echo date('Y'); ?> Fayen. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+  </body>
+  </html>
