@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: List project files
+      - name: Show project files
         run: ls -la
 
       - name: Build Docker image
@@ -23,5 +23,5 @@ jobs:
           elif [ -f dockerfile ]; then
             docker build -f dockerfile -t fayen:ci .
           else
-            echo "Dockerfile not found"
+            echo "No Dockerfile found"
           fi
