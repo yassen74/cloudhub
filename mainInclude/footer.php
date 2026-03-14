@@ -1,47 +1,45 @@
-<?php
-if (!defined('FAYEN_FOOTER_EMBED')) {
-  define('FAYEN_FOOTER_EMBED', false);
-}
-?>
-<footer class="site-footer">
+<footer class="ch-footer" role="contentinfo">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="footer-brand">Fayen</div>
-        <div class="footer-tagline">Learn And Achieve</div>
-        <p class="footer-desc">
+    <div class="row ch-footer-row">
+      <section class="col-lg-5 col-md-12 ch-footer-col ch-footer-col-brand">
+        <h2 class="ch-footer-brand">CloudHub</h2>
+        <p class="ch-footer-tag">Learn And Achieve</p>
+        <p class="ch-footer-text">
           A modern e-learning platform for cloud, cybersecurity, and technology learning.
         </p>
-      </div>
+      </section>
 
-      <div class="footer-col">
-        <div class="footer-head">Quick Links</div>
-        <ul class="footer-links">
-          <li><a href="/index.php">Home</a></li>
-          <li><a href="/courses.php">Courses</a></li>
-          <li><a href="/contact.php">Contact</a></li>
-          <li><a href="/Student/stufeedback.php">Feedback</a></li>
+      <nav class="col-lg-3 col-md-6 col-sm-6 ch-footer-col" aria-label="Footer quick links">
+        <h6 class="ch-footer-title">Quick Links</h6>
+        <ul class="ch-footer-links">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="courses.php">Courses</a></li>
+          <li><a href="#Contact">Contact</a></li>
+          <li><a href="Student/stufeedback.php">Feedback</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="footer-col footer-contact-col">
-        <div class="footer-head">Contact</div>
-        <ul class="footer-contact">
-          <li><a href="mailto:yassenashraf372@gmail.com">yassenashraf372@gmail.com</a></li>
-          <li><a href="tel:01012175752">01012175752</a></li>
+      <section class="col-lg-4 col-md-6 col-sm-6 ch-footer-col">
+        <h6 class="ch-footer-title">Contact</h6>
+        <ul class="ch-footer-links ch-footer-contact-list">
+          <li>
+            <a href="mailto:yassenashraf372@gmail.com" aria-label="Email CloudHub">
+              <span class="ch-footer-icon"><i class="fas fa-envelope"></i></span>
+              <span>yassenashraf372@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/yassen-mekawy-138b18320" target="_blank" rel="noopener noreferrer" aria-label="CloudHub LinkedIn">
+              <span class="ch-footer-icon"><i class="fab fa-linkedin-in"></i></span>
+              <span>LinkedIn</span>
+            </a>
+          </li>
         </ul>
-      </div>
+      </section>
     </div>
 
-    <div class="footer-divider"></div>
-
-    <div class="footer-copy">
-      &copy; <?php echo date('Y'); ?> Fayen. All rights reserved.
+    <div class="ch-footer-bottom">
+      <p class="ch-footer-copy">© <?php echo date('Y'); ?> CloudHub. All rights reserved.</p>
     </div>
   </div>
 </footer>
-
-<?php if (!FAYEN_FOOTER_EMBED): ?>
-</body>
-</html>
-<?php endif; ?>

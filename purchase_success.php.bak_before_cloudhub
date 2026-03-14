@@ -22,7 +22,7 @@ function h(string $s): string { return htmlspecialchars($s, ENT_QUOTES); }
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>CloudHub</title>
+<title>Fayen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <style>

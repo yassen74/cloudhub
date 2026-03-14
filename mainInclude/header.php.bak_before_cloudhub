@@ -24,13 +24,13 @@ if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
     <link rel="stylesheet" type="text/css" href="css/testyslider.css">
 
     <!-- Custom Style CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css?v=999" />
-    <title>CloudHub</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>Fayen</title>
   </head>
   <body>
      <!-- Start Nagigation -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark pl-5 fixed-top">
-      <a href="index.php" class="navbar-brand">CloudHub</a>
+      <a href="index.php" class="navbar-brand">Fayen</a>
       <span class="navbar-text">Learn And Achieve</span>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
         <span class="navbar-toggler-icon"></span>

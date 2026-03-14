@@ -22,7 +22,7 @@ USE lms_db;
 DELETE FROM `lesson`;
 DELETE FROM `course`;
 
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (1,'cloud Course 1','Auto-seeded course for cloud','course-1-1.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (1,'cloud Course 1','Auto-seeded course for cloud','course-1-1.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1,'Module 1 - cloud Course 1','Auto-seeded lesson 1',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (2,'Module 2 - cloud Course 1','Auto-seeded lesson 2',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (3,'Module 3 - cloud Course 1','Auto-seeded lesson 3',1);
@@ -38,7 +38,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (13,'Module 13 - cloud Course 1','Auto-seeded lesson 13',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (14,'Module 14 - cloud Course 1','Auto-seeded lesson 14',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (15,'Module 15 - cloud Course 1','Auto-seeded lesson 15',1);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (2,'cloud Course 2','Auto-seeded course for cloud','course-1-2.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (2,'cloud Course 2','Auto-seeded course for cloud','course-1-2.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (16,'Module 1 - cloud Course 2','Auto-seeded lesson 1',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (17,'Module 2 - cloud Course 2','Auto-seeded lesson 2',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (18,'Module 3 - cloud Course 2','Auto-seeded lesson 3',2);
@@ -54,7 +54,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (28,'Module 13 - cloud Course 2','Auto-seeded lesson 13',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (29,'Module 14 - cloud Course 2','Auto-seeded lesson 14',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (30,'Module 15 - cloud Course 2','Auto-seeded lesson 15',2);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (3,'cloud Course 3','Auto-seeded course for cloud','course-1-3.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (3,'cloud Course 3','Auto-seeded course for cloud','course-1-3.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (31,'Module 1 - cloud Course 3','Auto-seeded lesson 1',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (32,'Module 2 - cloud Course 3','Auto-seeded lesson 2',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (33,'Module 3 - cloud Course 3','Auto-seeded lesson 3',3);
@@ -70,7 +70,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (43,'Module 13 - cloud Course 3','Auto-seeded lesson 13',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (44,'Module 14 - cloud Course 3','Auto-seeded lesson 14',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (45,'Module 15 - cloud Course 3','Auto-seeded lesson 15',3);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (4,'cloud Course 4','Auto-seeded course for cloud','course-1-4.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (4,'cloud Course 4','Auto-seeded course for cloud','course-1-4.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (46,'Module 1 - cloud Course 4','Auto-seeded lesson 1',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (47,'Module 2 - cloud Course 4','Auto-seeded lesson 2',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (48,'Module 3 - cloud Course 4','Auto-seeded lesson 3',4);
@@ -86,7 +86,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (58,'Module 13 - cloud Course 4','Auto-seeded lesson 13',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (59,'Module 14 - cloud Course 4','Auto-seeded lesson 14',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (60,'Module 15 - cloud Course 4','Auto-seeded lesson 15',4);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (5,'cloud Course 5','Auto-seeded course for cloud','course-1-5.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (5,'cloud Course 5','Auto-seeded course for cloud','course-1-5.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (61,'Module 1 - cloud Course 5','Auto-seeded lesson 1',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (62,'Module 2 - cloud Course 5','Auto-seeded lesson 2',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (63,'Module 3 - cloud Course 5','Auto-seeded lesson 3',5);
@@ -102,7 +102,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (73,'Module 13 - cloud Course 5','Auto-seeded lesson 13',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (74,'Module 14 - cloud Course 5','Auto-seeded lesson 14',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (75,'Module 15 - cloud Course 5','Auto-seeded lesson 15',5);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (6,'cloud Course 6','Auto-seeded course for cloud','course-1-6.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (6,'cloud Course 6','Auto-seeded course for cloud','course-1-6.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (76,'Module 1 - cloud Course 6','Auto-seeded lesson 1',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (77,'Module 2 - cloud Course 6','Auto-seeded lesson 2',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (78,'Module 3 - cloud Course 6','Auto-seeded lesson 3',6);
@@ -118,7 +118,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (88,'Module 13 - cloud Course 6','Auto-seeded lesson 13',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (89,'Module 14 - cloud Course 6','Auto-seeded lesson 14',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (90,'Module 15 - cloud Course 6','Auto-seeded lesson 15',6);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (7,'cloud Course 7','Auto-seeded course for cloud','course-1-7.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (7,'cloud Course 7','Auto-seeded course for cloud','course-1-7.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (91,'Module 1 - cloud Course 7','Auto-seeded lesson 1',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (92,'Module 2 - cloud Course 7','Auto-seeded lesson 2',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (93,'Module 3 - cloud Course 7','Auto-seeded lesson 3',7);
@@ -134,7 +134,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (103,'Module 13 - cloud Course 7','Auto-seeded lesson 13',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (104,'Module 14 - cloud Course 7','Auto-seeded lesson 14',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (105,'Module 15 - cloud Course 7','Auto-seeded lesson 15',7);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (8,'cloud Course 8','Auto-seeded course for cloud','course-1-8.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (8,'cloud Course 8','Auto-seeded course for cloud','course-1-8.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (106,'Module 1 - cloud Course 8','Auto-seeded lesson 1',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (107,'Module 2 - cloud Course 8','Auto-seeded lesson 2',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (108,'Module 3 - cloud Course 8','Auto-seeded lesson 3',8);
@@ -150,7 +150,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (118,'Module 13 - cloud Course 8','Auto-seeded lesson 13',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (119,'Module 14 - cloud Course 8','Auto-seeded lesson 14',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (120,'Module 15 - cloud Course 8','Auto-seeded lesson 15',8);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (9,'cloud Course 9','Auto-seeded course for cloud','course-1-9.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (9,'cloud Course 9','Auto-seeded course for cloud','course-1-9.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (121,'Module 1 - cloud Course 9','Auto-seeded lesson 1',9);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (122,'Module 2 - cloud Course 9','Auto-seeded lesson 2',9);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (123,'Module 3 - cloud Course 9','Auto-seeded lesson 3',9);
@@ -166,7 +166,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (133,'Module 13 - cloud Course 9','Auto-seeded lesson 13',9);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (134,'Module 14 - cloud Course 9','Auto-seeded lesson 14',9);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (135,'Module 15 - cloud Course 9','Auto-seeded lesson 15',9);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (10,'cloud Course 10','Auto-seeded course for cloud','course-1-10.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (10,'cloud Course 10','Auto-seeded course for cloud','course-1-10.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (136,'Module 1 - cloud Course 10','Auto-seeded lesson 1',10);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (137,'Module 2 - cloud Course 10','Auto-seeded lesson 2',10);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (138,'Module 3 - cloud Course 10','Auto-seeded lesson 3',10);
@@ -182,7 +182,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (148,'Module 13 - cloud Course 10','Auto-seeded lesson 13',10);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (149,'Module 14 - cloud Course 10','Auto-seeded lesson 14',10);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (150,'Module 15 - cloud Course 10','Auto-seeded lesson 15',10);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (11,'cloud Course 11','Auto-seeded course for cloud','course-1-11.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (11,'cloud Course 11','Auto-seeded course for cloud','course-1-11.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (151,'Module 1 - cloud Course 11','Auto-seeded lesson 1',11);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (152,'Module 2 - cloud Course 11','Auto-seeded lesson 2',11);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (153,'Module 3 - cloud Course 11','Auto-seeded lesson 3',11);
@@ -198,7 +198,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (163,'Module 13 - cloud Course 11','Auto-seeded lesson 13',11);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (164,'Module 14 - cloud Course 11','Auto-seeded lesson 14',11);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (165,'Module 15 - cloud Course 11','Auto-seeded lesson 15',11);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (12,'cloud Course 12','Auto-seeded course for cloud','course-1-12.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (12,'cloud Course 12','Auto-seeded course for cloud','course-1-12.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (166,'Module 1 - cloud Course 12','Auto-seeded lesson 1',12);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (167,'Module 2 - cloud Course 12','Auto-seeded lesson 2',12);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (168,'Module 3 - cloud Course 12','Auto-seeded lesson 3',12);
@@ -214,7 +214,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (178,'Module 13 - cloud Course 12','Auto-seeded lesson 13',12);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (179,'Module 14 - cloud Course 12','Auto-seeded lesson 14',12);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (180,'Module 15 - cloud Course 12','Auto-seeded lesson 15',12);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (13,'cloud Course 13','Auto-seeded course for cloud','course-1-13.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (13,'cloud Course 13','Auto-seeded course for cloud','course-1-13.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (181,'Module 1 - cloud Course 13','Auto-seeded lesson 1',13);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (182,'Module 2 - cloud Course 13','Auto-seeded lesson 2',13);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (183,'Module 3 - cloud Course 13','Auto-seeded lesson 3',13);
@@ -230,7 +230,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (193,'Module 13 - cloud Course 13','Auto-seeded lesson 13',13);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (194,'Module 14 - cloud Course 13','Auto-seeded lesson 14',13);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (195,'Module 15 - cloud Course 13','Auto-seeded lesson 15',13);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (14,'cloud Course 14','Auto-seeded course for cloud','course-1-14.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (14,'cloud Course 14','Auto-seeded course for cloud','course-1-14.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (196,'Module 1 - cloud Course 14','Auto-seeded lesson 1',14);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (197,'Module 2 - cloud Course 14','Auto-seeded lesson 2',14);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (198,'Module 3 - cloud Course 14','Auto-seeded lesson 3',14);
@@ -246,7 +246,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (208,'Module 13 - cloud Course 14','Auto-seeded lesson 13',14);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (209,'Module 14 - cloud Course 14','Auto-seeded lesson 14',14);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (210,'Module 15 - cloud Course 14','Auto-seeded lesson 15',14);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (15,'cloud Course 15','Auto-seeded course for cloud','course-1-15.jpg',0,'Fayen',1);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (15,'cloud Course 15','Auto-seeded course for cloud','course-1-15.jpg',0,'CloudHub',1);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (211,'Module 1 - cloud Course 15','Auto-seeded lesson 1',15);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (212,'Module 2 - cloud Course 15','Auto-seeded lesson 2',15);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (213,'Module 3 - cloud Course 15','Auto-seeded lesson 3',15);
@@ -262,7 +262,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (223,'Module 13 - cloud Course 15','Auto-seeded lesson 13',15);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (224,'Module 14 - cloud Course 15','Auto-seeded lesson 14',15);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (225,'Module 15 - cloud Course 15','Auto-seeded lesson 15',15);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (16,'2	CyberSecurity Course 1','Auto-seeded course for 2	CyberSecurity','course-2-1.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (16,'2	CyberSecurity Course 1','Auto-seeded course for 2	CyberSecurity','course-2-1.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (226,'Module 1 - 2	CyberSecurity Course 1','Auto-seeded lesson 1',16);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (227,'Module 2 - 2	CyberSecurity Course 1','Auto-seeded lesson 2',16);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (228,'Module 3 - 2	CyberSecurity Course 1','Auto-seeded lesson 3',16);
@@ -278,7 +278,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (238,'Module 13 - 2	CyberSecurity Course 1','Auto-seeded lesson 13',16);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (239,'Module 14 - 2	CyberSecurity Course 1','Auto-seeded lesson 14',16);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (240,'Module 15 - 2	CyberSecurity Course 1','Auto-seeded lesson 15',16);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (17,'2	CyberSecurity Course 2','Auto-seeded course for 2	CyberSecurity','course-2-2.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (17,'2	CyberSecurity Course 2','Auto-seeded course for 2	CyberSecurity','course-2-2.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (241,'Module 1 - 2	CyberSecurity Course 2','Auto-seeded lesson 1',17);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (242,'Module 2 - 2	CyberSecurity Course 2','Auto-seeded lesson 2',17);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (243,'Module 3 - 2	CyberSecurity Course 2','Auto-seeded lesson 3',17);
@@ -294,7 +294,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (253,'Module 13 - 2	CyberSecurity Course 2','Auto-seeded lesson 13',17);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (254,'Module 14 - 2	CyberSecurity Course 2','Auto-seeded lesson 14',17);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (255,'Module 15 - 2	CyberSecurity Course 2','Auto-seeded lesson 15',17);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (18,'2	CyberSecurity Course 3','Auto-seeded course for 2	CyberSecurity','course-2-3.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (18,'2	CyberSecurity Course 3','Auto-seeded course for 2	CyberSecurity','course-2-3.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (256,'Module 1 - 2	CyberSecurity Course 3','Auto-seeded lesson 1',18);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (257,'Module 2 - 2	CyberSecurity Course 3','Auto-seeded lesson 2',18);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (258,'Module 3 - 2	CyberSecurity Course 3','Auto-seeded lesson 3',18);
@@ -310,7 +310,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (268,'Module 13 - 2	CyberSecurity Course 3','Auto-seeded lesson 13',18);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (269,'Module 14 - 2	CyberSecurity Course 3','Auto-seeded lesson 14',18);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (270,'Module 15 - 2	CyberSecurity Course 3','Auto-seeded lesson 15',18);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (19,'2	CyberSecurity Course 4','Auto-seeded course for 2	CyberSecurity','course-2-4.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (19,'2	CyberSecurity Course 4','Auto-seeded course for 2	CyberSecurity','course-2-4.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (271,'Module 1 - 2	CyberSecurity Course 4','Auto-seeded lesson 1',19);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (272,'Module 2 - 2	CyberSecurity Course 4','Auto-seeded lesson 2',19);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (273,'Module 3 - 2	CyberSecurity Course 4','Auto-seeded lesson 3',19);
@@ -326,7 +326,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (283,'Module 13 - 2	CyberSecurity Course 4','Auto-seeded lesson 13',19);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (284,'Module 14 - 2	CyberSecurity Course 4','Auto-seeded lesson 14',19);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (285,'Module 15 - 2	CyberSecurity Course 4','Auto-seeded lesson 15',19);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (20,'2	CyberSecurity Course 5','Auto-seeded course for 2	CyberSecurity','course-2-5.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (20,'2	CyberSecurity Course 5','Auto-seeded course for 2	CyberSecurity','course-2-5.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (286,'Module 1 - 2	CyberSecurity Course 5','Auto-seeded lesson 1',20);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (287,'Module 2 - 2	CyberSecurity Course 5','Auto-seeded lesson 2',20);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (288,'Module 3 - 2	CyberSecurity Course 5','Auto-seeded lesson 3',20);
@@ -342,7 +342,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (298,'Module 13 - 2	CyberSecurity Course 5','Auto-seeded lesson 13',20);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (299,'Module 14 - 2	CyberSecurity Course 5','Auto-seeded lesson 14',20);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (300,'Module 15 - 2	CyberSecurity Course 5','Auto-seeded lesson 15',20);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (21,'2	CyberSecurity Course 6','Auto-seeded course for 2	CyberSecurity','course-2-6.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (21,'2	CyberSecurity Course 6','Auto-seeded course for 2	CyberSecurity','course-2-6.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (301,'Module 1 - 2	CyberSecurity Course 6','Auto-seeded lesson 1',21);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (302,'Module 2 - 2	CyberSecurity Course 6','Auto-seeded lesson 2',21);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (303,'Module 3 - 2	CyberSecurity Course 6','Auto-seeded lesson 3',21);
@@ -358,7 +358,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (313,'Module 13 - 2	CyberSecurity Course 6','Auto-seeded lesson 13',21);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (314,'Module 14 - 2	CyberSecurity Course 6','Auto-seeded lesson 14',21);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (315,'Module 15 - 2	CyberSecurity Course 6','Auto-seeded lesson 15',21);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (22,'2	CyberSecurity Course 7','Auto-seeded course for 2	CyberSecurity','course-2-7.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (22,'2	CyberSecurity Course 7','Auto-seeded course for 2	CyberSecurity','course-2-7.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (316,'Module 1 - 2	CyberSecurity Course 7','Auto-seeded lesson 1',22);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (317,'Module 2 - 2	CyberSecurity Course 7','Auto-seeded lesson 2',22);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (318,'Module 3 - 2	CyberSecurity Course 7','Auto-seeded lesson 3',22);
@@ -374,7 +374,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (328,'Module 13 - 2	CyberSecurity Course 7','Auto-seeded lesson 13',22);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (329,'Module 14 - 2	CyberSecurity Course 7','Auto-seeded lesson 14',22);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (330,'Module 15 - 2	CyberSecurity Course 7','Auto-seeded lesson 15',22);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (23,'2	CyberSecurity Course 8','Auto-seeded course for 2	CyberSecurity','course-2-8.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (23,'2	CyberSecurity Course 8','Auto-seeded course for 2	CyberSecurity','course-2-8.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (331,'Module 1 - 2	CyberSecurity Course 8','Auto-seeded lesson 1',23);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (332,'Module 2 - 2	CyberSecurity Course 8','Auto-seeded lesson 2',23);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (333,'Module 3 - 2	CyberSecurity Course 8','Auto-seeded lesson 3',23);
@@ -390,7 +390,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (343,'Module 13 - 2	CyberSecurity Course 8','Auto-seeded lesson 13',23);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (344,'Module 14 - 2	CyberSecurity Course 8','Auto-seeded lesson 14',23);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (345,'Module 15 - 2	CyberSecurity Course 8','Auto-seeded lesson 15',23);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (24,'2	CyberSecurity Course 9','Auto-seeded course for 2	CyberSecurity','course-2-9.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (24,'2	CyberSecurity Course 9','Auto-seeded course for 2	CyberSecurity','course-2-9.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (346,'Module 1 - 2	CyberSecurity Course 9','Auto-seeded lesson 1',24);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (347,'Module 2 - 2	CyberSecurity Course 9','Auto-seeded lesson 2',24);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (348,'Module 3 - 2	CyberSecurity Course 9','Auto-seeded lesson 3',24);
@@ -406,7 +406,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (358,'Module 13 - 2	CyberSecurity Course 9','Auto-seeded lesson 13',24);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (359,'Module 14 - 2	CyberSecurity Course 9','Auto-seeded lesson 14',24);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (360,'Module 15 - 2	CyberSecurity Course 9','Auto-seeded lesson 15',24);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (25,'2	CyberSecurity Course 10','Auto-seeded course for 2	CyberSecurity','course-2-10.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (25,'2	CyberSecurity Course 10','Auto-seeded course for 2	CyberSecurity','course-2-10.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (361,'Module 1 - 2	CyberSecurity Course 10','Auto-seeded lesson 1',25);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (362,'Module 2 - 2	CyberSecurity Course 10','Auto-seeded lesson 2',25);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (363,'Module 3 - 2	CyberSecurity Course 10','Auto-seeded lesson 3',25);
@@ -422,7 +422,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (373,'Module 13 - 2	CyberSecurity Course 10','Auto-seeded lesson 13',25);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (374,'Module 14 - 2	CyberSecurity Course 10','Auto-seeded lesson 14',25);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (375,'Module 15 - 2	CyberSecurity Course 10','Auto-seeded lesson 15',25);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (26,'2	CyberSecurity Course 11','Auto-seeded course for 2	CyberSecurity','course-2-11.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (26,'2	CyberSecurity Course 11','Auto-seeded course for 2	CyberSecurity','course-2-11.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (376,'Module 1 - 2	CyberSecurity Course 11','Auto-seeded lesson 1',26);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (377,'Module 2 - 2	CyberSecurity Course 11','Auto-seeded lesson 2',26);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (378,'Module 3 - 2	CyberSecurity Course 11','Auto-seeded lesson 3',26);
@@ -438,7 +438,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (388,'Module 13 - 2	CyberSecurity Course 11','Auto-seeded lesson 13',26);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (389,'Module 14 - 2	CyberSecurity Course 11','Auto-seeded lesson 14',26);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (390,'Module 15 - 2	CyberSecurity Course 11','Auto-seeded lesson 15',26);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (27,'2	CyberSecurity Course 12','Auto-seeded course for 2	CyberSecurity','course-2-12.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (27,'2	CyberSecurity Course 12','Auto-seeded course for 2	CyberSecurity','course-2-12.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (391,'Module 1 - 2	CyberSecurity Course 12','Auto-seeded lesson 1',27);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (392,'Module 2 - 2	CyberSecurity Course 12','Auto-seeded lesson 2',27);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (393,'Module 3 - 2	CyberSecurity Course 12','Auto-seeded lesson 3',27);
@@ -454,7 +454,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (403,'Module 13 - 2	CyberSecurity Course 12','Auto-seeded lesson 13',27);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (404,'Module 14 - 2	CyberSecurity Course 12','Auto-seeded lesson 14',27);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (405,'Module 15 - 2	CyberSecurity Course 12','Auto-seeded lesson 15',27);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (28,'2	CyberSecurity Course 13','Auto-seeded course for 2	CyberSecurity','course-2-13.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (28,'2	CyberSecurity Course 13','Auto-seeded course for 2	CyberSecurity','course-2-13.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (406,'Module 1 - 2	CyberSecurity Course 13','Auto-seeded lesson 1',28);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (407,'Module 2 - 2	CyberSecurity Course 13','Auto-seeded lesson 2',28);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (408,'Module 3 - 2	CyberSecurity Course 13','Auto-seeded lesson 3',28);
@@ -470,7 +470,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (418,'Module 13 - 2	CyberSecurity Course 13','Auto-seeded lesson 13',28);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (419,'Module 14 - 2	CyberSecurity Course 13','Auto-seeded lesson 14',28);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (420,'Module 15 - 2	CyberSecurity Course 13','Auto-seeded lesson 15',28);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (29,'2	CyberSecurity Course 14','Auto-seeded course for 2	CyberSecurity','course-2-14.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (29,'2	CyberSecurity Course 14','Auto-seeded course for 2	CyberSecurity','course-2-14.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (421,'Module 1 - 2	CyberSecurity Course 14','Auto-seeded lesson 1',29);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (422,'Module 2 - 2	CyberSecurity Course 14','Auto-seeded lesson 2',29);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (423,'Module 3 - 2	CyberSecurity Course 14','Auto-seeded lesson 3',29);
@@ -486,7 +486,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (433,'Module 13 - 2	CyberSecurity Course 14','Auto-seeded lesson 13',29);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (434,'Module 14 - 2	CyberSecurity Course 14','Auto-seeded lesson 14',29);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (435,'Module 15 - 2	CyberSecurity Course 14','Auto-seeded lesson 15',29);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (30,'2	CyberSecurity Course 15','Auto-seeded course for 2	CyberSecurity','course-2-15.jpg',0,'Fayen',2);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (30,'2	CyberSecurity Course 15','Auto-seeded course for 2	CyberSecurity','course-2-15.jpg',0,'CloudHub',2);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (436,'Module 1 - 2	CyberSecurity Course 15','Auto-seeded lesson 1',30);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (437,'Module 2 - 2	CyberSecurity Course 15','Auto-seeded lesson 2',30);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (438,'Module 3 - 2	CyberSecurity Course 15','Auto-seeded lesson 3',30);
@@ -502,7 +502,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (448,'Module 13 - 2	CyberSecurity Course 15','Auto-seeded lesson 13',30);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (449,'Module 14 - 2	CyberSecurity Course 15','Auto-seeded lesson 14',30);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (450,'Module 15 - 2	CyberSecurity Course 15','Auto-seeded lesson 15',30);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (31,'Science Course 1','Auto-seeded course for Science','course-3-1.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (31,'Science Course 1','Auto-seeded course for Science','course-3-1.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (451,'Module 1 - Science Course 1','Auto-seeded lesson 1',31);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (452,'Module 2 - Science Course 1','Auto-seeded lesson 2',31);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (453,'Module 3 - Science Course 1','Auto-seeded lesson 3',31);
@@ -518,7 +518,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (463,'Module 13 - Science Course 1','Auto-seeded lesson 13',31);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (464,'Module 14 - Science Course 1','Auto-seeded lesson 14',31);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (465,'Module 15 - Science Course 1','Auto-seeded lesson 15',31);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (32,'Science Course 2','Auto-seeded course for Science','course-3-2.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (32,'Science Course 2','Auto-seeded course for Science','course-3-2.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (466,'Module 1 - Science Course 2','Auto-seeded lesson 1',32);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (467,'Module 2 - Science Course 2','Auto-seeded lesson 2',32);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (468,'Module 3 - Science Course 2','Auto-seeded lesson 3',32);
@@ -534,7 +534,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (478,'Module 13 - Science Course 2','Auto-seeded lesson 13',32);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (479,'Module 14 - Science Course 2','Auto-seeded lesson 14',32);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (480,'Module 15 - Science Course 2','Auto-seeded lesson 15',32);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (33,'Science Course 3','Auto-seeded course for Science','course-3-3.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (33,'Science Course 3','Auto-seeded course for Science','course-3-3.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (481,'Module 1 - Science Course 3','Auto-seeded lesson 1',33);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (482,'Module 2 - Science Course 3','Auto-seeded lesson 2',33);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (483,'Module 3 - Science Course 3','Auto-seeded lesson 3',33);
@@ -550,7 +550,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (493,'Module 13 - Science Course 3','Auto-seeded lesson 13',33);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (494,'Module 14 - Science Course 3','Auto-seeded lesson 14',33);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (495,'Module 15 - Science Course 3','Auto-seeded lesson 15',33);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (34,'Science Course 4','Auto-seeded course for Science','course-3-4.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (34,'Science Course 4','Auto-seeded course for Science','course-3-4.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (496,'Module 1 - Science Course 4','Auto-seeded lesson 1',34);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (497,'Module 2 - Science Course 4','Auto-seeded lesson 2',34);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (498,'Module 3 - Science Course 4','Auto-seeded lesson 3',34);
@@ -566,7 +566,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (508,'Module 13 - Science Course 4','Auto-seeded lesson 13',34);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (509,'Module 14 - Science Course 4','Auto-seeded lesson 14',34);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (510,'Module 15 - Science Course 4','Auto-seeded lesson 15',34);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (35,'Science Course 5','Auto-seeded course for Science','course-3-5.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (35,'Science Course 5','Auto-seeded course for Science','course-3-5.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (511,'Module 1 - Science Course 5','Auto-seeded lesson 1',35);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (512,'Module 2 - Science Course 5','Auto-seeded lesson 2',35);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (513,'Module 3 - Science Course 5','Auto-seeded lesson 3',35);
@@ -582,7 +582,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (523,'Module 13 - Science Course 5','Auto-seeded lesson 13',35);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (524,'Module 14 - Science Course 5','Auto-seeded lesson 14',35);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (525,'Module 15 - Science Course 5','Auto-seeded lesson 15',35);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (36,'Science Course 6','Auto-seeded course for Science','course-3-6.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (36,'Science Course 6','Auto-seeded course for Science','course-3-6.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (526,'Module 1 - Science Course 6','Auto-seeded lesson 1',36);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (527,'Module 2 - Science Course 6','Auto-seeded lesson 2',36);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (528,'Module 3 - Science Course 6','Auto-seeded lesson 3',36);
@@ -598,7 +598,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (538,'Module 13 - Science Course 6','Auto-seeded lesson 13',36);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (539,'Module 14 - Science Course 6','Auto-seeded lesson 14',36);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (540,'Module 15 - Science Course 6','Auto-seeded lesson 15',36);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (37,'Science Course 7','Auto-seeded course for Science','course-3-7.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (37,'Science Course 7','Auto-seeded course for Science','course-3-7.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (541,'Module 1 - Science Course 7','Auto-seeded lesson 1',37);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (542,'Module 2 - Science Course 7','Auto-seeded lesson 2',37);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (543,'Module 3 - Science Course 7','Auto-seeded lesson 3',37);
@@ -614,7 +614,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (553,'Module 13 - Science Course 7','Auto-seeded lesson 13',37);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (554,'Module 14 - Science Course 7','Auto-seeded lesson 14',37);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (555,'Module 15 - Science Course 7','Auto-seeded lesson 15',37);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (38,'Science Course 8','Auto-seeded course for Science','course-3-8.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (38,'Science Course 8','Auto-seeded course for Science','course-3-8.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (556,'Module 1 - Science Course 8','Auto-seeded lesson 1',38);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (557,'Module 2 - Science Course 8','Auto-seeded lesson 2',38);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (558,'Module 3 - Science Course 8','Auto-seeded lesson 3',38);
@@ -630,7 +630,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (568,'Module 13 - Science Course 8','Auto-seeded lesson 13',38);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (569,'Module 14 - Science Course 8','Auto-seeded lesson 14',38);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (570,'Module 15 - Science Course 8','Auto-seeded lesson 15',38);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (39,'Science Course 9','Auto-seeded course for Science','course-3-9.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (39,'Science Course 9','Auto-seeded course for Science','course-3-9.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (571,'Module 1 - Science Course 9','Auto-seeded lesson 1',39);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (572,'Module 2 - Science Course 9','Auto-seeded lesson 2',39);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (573,'Module 3 - Science Course 9','Auto-seeded lesson 3',39);
@@ -646,7 +646,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (583,'Module 13 - Science Course 9','Auto-seeded lesson 13',39);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (584,'Module 14 - Science Course 9','Auto-seeded lesson 14',39);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (585,'Module 15 - Science Course 9','Auto-seeded lesson 15',39);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (40,'Science Course 10','Auto-seeded course for Science','course-3-10.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (40,'Science Course 10','Auto-seeded course for Science','course-3-10.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (586,'Module 1 - Science Course 10','Auto-seeded lesson 1',40);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (587,'Module 2 - Science Course 10','Auto-seeded lesson 2',40);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (588,'Module 3 - Science Course 10','Auto-seeded lesson 3',40);
@@ -662,7 +662,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (598,'Module 13 - Science Course 10','Auto-seeded lesson 13',40);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (599,'Module 14 - Science Course 10','Auto-seeded lesson 14',40);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (600,'Module 15 - Science Course 10','Auto-seeded lesson 15',40);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (41,'Science Course 11','Auto-seeded course for Science','course-3-11.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (41,'Science Course 11','Auto-seeded course for Science','course-3-11.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (601,'Module 1 - Science Course 11','Auto-seeded lesson 1',41);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (602,'Module 2 - Science Course 11','Auto-seeded lesson 2',41);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (603,'Module 3 - Science Course 11','Auto-seeded lesson 3',41);
@@ -678,7 +678,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (613,'Module 13 - Science Course 11','Auto-seeded lesson 13',41);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (614,'Module 14 - Science Course 11','Auto-seeded lesson 14',41);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (615,'Module 15 - Science Course 11','Auto-seeded lesson 15',41);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (42,'Science Course 12','Auto-seeded course for Science','course-3-12.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (42,'Science Course 12','Auto-seeded course for Science','course-3-12.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (616,'Module 1 - Science Course 12','Auto-seeded lesson 1',42);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (617,'Module 2 - Science Course 12','Auto-seeded lesson 2',42);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (618,'Module 3 - Science Course 12','Auto-seeded lesson 3',42);
@@ -694,7 +694,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (628,'Module 13 - Science Course 12','Auto-seeded lesson 13',42);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (629,'Module 14 - Science Course 12','Auto-seeded lesson 14',42);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (630,'Module 15 - Science Course 12','Auto-seeded lesson 15',42);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (43,'Science Course 13','Auto-seeded course for Science','course-3-13.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (43,'Science Course 13','Auto-seeded course for Science','course-3-13.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (631,'Module 1 - Science Course 13','Auto-seeded lesson 1',43);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (632,'Module 2 - Science Course 13','Auto-seeded lesson 2',43);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (633,'Module 3 - Science Course 13','Auto-seeded lesson 3',43);
@@ -710,7 +710,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (643,'Module 13 - Science Course 13','Auto-seeded lesson 13',43);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (644,'Module 14 - Science Course 13','Auto-seeded lesson 14',43);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (645,'Module 15 - Science Course 13','Auto-seeded lesson 15',43);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (44,'Science Course 14','Auto-seeded course for Science','course-3-14.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (44,'Science Course 14','Auto-seeded course for Science','course-3-14.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (646,'Module 1 - Science Course 14','Auto-seeded lesson 1',44);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (647,'Module 2 - Science Course 14','Auto-seeded lesson 2',44);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (648,'Module 3 - Science Course 14','Auto-seeded lesson 3',44);
@@ -726,7 +726,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (658,'Module 13 - Science Course 14','Auto-seeded lesson 13',44);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (659,'Module 14 - Science Course 14','Auto-seeded lesson 14',44);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (660,'Module 15 - Science Course 14','Auto-seeded lesson 15',44);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (45,'Science Course 15','Auto-seeded course for Science','course-3-15.jpg',0,'Fayen',3);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (45,'Science Course 15','Auto-seeded course for Science','course-3-15.jpg',0,'CloudHub',3);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (661,'Module 1 - Science Course 15','Auto-seeded lesson 1',45);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (662,'Module 2 - Science Course 15','Auto-seeded lesson 2',45);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (663,'Module 3 - Science Course 15','Auto-seeded lesson 3',45);
@@ -742,7 +742,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (673,'Module 13 - Science Course 15','Auto-seeded lesson 13',45);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (674,'Module 14 - Science Course 15','Auto-seeded lesson 14',45);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (675,'Module 15 - Science Course 15','Auto-seeded lesson 15',45);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (46,'4	DevOps Course 1','Auto-seeded course for 4	DevOps','course-4-1.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (46,'4	DevOps Course 1','Auto-seeded course for 4	DevOps','course-4-1.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (676,'Module 1 - 4	DevOps Course 1','Auto-seeded lesson 1',46);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (677,'Module 2 - 4	DevOps Course 1','Auto-seeded lesson 2',46);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (678,'Module 3 - 4	DevOps Course 1','Auto-seeded lesson 3',46);
@@ -758,7 +758,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (688,'Module 13 - 4	DevOps Course 1','Auto-seeded lesson 13',46);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (689,'Module 14 - 4	DevOps Course 1','Auto-seeded lesson 14',46);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (690,'Module 15 - 4	DevOps Course 1','Auto-seeded lesson 15',46);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (47,'4	DevOps Course 2','Auto-seeded course for 4	DevOps','course-4-2.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (47,'4	DevOps Course 2','Auto-seeded course for 4	DevOps','course-4-2.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (691,'Module 1 - 4	DevOps Course 2','Auto-seeded lesson 1',47);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (692,'Module 2 - 4	DevOps Course 2','Auto-seeded lesson 2',47);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (693,'Module 3 - 4	DevOps Course 2','Auto-seeded lesson 3',47);
@@ -774,7 +774,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (703,'Module 13 - 4	DevOps Course 2','Auto-seeded lesson 13',47);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (704,'Module 14 - 4	DevOps Course 2','Auto-seeded lesson 14',47);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (705,'Module 15 - 4	DevOps Course 2','Auto-seeded lesson 15',47);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (48,'4	DevOps Course 3','Auto-seeded course for 4	DevOps','course-4-3.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (48,'4	DevOps Course 3','Auto-seeded course for 4	DevOps','course-4-3.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (706,'Module 1 - 4	DevOps Course 3','Auto-seeded lesson 1',48);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (707,'Module 2 - 4	DevOps Course 3','Auto-seeded lesson 2',48);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (708,'Module 3 - 4	DevOps Course 3','Auto-seeded lesson 3',48);
@@ -790,7 +790,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (718,'Module 13 - 4	DevOps Course 3','Auto-seeded lesson 13',48);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (719,'Module 14 - 4	DevOps Course 3','Auto-seeded lesson 14',48);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (720,'Module 15 - 4	DevOps Course 3','Auto-seeded lesson 15',48);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (49,'4	DevOps Course 4','Auto-seeded course for 4	DevOps','course-4-4.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (49,'4	DevOps Course 4','Auto-seeded course for 4	DevOps','course-4-4.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (721,'Module 1 - 4	DevOps Course 4','Auto-seeded lesson 1',49);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (722,'Module 2 - 4	DevOps Course 4','Auto-seeded lesson 2',49);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (723,'Module 3 - 4	DevOps Course 4','Auto-seeded lesson 3',49);
@@ -806,7 +806,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (733,'Module 13 - 4	DevOps Course 4','Auto-seeded lesson 13',49);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (734,'Module 14 - 4	DevOps Course 4','Auto-seeded lesson 14',49);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (735,'Module 15 - 4	DevOps Course 4','Auto-seeded lesson 15',49);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (50,'4	DevOps Course 5','Auto-seeded course for 4	DevOps','course-4-5.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (50,'4	DevOps Course 5','Auto-seeded course for 4	DevOps','course-4-5.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (736,'Module 1 - 4	DevOps Course 5','Auto-seeded lesson 1',50);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (737,'Module 2 - 4	DevOps Course 5','Auto-seeded lesson 2',50);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (738,'Module 3 - 4	DevOps Course 5','Auto-seeded lesson 3',50);
@@ -822,7 +822,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (748,'Module 13 - 4	DevOps Course 5','Auto-seeded lesson 13',50);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (749,'Module 14 - 4	DevOps Course 5','Auto-seeded lesson 14',50);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (750,'Module 15 - 4	DevOps Course 5','Auto-seeded lesson 15',50);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (51,'4	DevOps Course 6','Auto-seeded course for 4	DevOps','course-4-6.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (51,'4	DevOps Course 6','Auto-seeded course for 4	DevOps','course-4-6.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (751,'Module 1 - 4	DevOps Course 6','Auto-seeded lesson 1',51);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (752,'Module 2 - 4	DevOps Course 6','Auto-seeded lesson 2',51);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (753,'Module 3 - 4	DevOps Course 6','Auto-seeded lesson 3',51);
@@ -838,7 +838,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (763,'Module 13 - 4	DevOps Course 6','Auto-seeded lesson 13',51);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (764,'Module 14 - 4	DevOps Course 6','Auto-seeded lesson 14',51);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (765,'Module 15 - 4	DevOps Course 6','Auto-seeded lesson 15',51);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (52,'4	DevOps Course 7','Auto-seeded course for 4	DevOps','course-4-7.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (52,'4	DevOps Course 7','Auto-seeded course for 4	DevOps','course-4-7.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (766,'Module 1 - 4	DevOps Course 7','Auto-seeded lesson 1',52);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (767,'Module 2 - 4	DevOps Course 7','Auto-seeded lesson 2',52);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (768,'Module 3 - 4	DevOps Course 7','Auto-seeded lesson 3',52);
@@ -854,7 +854,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (778,'Module 13 - 4	DevOps Course 7','Auto-seeded lesson 13',52);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (779,'Module 14 - 4	DevOps Course 7','Auto-seeded lesson 14',52);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (780,'Module 15 - 4	DevOps Course 7','Auto-seeded lesson 15',52);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (53,'4	DevOps Course 8','Auto-seeded course for 4	DevOps','course-4-8.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (53,'4	DevOps Course 8','Auto-seeded course for 4	DevOps','course-4-8.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (781,'Module 1 - 4	DevOps Course 8','Auto-seeded lesson 1',53);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (782,'Module 2 - 4	DevOps Course 8','Auto-seeded lesson 2',53);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (783,'Module 3 - 4	DevOps Course 8','Auto-seeded lesson 3',53);
@@ -870,7 +870,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (793,'Module 13 - 4	DevOps Course 8','Auto-seeded lesson 13',53);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (794,'Module 14 - 4	DevOps Course 8','Auto-seeded lesson 14',53);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (795,'Module 15 - 4	DevOps Course 8','Auto-seeded lesson 15',53);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (54,'4	DevOps Course 9','Auto-seeded course for 4	DevOps','course-4-9.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (54,'4	DevOps Course 9','Auto-seeded course for 4	DevOps','course-4-9.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (796,'Module 1 - 4	DevOps Course 9','Auto-seeded lesson 1',54);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (797,'Module 2 - 4	DevOps Course 9','Auto-seeded lesson 2',54);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (798,'Module 3 - 4	DevOps Course 9','Auto-seeded lesson 3',54);
@@ -886,7 +886,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (808,'Module 13 - 4	DevOps Course 9','Auto-seeded lesson 13',54);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (809,'Module 14 - 4	DevOps Course 9','Auto-seeded lesson 14',54);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (810,'Module 15 - 4	DevOps Course 9','Auto-seeded lesson 15',54);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (55,'4	DevOps Course 10','Auto-seeded course for 4	DevOps','course-4-10.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (55,'4	DevOps Course 10','Auto-seeded course for 4	DevOps','course-4-10.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (811,'Module 1 - 4	DevOps Course 10','Auto-seeded lesson 1',55);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (812,'Module 2 - 4	DevOps Course 10','Auto-seeded lesson 2',55);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (813,'Module 3 - 4	DevOps Course 10','Auto-seeded lesson 3',55);
@@ -902,7 +902,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (823,'Module 13 - 4	DevOps Course 10','Auto-seeded lesson 13',55);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (824,'Module 14 - 4	DevOps Course 10','Auto-seeded lesson 14',55);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (825,'Module 15 - 4	DevOps Course 10','Auto-seeded lesson 15',55);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (56,'4	DevOps Course 11','Auto-seeded course for 4	DevOps','course-4-11.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (56,'4	DevOps Course 11','Auto-seeded course for 4	DevOps','course-4-11.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (826,'Module 1 - 4	DevOps Course 11','Auto-seeded lesson 1',56);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (827,'Module 2 - 4	DevOps Course 11','Auto-seeded lesson 2',56);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (828,'Module 3 - 4	DevOps Course 11','Auto-seeded lesson 3',56);
@@ -918,7 +918,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (838,'Module 13 - 4	DevOps Course 11','Auto-seeded lesson 13',56);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (839,'Module 14 - 4	DevOps Course 11','Auto-seeded lesson 14',56);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (840,'Module 15 - 4	DevOps Course 11','Auto-seeded lesson 15',56);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (57,'4	DevOps Course 12','Auto-seeded course for 4	DevOps','course-4-12.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (57,'4	DevOps Course 12','Auto-seeded course for 4	DevOps','course-4-12.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (841,'Module 1 - 4	DevOps Course 12','Auto-seeded lesson 1',57);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (842,'Module 2 - 4	DevOps Course 12','Auto-seeded lesson 2',57);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (843,'Module 3 - 4	DevOps Course 12','Auto-seeded lesson 3',57);
@@ -934,7 +934,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (853,'Module 13 - 4	DevOps Course 12','Auto-seeded lesson 13',57);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (854,'Module 14 - 4	DevOps Course 12','Auto-seeded lesson 14',57);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (855,'Module 15 - 4	DevOps Course 12','Auto-seeded lesson 15',57);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (58,'4	DevOps Course 13','Auto-seeded course for 4	DevOps','course-4-13.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (58,'4	DevOps Course 13','Auto-seeded course for 4	DevOps','course-4-13.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (856,'Module 1 - 4	DevOps Course 13','Auto-seeded lesson 1',58);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (857,'Module 2 - 4	DevOps Course 13','Auto-seeded lesson 2',58);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (858,'Module 3 - 4	DevOps Course 13','Auto-seeded lesson 3',58);
@@ -950,7 +950,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (868,'Module 13 - 4	DevOps Course 13','Auto-seeded lesson 13',58);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (869,'Module 14 - 4	DevOps Course 13','Auto-seeded lesson 14',58);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (870,'Module 15 - 4	DevOps Course 13','Auto-seeded lesson 15',58);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (59,'4	DevOps Course 14','Auto-seeded course for 4	DevOps','course-4-14.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (59,'4	DevOps Course 14','Auto-seeded course for 4	DevOps','course-4-14.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (871,'Module 1 - 4	DevOps Course 14','Auto-seeded lesson 1',59);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (872,'Module 2 - 4	DevOps Course 14','Auto-seeded lesson 2',59);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (873,'Module 3 - 4	DevOps Course 14','Auto-seeded lesson 3',59);
@@ -966,7 +966,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (883,'Module 13 - 4	DevOps Course 14','Auto-seeded lesson 13',59);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (884,'Module 14 - 4	DevOps Course 14','Auto-seeded lesson 14',59);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (885,'Module 15 - 4	DevOps Course 14','Auto-seeded lesson 15',59);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (60,'4	DevOps Course 15','Auto-seeded course for 4	DevOps','course-4-15.jpg',0,'Fayen',4);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (60,'4	DevOps Course 15','Auto-seeded course for 4	DevOps','course-4-15.jpg',0,'CloudHub',4);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (886,'Module 1 - 4	DevOps Course 15','Auto-seeded lesson 1',60);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (887,'Module 2 - 4	DevOps Course 15','Auto-seeded lesson 2',60);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (888,'Module 3 - 4	DevOps Course 15','Auto-seeded lesson 3',60);
@@ -982,7 +982,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (898,'Module 13 - 4	DevOps Course 15','Auto-seeded lesson 13',60);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (899,'Module 14 - 4	DevOps Course 15','Auto-seeded lesson 14',60);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (900,'Module 15 - 4	DevOps Course 15','Auto-seeded lesson 15',60);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (61,'5	ai Course 1','Auto-seeded course for 5	ai','course-5-1.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (61,'5	ai Course 1','Auto-seeded course for 5	ai','course-5-1.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (901,'Module 1 - 5	ai Course 1','Auto-seeded lesson 1',61);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (902,'Module 2 - 5	ai Course 1','Auto-seeded lesson 2',61);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (903,'Module 3 - 5	ai Course 1','Auto-seeded lesson 3',61);
@@ -998,7 +998,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (913,'Module 13 - 5	ai Course 1','Auto-seeded lesson 13',61);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (914,'Module 14 - 5	ai Course 1','Auto-seeded lesson 14',61);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (915,'Module 15 - 5	ai Course 1','Auto-seeded lesson 15',61);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (62,'5	ai Course 2','Auto-seeded course for 5	ai','course-5-2.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (62,'5	ai Course 2','Auto-seeded course for 5	ai','course-5-2.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (916,'Module 1 - 5	ai Course 2','Auto-seeded lesson 1',62);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (917,'Module 2 - 5	ai Course 2','Auto-seeded lesson 2',62);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (918,'Module 3 - 5	ai Course 2','Auto-seeded lesson 3',62);
@@ -1014,7 +1014,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (928,'Module 13 - 5	ai Course 2','Auto-seeded lesson 13',62);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (929,'Module 14 - 5	ai Course 2','Auto-seeded lesson 14',62);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (930,'Module 15 - 5	ai Course 2','Auto-seeded lesson 15',62);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (63,'5	ai Course 3','Auto-seeded course for 5	ai','course-5-3.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (63,'5	ai Course 3','Auto-seeded course for 5	ai','course-5-3.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (931,'Module 1 - 5	ai Course 3','Auto-seeded lesson 1',63);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (932,'Module 2 - 5	ai Course 3','Auto-seeded lesson 2',63);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (933,'Module 3 - 5	ai Course 3','Auto-seeded lesson 3',63);
@@ -1030,7 +1030,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (943,'Module 13 - 5	ai Course 3','Auto-seeded lesson 13',63);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (944,'Module 14 - 5	ai Course 3','Auto-seeded lesson 14',63);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (945,'Module 15 - 5	ai Course 3','Auto-seeded lesson 15',63);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (64,'5	ai Course 4','Auto-seeded course for 5	ai','course-5-4.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (64,'5	ai Course 4','Auto-seeded course for 5	ai','course-5-4.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (946,'Module 1 - 5	ai Course 4','Auto-seeded lesson 1',64);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (947,'Module 2 - 5	ai Course 4','Auto-seeded lesson 2',64);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (948,'Module 3 - 5	ai Course 4','Auto-seeded lesson 3',64);
@@ -1046,7 +1046,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (958,'Module 13 - 5	ai Course 4','Auto-seeded lesson 13',64);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (959,'Module 14 - 5	ai Course 4','Auto-seeded lesson 14',64);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (960,'Module 15 - 5	ai Course 4','Auto-seeded lesson 15',64);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (65,'5	ai Course 5','Auto-seeded course for 5	ai','course-5-5.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (65,'5	ai Course 5','Auto-seeded course for 5	ai','course-5-5.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (961,'Module 1 - 5	ai Course 5','Auto-seeded lesson 1',65);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (962,'Module 2 - 5	ai Course 5','Auto-seeded lesson 2',65);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (963,'Module 3 - 5	ai Course 5','Auto-seeded lesson 3',65);
@@ -1062,7 +1062,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (973,'Module 13 - 5	ai Course 5','Auto-seeded lesson 13',65);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (974,'Module 14 - 5	ai Course 5','Auto-seeded lesson 14',65);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (975,'Module 15 - 5	ai Course 5','Auto-seeded lesson 15',65);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (66,'5	ai Course 6','Auto-seeded course for 5	ai','course-5-6.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (66,'5	ai Course 6','Auto-seeded course for 5	ai','course-5-6.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (976,'Module 1 - 5	ai Course 6','Auto-seeded lesson 1',66);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (977,'Module 2 - 5	ai Course 6','Auto-seeded lesson 2',66);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (978,'Module 3 - 5	ai Course 6','Auto-seeded lesson 3',66);
@@ -1078,7 +1078,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (988,'Module 13 - 5	ai Course 6','Auto-seeded lesson 13',66);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (989,'Module 14 - 5	ai Course 6','Auto-seeded lesson 14',66);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (990,'Module 15 - 5	ai Course 6','Auto-seeded lesson 15',66);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (67,'5	ai Course 7','Auto-seeded course for 5	ai','course-5-7.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (67,'5	ai Course 7','Auto-seeded course for 5	ai','course-5-7.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (991,'Module 1 - 5	ai Course 7','Auto-seeded lesson 1',67);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (992,'Module 2 - 5	ai Course 7','Auto-seeded lesson 2',67);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (993,'Module 3 - 5	ai Course 7','Auto-seeded lesson 3',67);
@@ -1094,7 +1094,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1003,'Module 13 - 5	ai Course 7','Auto-seeded lesson 13',67);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1004,'Module 14 - 5	ai Course 7','Auto-seeded lesson 14',67);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1005,'Module 15 - 5	ai Course 7','Auto-seeded lesson 15',67);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (68,'5	ai Course 8','Auto-seeded course for 5	ai','course-5-8.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (68,'5	ai Course 8','Auto-seeded course for 5	ai','course-5-8.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1006,'Module 1 - 5	ai Course 8','Auto-seeded lesson 1',68);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1007,'Module 2 - 5	ai Course 8','Auto-seeded lesson 2',68);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1008,'Module 3 - 5	ai Course 8','Auto-seeded lesson 3',68);
@@ -1110,7 +1110,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1018,'Module 13 - 5	ai Course 8','Auto-seeded lesson 13',68);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1019,'Module 14 - 5	ai Course 8','Auto-seeded lesson 14',68);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1020,'Module 15 - 5	ai Course 8','Auto-seeded lesson 15',68);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (69,'5	ai Course 9','Auto-seeded course for 5	ai','course-5-9.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (69,'5	ai Course 9','Auto-seeded course for 5	ai','course-5-9.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1021,'Module 1 - 5	ai Course 9','Auto-seeded lesson 1',69);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1022,'Module 2 - 5	ai Course 9','Auto-seeded lesson 2',69);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1023,'Module 3 - 5	ai Course 9','Auto-seeded lesson 3',69);
@@ -1126,7 +1126,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1033,'Module 13 - 5	ai Course 9','Auto-seeded lesson 13',69);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1034,'Module 14 - 5	ai Course 9','Auto-seeded lesson 14',69);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1035,'Module 15 - 5	ai Course 9','Auto-seeded lesson 15',69);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (70,'5	ai Course 10','Auto-seeded course for 5	ai','course-5-10.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (70,'5	ai Course 10','Auto-seeded course for 5	ai','course-5-10.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1036,'Module 1 - 5	ai Course 10','Auto-seeded lesson 1',70);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1037,'Module 2 - 5	ai Course 10','Auto-seeded lesson 2',70);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1038,'Module 3 - 5	ai Course 10','Auto-seeded lesson 3',70);
@@ -1142,7 +1142,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1048,'Module 13 - 5	ai Course 10','Auto-seeded lesson 13',70);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1049,'Module 14 - 5	ai Course 10','Auto-seeded lesson 14',70);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1050,'Module 15 - 5	ai Course 10','Auto-seeded lesson 15',70);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (71,'5	ai Course 11','Auto-seeded course for 5	ai','course-5-11.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (71,'5	ai Course 11','Auto-seeded course for 5	ai','course-5-11.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1051,'Module 1 - 5	ai Course 11','Auto-seeded lesson 1',71);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1052,'Module 2 - 5	ai Course 11','Auto-seeded lesson 2',71);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1053,'Module 3 - 5	ai Course 11','Auto-seeded lesson 3',71);
@@ -1158,7 +1158,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1063,'Module 13 - 5	ai Course 11','Auto-seeded lesson 13',71);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1064,'Module 14 - 5	ai Course 11','Auto-seeded lesson 14',71);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1065,'Module 15 - 5	ai Course 11','Auto-seeded lesson 15',71);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (72,'5	ai Course 12','Auto-seeded course for 5	ai','course-5-12.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (72,'5	ai Course 12','Auto-seeded course for 5	ai','course-5-12.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1066,'Module 1 - 5	ai Course 12','Auto-seeded lesson 1',72);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1067,'Module 2 - 5	ai Course 12','Auto-seeded lesson 2',72);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1068,'Module 3 - 5	ai Course 12','Auto-seeded lesson 3',72);
@@ -1174,7 +1174,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1078,'Module 13 - 5	ai Course 12','Auto-seeded lesson 13',72);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1079,'Module 14 - 5	ai Course 12','Auto-seeded lesson 14',72);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1080,'Module 15 - 5	ai Course 12','Auto-seeded lesson 15',72);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (73,'5	ai Course 13','Auto-seeded course for 5	ai','course-5-13.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (73,'5	ai Course 13','Auto-seeded course for 5	ai','course-5-13.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1081,'Module 1 - 5	ai Course 13','Auto-seeded lesson 1',73);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1082,'Module 2 - 5	ai Course 13','Auto-seeded lesson 2',73);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1083,'Module 3 - 5	ai Course 13','Auto-seeded lesson 3',73);
@@ -1190,7 +1190,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1093,'Module 13 - 5	ai Course 13','Auto-seeded lesson 13',73);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1094,'Module 14 - 5	ai Course 13','Auto-seeded lesson 14',73);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1095,'Module 15 - 5	ai Course 13','Auto-seeded lesson 15',73);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (74,'5	ai Course 14','Auto-seeded course for 5	ai','course-5-14.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (74,'5	ai Course 14','Auto-seeded course for 5	ai','course-5-14.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1096,'Module 1 - 5	ai Course 14','Auto-seeded lesson 1',74);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1097,'Module 2 - 5	ai Course 14','Auto-seeded lesson 2',74);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1098,'Module 3 - 5	ai Course 14','Auto-seeded lesson 3',74);
@@ -1206,7 +1206,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1108,'Module 13 - 5	ai Course 14','Auto-seeded lesson 13',74);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1109,'Module 14 - 5	ai Course 14','Auto-seeded lesson 14',74);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1110,'Module 15 - 5	ai Course 14','Auto-seeded lesson 15',74);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (75,'5	ai Course 15','Auto-seeded course for 5	ai','course-5-15.jpg',0,'Fayen',5);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (75,'5	ai Course 15','Auto-seeded course for 5	ai','course-5-15.jpg',0,'CloudHub',5);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1111,'Module 1 - 5	ai Course 15','Auto-seeded lesson 1',75);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1112,'Module 2 - 5	ai Course 15','Auto-seeded lesson 2',75);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1113,'Module 3 - 5	ai Course 15','Auto-seeded lesson 3',75);
@@ -1222,7 +1222,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1123,'Module 13 - 5	ai Course 15','Auto-seeded lesson 13',75);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1124,'Module 14 - 5	ai Course 15','Auto-seeded lesson 14',75);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1125,'Module 15 - 5	ai Course 15','Auto-seeded lesson 15',75);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (76,'6	networking Course 1','Auto-seeded course for 6	networking','course-6-1.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (76,'6	networking Course 1','Auto-seeded course for 6	networking','course-6-1.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1126,'Module 1 - 6	networking Course 1','Auto-seeded lesson 1',76);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1127,'Module 2 - 6	networking Course 1','Auto-seeded lesson 2',76);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1128,'Module 3 - 6	networking Course 1','Auto-seeded lesson 3',76);
@@ -1238,7 +1238,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1138,'Module 13 - 6	networking Course 1','Auto-seeded lesson 13',76);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1139,'Module 14 - 6	networking Course 1','Auto-seeded lesson 14',76);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1140,'Module 15 - 6	networking Course 1','Auto-seeded lesson 15',76);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (77,'6	networking Course 2','Auto-seeded course for 6	networking','course-6-2.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (77,'6	networking Course 2','Auto-seeded course for 6	networking','course-6-2.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1141,'Module 1 - 6	networking Course 2','Auto-seeded lesson 1',77);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1142,'Module 2 - 6	networking Course 2','Auto-seeded lesson 2',77);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1143,'Module 3 - 6	networking Course 2','Auto-seeded lesson 3',77);
@@ -1254,7 +1254,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1153,'Module 13 - 6	networking Course 2','Auto-seeded lesson 13',77);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1154,'Module 14 - 6	networking Course 2','Auto-seeded lesson 14',77);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1155,'Module 15 - 6	networking Course 2','Auto-seeded lesson 15',77);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (78,'6	networking Course 3','Auto-seeded course for 6	networking','course-6-3.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (78,'6	networking Course 3','Auto-seeded course for 6	networking','course-6-3.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1156,'Module 1 - 6	networking Course 3','Auto-seeded lesson 1',78);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1157,'Module 2 - 6	networking Course 3','Auto-seeded lesson 2',78);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1158,'Module 3 - 6	networking Course 3','Auto-seeded lesson 3',78);
@@ -1270,7 +1270,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1168,'Module 13 - 6	networking Course 3','Auto-seeded lesson 13',78);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1169,'Module 14 - 6	networking Course 3','Auto-seeded lesson 14',78);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1170,'Module 15 - 6	networking Course 3','Auto-seeded lesson 15',78);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (79,'6	networking Course 4','Auto-seeded course for 6	networking','course-6-4.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (79,'6	networking Course 4','Auto-seeded course for 6	networking','course-6-4.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1171,'Module 1 - 6	networking Course 4','Auto-seeded lesson 1',79);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1172,'Module 2 - 6	networking Course 4','Auto-seeded lesson 2',79);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1173,'Module 3 - 6	networking Course 4','Auto-seeded lesson 3',79);
@@ -1286,7 +1286,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1183,'Module 13 - 6	networking Course 4','Auto-seeded lesson 13',79);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1184,'Module 14 - 6	networking Course 4','Auto-seeded lesson 14',79);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1185,'Module 15 - 6	networking Course 4','Auto-seeded lesson 15',79);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (80,'6	networking Course 5','Auto-seeded course for 6	networking','course-6-5.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (80,'6	networking Course 5','Auto-seeded course for 6	networking','course-6-5.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1186,'Module 1 - 6	networking Course 5','Auto-seeded lesson 1',80);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1187,'Module 2 - 6	networking Course 5','Auto-seeded lesson 2',80);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1188,'Module 3 - 6	networking Course 5','Auto-seeded lesson 3',80);
@@ -1302,7 +1302,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1198,'Module 13 - 6	networking Course 5','Auto-seeded lesson 13',80);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1199,'Module 14 - 6	networking Course 5','Auto-seeded lesson 14',80);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1200,'Module 15 - 6	networking Course 5','Auto-seeded lesson 15',80);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (81,'6	networking Course 6','Auto-seeded course for 6	networking','course-6-6.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (81,'6	networking Course 6','Auto-seeded course for 6	networking','course-6-6.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1201,'Module 1 - 6	networking Course 6','Auto-seeded lesson 1',81);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1202,'Module 2 - 6	networking Course 6','Auto-seeded lesson 2',81);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1203,'Module 3 - 6	networking Course 6','Auto-seeded lesson 3',81);
@@ -1318,7 +1318,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1213,'Module 13 - 6	networking Course 6','Auto-seeded lesson 13',81);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1214,'Module 14 - 6	networking Course 6','Auto-seeded lesson 14',81);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1215,'Module 15 - 6	networking Course 6','Auto-seeded lesson 15',81);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (82,'6	networking Course 7','Auto-seeded course for 6	networking','course-6-7.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (82,'6	networking Course 7','Auto-seeded course for 6	networking','course-6-7.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1216,'Module 1 - 6	networking Course 7','Auto-seeded lesson 1',82);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1217,'Module 2 - 6	networking Course 7','Auto-seeded lesson 2',82);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1218,'Module 3 - 6	networking Course 7','Auto-seeded lesson 3',82);
@@ -1334,7 +1334,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1228,'Module 13 - 6	networking Course 7','Auto-seeded lesson 13',82);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1229,'Module 14 - 6	networking Course 7','Auto-seeded lesson 14',82);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1230,'Module 15 - 6	networking Course 7','Auto-seeded lesson 15',82);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (83,'6	networking Course 8','Auto-seeded course for 6	networking','course-6-8.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (83,'6	networking Course 8','Auto-seeded course for 6	networking','course-6-8.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1231,'Module 1 - 6	networking Course 8','Auto-seeded lesson 1',83);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1232,'Module 2 - 6	networking Course 8','Auto-seeded lesson 2',83);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1233,'Module 3 - 6	networking Course 8','Auto-seeded lesson 3',83);
@@ -1350,7 +1350,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1243,'Module 13 - 6	networking Course 8','Auto-seeded lesson 13',83);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1244,'Module 14 - 6	networking Course 8','Auto-seeded lesson 14',83);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1245,'Module 15 - 6	networking Course 8','Auto-seeded lesson 15',83);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (84,'6	networking Course 9','Auto-seeded course for 6	networking','course-6-9.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (84,'6	networking Course 9','Auto-seeded course for 6	networking','course-6-9.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1246,'Module 1 - 6	networking Course 9','Auto-seeded lesson 1',84);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1247,'Module 2 - 6	networking Course 9','Auto-seeded lesson 2',84);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1248,'Module 3 - 6	networking Course 9','Auto-seeded lesson 3',84);
@@ -1366,7 +1366,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1258,'Module 13 - 6	networking Course 9','Auto-seeded lesson 13',84);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1259,'Module 14 - 6	networking Course 9','Auto-seeded lesson 14',84);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1260,'Module 15 - 6	networking Course 9','Auto-seeded lesson 15',84);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (85,'6	networking Course 10','Auto-seeded course for 6	networking','course-6-10.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (85,'6	networking Course 10','Auto-seeded course for 6	networking','course-6-10.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1261,'Module 1 - 6	networking Course 10','Auto-seeded lesson 1',85);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1262,'Module 2 - 6	networking Course 10','Auto-seeded lesson 2',85);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1263,'Module 3 - 6	networking Course 10','Auto-seeded lesson 3',85);
@@ -1382,7 +1382,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1273,'Module 13 - 6	networking Course 10','Auto-seeded lesson 13',85);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1274,'Module 14 - 6	networking Course 10','Auto-seeded lesson 14',85);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1275,'Module 15 - 6	networking Course 10','Auto-seeded lesson 15',85);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (86,'6	networking Course 11','Auto-seeded course for 6	networking','course-6-11.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (86,'6	networking Course 11','Auto-seeded course for 6	networking','course-6-11.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1276,'Module 1 - 6	networking Course 11','Auto-seeded lesson 1',86);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1277,'Module 2 - 6	networking Course 11','Auto-seeded lesson 2',86);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1278,'Module 3 - 6	networking Course 11','Auto-seeded lesson 3',86);
@@ -1398,7 +1398,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1288,'Module 13 - 6	networking Course 11','Auto-seeded lesson 13',86);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1289,'Module 14 - 6	networking Course 11','Auto-seeded lesson 14',86);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1290,'Module 15 - 6	networking Course 11','Auto-seeded lesson 15',86);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (87,'6	networking Course 12','Auto-seeded course for 6	networking','course-6-12.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (87,'6	networking Course 12','Auto-seeded course for 6	networking','course-6-12.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1291,'Module 1 - 6	networking Course 12','Auto-seeded lesson 1',87);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1292,'Module 2 - 6	networking Course 12','Auto-seeded lesson 2',87);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1293,'Module 3 - 6	networking Course 12','Auto-seeded lesson 3',87);
@@ -1414,7 +1414,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1303,'Module 13 - 6	networking Course 12','Auto-seeded lesson 13',87);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1304,'Module 14 - 6	networking Course 12','Auto-seeded lesson 14',87);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1305,'Module 15 - 6	networking Course 12','Auto-seeded lesson 15',87);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (88,'6	networking Course 13','Auto-seeded course for 6	networking','course-6-13.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (88,'6	networking Course 13','Auto-seeded course for 6	networking','course-6-13.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1306,'Module 1 - 6	networking Course 13','Auto-seeded lesson 1',88);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1307,'Module 2 - 6	networking Course 13','Auto-seeded lesson 2',88);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1308,'Module 3 - 6	networking Course 13','Auto-seeded lesson 3',88);
@@ -1430,7 +1430,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1318,'Module 13 - 6	networking Course 13','Auto-seeded lesson 13',88);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1319,'Module 14 - 6	networking Course 13','Auto-seeded lesson 14',88);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1320,'Module 15 - 6	networking Course 13','Auto-seeded lesson 15',88);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (89,'6	networking Course 14','Auto-seeded course for 6	networking','course-6-14.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (89,'6	networking Course 14','Auto-seeded course for 6	networking','course-6-14.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1321,'Module 1 - 6	networking Course 14','Auto-seeded lesson 1',89);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1322,'Module 2 - 6	networking Course 14','Auto-seeded lesson 2',89);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1323,'Module 3 - 6	networking Course 14','Auto-seeded lesson 3',89);
@@ -1446,7 +1446,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1333,'Module 13 - 6	networking Course 14','Auto-seeded lesson 13',89);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1334,'Module 14 - 6	networking Course 14','Auto-seeded lesson 14',89);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1335,'Module 15 - 6	networking Course 14','Auto-seeded lesson 15',89);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (90,'6	networking Course 15','Auto-seeded course for 6	networking','course-6-15.jpg',0,'Fayen',6);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (90,'6	networking Course 15','Auto-seeded course for 6	networking','course-6-15.jpg',0,'CloudHub',6);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1336,'Module 1 - 6	networking Course 15','Auto-seeded lesson 1',90);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1337,'Module 2 - 6	networking Course 15','Auto-seeded lesson 2',90);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1338,'Module 3 - 6	networking Course 15','Auto-seeded lesson 3',90);
@@ -1462,7 +1462,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1348,'Module 13 - 6	networking Course 15','Auto-seeded lesson 13',90);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1349,'Module 14 - 6	networking Course 15','Auto-seeded lesson 14',90);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1350,'Module 15 - 6	networking Course 15','Auto-seeded lesson 15',90);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (91,'7	operating Course 1','Auto-seeded course for 7	operating','course-7-1.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (91,'7	operating Course 1','Auto-seeded course for 7	operating','course-7-1.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1351,'Module 1 - 7	operating Course 1','Auto-seeded lesson 1',91);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1352,'Module 2 - 7	operating Course 1','Auto-seeded lesson 2',91);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1353,'Module 3 - 7	operating Course 1','Auto-seeded lesson 3',91);
@@ -1478,7 +1478,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1363,'Module 13 - 7	operating Course 1','Auto-seeded lesson 13',91);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1364,'Module 14 - 7	operating Course 1','Auto-seeded lesson 14',91);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1365,'Module 15 - 7	operating Course 1','Auto-seeded lesson 15',91);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (92,'7	operating Course 2','Auto-seeded course for 7	operating','course-7-2.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (92,'7	operating Course 2','Auto-seeded course for 7	operating','course-7-2.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1366,'Module 1 - 7	operating Course 2','Auto-seeded lesson 1',92);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1367,'Module 2 - 7	operating Course 2','Auto-seeded lesson 2',92);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1368,'Module 3 - 7	operating Course 2','Auto-seeded lesson 3',92);
@@ -1494,7 +1494,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1378,'Module 13 - 7	operating Course 2','Auto-seeded lesson 13',92);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1379,'Module 14 - 7	operating Course 2','Auto-seeded lesson 14',92);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1380,'Module 15 - 7	operating Course 2','Auto-seeded lesson 15',92);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (93,'7	operating Course 3','Auto-seeded course for 7	operating','course-7-3.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (93,'7	operating Course 3','Auto-seeded course for 7	operating','course-7-3.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1381,'Module 1 - 7	operating Course 3','Auto-seeded lesson 1',93);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1382,'Module 2 - 7	operating Course 3','Auto-seeded lesson 2',93);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1383,'Module 3 - 7	operating Course 3','Auto-seeded lesson 3',93);
@@ -1510,7 +1510,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1393,'Module 13 - 7	operating Course 3','Auto-seeded lesson 13',93);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1394,'Module 14 - 7	operating Course 3','Auto-seeded lesson 14',93);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1395,'Module 15 - 7	operating Course 3','Auto-seeded lesson 15',93);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (94,'7	operating Course 4','Auto-seeded course for 7	operating','course-7-4.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (94,'7	operating Course 4','Auto-seeded course for 7	operating','course-7-4.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1396,'Module 1 - 7	operating Course 4','Auto-seeded lesson 1',94);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1397,'Module 2 - 7	operating Course 4','Auto-seeded lesson 2',94);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1398,'Module 3 - 7	operating Course 4','Auto-seeded lesson 3',94);
@@ -1526,7 +1526,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1408,'Module 13 - 7	operating Course 4','Auto-seeded lesson 13',94);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1409,'Module 14 - 7	operating Course 4','Auto-seeded lesson 14',94);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1410,'Module 15 - 7	operating Course 4','Auto-seeded lesson 15',94);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (95,'7	operating Course 5','Auto-seeded course for 7	operating','course-7-5.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (95,'7	operating Course 5','Auto-seeded course for 7	operating','course-7-5.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1411,'Module 1 - 7	operating Course 5','Auto-seeded lesson 1',95);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1412,'Module 2 - 7	operating Course 5','Auto-seeded lesson 2',95);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1413,'Module 3 - 7	operating Course 5','Auto-seeded lesson 3',95);
@@ -1542,7 +1542,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1423,'Module 13 - 7	operating Course 5','Auto-seeded lesson 13',95);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1424,'Module 14 - 7	operating Course 5','Auto-seeded lesson 14',95);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1425,'Module 15 - 7	operating Course 5','Auto-seeded lesson 15',95);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (96,'7	operating Course 6','Auto-seeded course for 7	operating','course-7-6.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (96,'7	operating Course 6','Auto-seeded course for 7	operating','course-7-6.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1426,'Module 1 - 7	operating Course 6','Auto-seeded lesson 1',96);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1427,'Module 2 - 7	operating Course 6','Auto-seeded lesson 2',96);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1428,'Module 3 - 7	operating Course 6','Auto-seeded lesson 3',96);
@@ -1558,7 +1558,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1438,'Module 13 - 7	operating Course 6','Auto-seeded lesson 13',96);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1439,'Module 14 - 7	operating Course 6','Auto-seeded lesson 14',96);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1440,'Module 15 - 7	operating Course 6','Auto-seeded lesson 15',96);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (97,'7	operating Course 7','Auto-seeded course for 7	operating','course-7-7.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (97,'7	operating Course 7','Auto-seeded course for 7	operating','course-7-7.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1441,'Module 1 - 7	operating Course 7','Auto-seeded lesson 1',97);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1442,'Module 2 - 7	operating Course 7','Auto-seeded lesson 2',97);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1443,'Module 3 - 7	operating Course 7','Auto-seeded lesson 3',97);
@@ -1574,7 +1574,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1453,'Module 13 - 7	operating Course 7','Auto-seeded lesson 13',97);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1454,'Module 14 - 7	operating Course 7','Auto-seeded lesson 14',97);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1455,'Module 15 - 7	operating Course 7','Auto-seeded lesson 15',97);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (98,'7	operating Course 8','Auto-seeded course for 7	operating','course-7-8.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (98,'7	operating Course 8','Auto-seeded course for 7	operating','course-7-8.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1456,'Module 1 - 7	operating Course 8','Auto-seeded lesson 1',98);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1457,'Module 2 - 7	operating Course 8','Auto-seeded lesson 2',98);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1458,'Module 3 - 7	operating Course 8','Auto-seeded lesson 3',98);
@@ -1590,7 +1590,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1468,'Module 13 - 7	operating Course 8','Auto-seeded lesson 13',98);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1469,'Module 14 - 7	operating Course 8','Auto-seeded lesson 14',98);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1470,'Module 15 - 7	operating Course 8','Auto-seeded lesson 15',98);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (99,'7	operating Course 9','Auto-seeded course for 7	operating','course-7-9.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (99,'7	operating Course 9','Auto-seeded course for 7	operating','course-7-9.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1471,'Module 1 - 7	operating Course 9','Auto-seeded lesson 1',99);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1472,'Module 2 - 7	operating Course 9','Auto-seeded lesson 2',99);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1473,'Module 3 - 7	operating Course 9','Auto-seeded lesson 3',99);
@@ -1606,7 +1606,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1483,'Module 13 - 7	operating Course 9','Auto-seeded lesson 13',99);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1484,'Module 14 - 7	operating Course 9','Auto-seeded lesson 14',99);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1485,'Module 15 - 7	operating Course 9','Auto-seeded lesson 15',99);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (100,'7	operating Course 10','Auto-seeded course for 7	operating','course-7-10.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (100,'7	operating Course 10','Auto-seeded course for 7	operating','course-7-10.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1486,'Module 1 - 7	operating Course 10','Auto-seeded lesson 1',100);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1487,'Module 2 - 7	operating Course 10','Auto-seeded lesson 2',100);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1488,'Module 3 - 7	operating Course 10','Auto-seeded lesson 3',100);
@@ -1622,7 +1622,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1498,'Module 13 - 7	operating Course 10','Auto-seeded lesson 13',100);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1499,'Module 14 - 7	operating Course 10','Auto-seeded lesson 14',100);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1500,'Module 15 - 7	operating Course 10','Auto-seeded lesson 15',100);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (101,'7	operating Course 11','Auto-seeded course for 7	operating','course-7-11.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (101,'7	operating Course 11','Auto-seeded course for 7	operating','course-7-11.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1501,'Module 1 - 7	operating Course 11','Auto-seeded lesson 1',101);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1502,'Module 2 - 7	operating Course 11','Auto-seeded lesson 2',101);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1503,'Module 3 - 7	operating Course 11','Auto-seeded lesson 3',101);
@@ -1638,7 +1638,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1513,'Module 13 - 7	operating Course 11','Auto-seeded lesson 13',101);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1514,'Module 14 - 7	operating Course 11','Auto-seeded lesson 14',101);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1515,'Module 15 - 7	operating Course 11','Auto-seeded lesson 15',101);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (102,'7	operating Course 12','Auto-seeded course for 7	operating','course-7-12.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (102,'7	operating Course 12','Auto-seeded course for 7	operating','course-7-12.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1516,'Module 1 - 7	operating Course 12','Auto-seeded lesson 1',102);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1517,'Module 2 - 7	operating Course 12','Auto-seeded lesson 2',102);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1518,'Module 3 - 7	operating Course 12','Auto-seeded lesson 3',102);
@@ -1654,7 +1654,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1528,'Module 13 - 7	operating Course 12','Auto-seeded lesson 13',102);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1529,'Module 14 - 7	operating Course 12','Auto-seeded lesson 14',102);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1530,'Module 15 - 7	operating Course 12','Auto-seeded lesson 15',102);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (103,'7	operating Course 13','Auto-seeded course for 7	operating','course-7-13.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (103,'7	operating Course 13','Auto-seeded course for 7	operating','course-7-13.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1531,'Module 1 - 7	operating Course 13','Auto-seeded lesson 1',103);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1532,'Module 2 - 7	operating Course 13','Auto-seeded lesson 2',103);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1533,'Module 3 - 7	operating Course 13','Auto-seeded lesson 3',103);
@@ -1670,7 +1670,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1543,'Module 13 - 7	operating Course 13','Auto-seeded lesson 13',103);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1544,'Module 14 - 7	operating Course 13','Auto-seeded lesson 14',103);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1545,'Module 15 - 7	operating Course 13','Auto-seeded lesson 15',103);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (104,'7	operating Course 14','Auto-seeded course for 7	operating','course-7-14.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (104,'7	operating Course 14','Auto-seeded course for 7	operating','course-7-14.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1546,'Module 1 - 7	operating Course 14','Auto-seeded lesson 1',104);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1547,'Module 2 - 7	operating Course 14','Auto-seeded lesson 2',104);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1548,'Module 3 - 7	operating Course 14','Auto-seeded lesson 3',104);
@@ -1686,7 +1686,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1558,'Module 13 - 7	operating Course 14','Auto-seeded lesson 13',104);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1559,'Module 14 - 7	operating Course 14','Auto-seeded lesson 14',104);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1560,'Module 15 - 7	operating Course 14','Auto-seeded lesson 15',104);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (105,'7	operating Course 15','Auto-seeded course for 7	operating','course-7-15.jpg',0,'Fayen',7);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (105,'7	operating Course 15','Auto-seeded course for 7	operating','course-7-15.jpg',0,'CloudHub',7);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1561,'Module 1 - 7	operating Course 15','Auto-seeded lesson 1',105);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1562,'Module 2 - 7	operating Course 15','Auto-seeded lesson 2',105);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1563,'Module 3 - 7	operating Course 15','Auto-seeded lesson 3',105);
@@ -1702,7 +1702,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1573,'Module 13 - 7	operating Course 15','Auto-seeded lesson 13',105);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1574,'Module 14 - 7	operating Course 15','Auto-seeded lesson 14',105);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1575,'Module 15 - 7	operating Course 15','Auto-seeded lesson 15',105);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (106,'8	programming Course 1','Auto-seeded course for 8	programming','course-8-1.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (106,'8	programming Course 1','Auto-seeded course for 8	programming','course-8-1.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1576,'Module 1 - 8	programming Course 1','Auto-seeded lesson 1',106);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1577,'Module 2 - 8	programming Course 1','Auto-seeded lesson 2',106);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1578,'Module 3 - 8	programming Course 1','Auto-seeded lesson 3',106);
@@ -1718,7 +1718,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1588,'Module 13 - 8	programming Course 1','Auto-seeded lesson 13',106);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1589,'Module 14 - 8	programming Course 1','Auto-seeded lesson 14',106);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1590,'Module 15 - 8	programming Course 1','Auto-seeded lesson 15',106);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (107,'8	programming Course 2','Auto-seeded course for 8	programming','course-8-2.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (107,'8	programming Course 2','Auto-seeded course for 8	programming','course-8-2.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1591,'Module 1 - 8	programming Course 2','Auto-seeded lesson 1',107);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1592,'Module 2 - 8	programming Course 2','Auto-seeded lesson 2',107);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1593,'Module 3 - 8	programming Course 2','Auto-seeded lesson 3',107);
@@ -1734,7 +1734,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1603,'Module 13 - 8	programming Course 2','Auto-seeded lesson 13',107);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1604,'Module 14 - 8	programming Course 2','Auto-seeded lesson 14',107);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1605,'Module 15 - 8	programming Course 2','Auto-seeded lesson 15',107);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (108,'8	programming Course 3','Auto-seeded course for 8	programming','course-8-3.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (108,'8	programming Course 3','Auto-seeded course for 8	programming','course-8-3.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1606,'Module 1 - 8	programming Course 3','Auto-seeded lesson 1',108);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1607,'Module 2 - 8	programming Course 3','Auto-seeded lesson 2',108);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1608,'Module 3 - 8	programming Course 3','Auto-seeded lesson 3',108);
@@ -1750,7 +1750,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1618,'Module 13 - 8	programming Course 3','Auto-seeded lesson 13',108);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1619,'Module 14 - 8	programming Course 3','Auto-seeded lesson 14',108);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1620,'Module 15 - 8	programming Course 3','Auto-seeded lesson 15',108);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (109,'8	programming Course 4','Auto-seeded course for 8	programming','course-8-4.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (109,'8	programming Course 4','Auto-seeded course for 8	programming','course-8-4.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1621,'Module 1 - 8	programming Course 4','Auto-seeded lesson 1',109);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1622,'Module 2 - 8	programming Course 4','Auto-seeded lesson 2',109);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1623,'Module 3 - 8	programming Course 4','Auto-seeded lesson 3',109);
@@ -1766,7 +1766,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1633,'Module 13 - 8	programming Course 4','Auto-seeded lesson 13',109);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1634,'Module 14 - 8	programming Course 4','Auto-seeded lesson 14',109);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1635,'Module 15 - 8	programming Course 4','Auto-seeded lesson 15',109);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (110,'8	programming Course 5','Auto-seeded course for 8	programming','course-8-5.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (110,'8	programming Course 5','Auto-seeded course for 8	programming','course-8-5.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1636,'Module 1 - 8	programming Course 5','Auto-seeded lesson 1',110);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1637,'Module 2 - 8	programming Course 5','Auto-seeded lesson 2',110);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1638,'Module 3 - 8	programming Course 5','Auto-seeded lesson 3',110);
@@ -1782,7 +1782,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1648,'Module 13 - 8	programming Course 5','Auto-seeded lesson 13',110);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1649,'Module 14 - 8	programming Course 5','Auto-seeded lesson 14',110);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1650,'Module 15 - 8	programming Course 5','Auto-seeded lesson 15',110);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (111,'8	programming Course 6','Auto-seeded course for 8	programming','course-8-6.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (111,'8	programming Course 6','Auto-seeded course for 8	programming','course-8-6.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1651,'Module 1 - 8	programming Course 6','Auto-seeded lesson 1',111);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1652,'Module 2 - 8	programming Course 6','Auto-seeded lesson 2',111);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1653,'Module 3 - 8	programming Course 6','Auto-seeded lesson 3',111);
@@ -1798,7 +1798,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1663,'Module 13 - 8	programming Course 6','Auto-seeded lesson 13',111);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1664,'Module 14 - 8	programming Course 6','Auto-seeded lesson 14',111);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1665,'Module 15 - 8	programming Course 6','Auto-seeded lesson 15',111);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (112,'8	programming Course 7','Auto-seeded course for 8	programming','course-8-7.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (112,'8	programming Course 7','Auto-seeded course for 8	programming','course-8-7.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1666,'Module 1 - 8	programming Course 7','Auto-seeded lesson 1',112);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1667,'Module 2 - 8	programming Course 7','Auto-seeded lesson 2',112);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1668,'Module 3 - 8	programming Course 7','Auto-seeded lesson 3',112);
@@ -1814,7 +1814,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1678,'Module 13 - 8	programming Course 7','Auto-seeded lesson 13',112);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1679,'Module 14 - 8	programming Course 7','Auto-seeded lesson 14',112);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1680,'Module 15 - 8	programming Course 7','Auto-seeded lesson 15',112);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (113,'8	programming Course 8','Auto-seeded course for 8	programming','course-8-8.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (113,'8	programming Course 8','Auto-seeded course for 8	programming','course-8-8.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1681,'Module 1 - 8	programming Course 8','Auto-seeded lesson 1',113);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1682,'Module 2 - 8	programming Course 8','Auto-seeded lesson 2',113);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1683,'Module 3 - 8	programming Course 8','Auto-seeded lesson 3',113);
@@ -1830,7 +1830,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1693,'Module 13 - 8	programming Course 8','Auto-seeded lesson 13',113);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1694,'Module 14 - 8	programming Course 8','Auto-seeded lesson 14',113);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1695,'Module 15 - 8	programming Course 8','Auto-seeded lesson 15',113);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (114,'8	programming Course 9','Auto-seeded course for 8	programming','course-8-9.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (114,'8	programming Course 9','Auto-seeded course for 8	programming','course-8-9.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1696,'Module 1 - 8	programming Course 9','Auto-seeded lesson 1',114);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1697,'Module 2 - 8	programming Course 9','Auto-seeded lesson 2',114);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1698,'Module 3 - 8	programming Course 9','Auto-seeded lesson 3',114);
@@ -1846,7 +1846,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1708,'Module 13 - 8	programming Course 9','Auto-seeded lesson 13',114);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1709,'Module 14 - 8	programming Course 9','Auto-seeded lesson 14',114);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1710,'Module 15 - 8	programming Course 9','Auto-seeded lesson 15',114);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (115,'8	programming Course 10','Auto-seeded course for 8	programming','course-8-10.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (115,'8	programming Course 10','Auto-seeded course for 8	programming','course-8-10.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1711,'Module 1 - 8	programming Course 10','Auto-seeded lesson 1',115);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1712,'Module 2 - 8	programming Course 10','Auto-seeded lesson 2',115);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1713,'Module 3 - 8	programming Course 10','Auto-seeded lesson 3',115);
@@ -1862,7 +1862,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1723,'Module 13 - 8	programming Course 10','Auto-seeded lesson 13',115);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1724,'Module 14 - 8	programming Course 10','Auto-seeded lesson 14',115);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1725,'Module 15 - 8	programming Course 10','Auto-seeded lesson 15',115);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (116,'8	programming Course 11','Auto-seeded course for 8	programming','course-8-11.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (116,'8	programming Course 11','Auto-seeded course for 8	programming','course-8-11.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1726,'Module 1 - 8	programming Course 11','Auto-seeded lesson 1',116);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1727,'Module 2 - 8	programming Course 11','Auto-seeded lesson 2',116);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1728,'Module 3 - 8	programming Course 11','Auto-seeded lesson 3',116);
@@ -1878,7 +1878,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1738,'Module 13 - 8	programming Course 11','Auto-seeded lesson 13',116);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1739,'Module 14 - 8	programming Course 11','Auto-seeded lesson 14',116);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1740,'Module 15 - 8	programming Course 11','Auto-seeded lesson 15',116);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (117,'8	programming Course 12','Auto-seeded course for 8	programming','course-8-12.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (117,'8	programming Course 12','Auto-seeded course for 8	programming','course-8-12.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1741,'Module 1 - 8	programming Course 12','Auto-seeded lesson 1',117);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1742,'Module 2 - 8	programming Course 12','Auto-seeded lesson 2',117);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1743,'Module 3 - 8	programming Course 12','Auto-seeded lesson 3',117);
@@ -1894,7 +1894,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1753,'Module 13 - 8	programming Course 12','Auto-seeded lesson 13',117);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1754,'Module 14 - 8	programming Course 12','Auto-seeded lesson 14',117);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1755,'Module 15 - 8	programming Course 12','Auto-seeded lesson 15',117);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (118,'8	programming Course 13','Auto-seeded course for 8	programming','course-8-13.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (118,'8	programming Course 13','Auto-seeded course for 8	programming','course-8-13.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1756,'Module 1 - 8	programming Course 13','Auto-seeded lesson 1',118);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1757,'Module 2 - 8	programming Course 13','Auto-seeded lesson 2',118);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1758,'Module 3 - 8	programming Course 13','Auto-seeded lesson 3',118);
@@ -1910,7 +1910,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1768,'Module 13 - 8	programming Course 13','Auto-seeded lesson 13',118);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1769,'Module 14 - 8	programming Course 13','Auto-seeded lesson 14',118);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1770,'Module 15 - 8	programming Course 13','Auto-seeded lesson 15',118);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (119,'8	programming Course 14','Auto-seeded course for 8	programming','course-8-14.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (119,'8	programming Course 14','Auto-seeded course for 8	programming','course-8-14.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1771,'Module 1 - 8	programming Course 14','Auto-seeded lesson 1',119);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1772,'Module 2 - 8	programming Course 14','Auto-seeded lesson 2',119);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1773,'Module 3 - 8	programming Course 14','Auto-seeded lesson 3',119);
@@ -1926,7 +1926,7 @@ INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUE
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1783,'Module 13 - 8	programming Course 14','Auto-seeded lesson 13',119);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1784,'Module 14 - 8	programming Course 14','Auto-seeded lesson 14',119);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1785,'Module 15 - 8	programming Course 14','Auto-seeded lesson 15',119);
-INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (120,'8	programming Course 15','Auto-seeded course for 8	programming','course-8-15.jpg',0,'Fayen',8);
+INSERT INTO `course` (`course_id`,`course_name`,`course_desc`,`course_img`,`course_price`,`course_author`,`track_id`) VALUES (120,'8	programming Course 15','Auto-seeded course for 8	programming','course-8-15.jpg',0,'CloudHub',8);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1786,'Module 1 - 8	programming Course 15','Auto-seeded lesson 1',120);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1787,'Module 2 - 8	programming Course 15','Auto-seeded lesson 2',120);
 INSERT INTO `lesson` (`lesson_id`,`lesson_name`,`lesson_desc`,`course_id`) VALUES (1788,'Module 3 - 8	programming Course 15','Auto-seeded lesson 3',120);
