@@ -44,13 +44,7 @@ if ($trackId > 0) {
 }
 ?>
 
-<div class="container-fluid bg-dark courses-hero-wrap">
-  <div class="row">
-    <img src="./image/devops-banner.jpg" alt="courses" class="course-banner courses-banner"/>
-  </div>
-</div>
-
-<div class="container mt-5 courses-page">
+<div class="container py-5 courses-page">
 
   <?php if ($trackId > 0 && $track): ?>
     <h1 class="text-center"><?php echo htmlspecialchars($track['track_name']); ?></h1>
@@ -134,5 +128,4 @@ if (isset($t['track_img'])) { $timg = trim((string)$t['track_img']); }
 
 </div>
 
-<?php include('./mainInclude/contactSection.php'); ?>
 <?php include('./mainInclude/footer.php'); ?>
