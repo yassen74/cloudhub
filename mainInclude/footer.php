@@ -60,3 +60,11 @@
     </div>
   </div>
 </footer>
+<?php if (!defined('FAYEN_FOOTER_EMBED')): ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/custom.js?v=1003"></script>
+</body>
+</html>
+<?php endif; ?>

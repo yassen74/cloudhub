@@ -25,6 +25,11 @@ if (PHP_SAPI !== 'cli' && session_status() !== PHP_SESSION_ACTIVE) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#08111d" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     
      <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -35,13 +40,8 @@ if (PHP_SAPI !== 'cli' && session_status() !== PHP_SESSION_ACTIVE) {
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Student Testimonial Owl Slider CSS -->
-    <link rel="stylesheet" type="text/css" href="css/owl.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.min.css">
-    <link rel="stylesheet" type="text/css" href="css/testyslider.css">
-
     <!-- Custom Style CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1002" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1003" />
     <title>CloudHub</title>
   </head>
   <body>

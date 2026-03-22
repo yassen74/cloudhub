@@ -111,6 +111,45 @@ body { background:#f4f6f9; }
 }
 
 .course-info{ flex:1; margin-left:20px; }
+
+@media (max-width: 767.98px) {
+  .top-bar{
+    padding:12px 14px;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  .top-bar a{
+    font-size:18px;
+  }
+
+  .profile-section{
+    width:100%;
+    justify-content:space-between;
+    gap:10px;
+  }
+
+  .course-card{
+    flex-direction:column;
+    align-items:stretch;
+    padding:14px;
+    gap:14px;
+  }
+
+  .course-img{
+    width:100%;
+    height:180px;
+  }
+
+  .course-info{
+    margin-left:0;
+  }
+
+  .course-card .btn{
+    width:100%;
+    min-height:44px;
+  }
+}
 </style>
 </head>
 
@@ -119,7 +158,7 @@ body { background:#f4f6f9; }
 <div class="top-bar">
   <a href="../index.php">CloudHub</a>
   <div class="profile-section">
-    <img src="<?php echo htmlspecialchars($profileImg, ENT_QUOTES, 'UTF-8'); ?>" alt="Profile">
+    <img src="<?php echo htmlspecialchars($profileImg, ENT_QUOTES, 'UTF-8'); ?>" alt="Profile" decoding="async">
     <a href="myprofile.php" class="btn btn-warning btn-sm" style="font-weight:700;">My Profile</a>
   </div>
 </div>
@@ -135,7 +174,7 @@ body { background:#f4f6f9; }
   $imgPath = course_image_src($row);
 ?>
   <div class="course-card">
-    <img src="<?php echo htmlspecialchars($imgPath, ENT_QUOTES, 'UTF-8'); ?>" class="course-img" alt="Course">
+    <img src="<?php echo htmlspecialchars($imgPath, ENT_QUOTES, 'UTF-8'); ?>" class="course-img" alt="Course" loading="lazy" decoding="async">
     <div class="course-info">
       <h5><?php echo htmlspecialchars((string)$row['course_name'], ENT_QUOTES, 'UTF-8'); ?></h5>
       <p class="text-muted mb-1"><?php echo htmlspecialchars((string)$row['course_desc'], ENT_QUOTES, 'UTF-8'); ?></p>

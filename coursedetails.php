@@ -43,7 +43,7 @@ include('./mainInclude/header.php');
 ?>  
     <div class="container-fluid course-details-hero"> <!-- Start Course Page Banner -->
       <div class="row">
-        <img src="./image/coursebanner.jpg" alt="courses" class="course-details-banner"/>
+        <img src="./image/coursebanner.jpg" alt="courses" class="course-details-banner" decoding="async"/>
       </div> 
     </div> <!-- End Course Page Banner -->
 
@@ -69,6 +69,7 @@ include('./mainInclude/header.php');
                     src="<?php echo $courseImage !== '' ? $courseImage : './image/coursebanner.jpg'; ?>"
                     class="course-details-image"
                     alt="<?php echo $courseName; ?>"
+                    decoding="async"
                     onerror="this.onerror=null;this.src='./image/coursebanner.jpg';"
                   />
                 </div>

@@ -99,7 +99,7 @@ $imgSrcEsc = htmlspecialchars($imgSrc, ENT_QUOTES, 'UTF-8');
       <div class="card shadow-sm mb-4">
         <div class="card-body">
           <div class="d-flex align-items-center gap-3">
-            <img src="<?php echo $imgSrcEsc; ?>" alt="Student" style="width:84px;height:84px;object-fit:cover;border-radius:50%;border:1px solid #eee;">
+            <img src="<?php echo $imgSrcEsc; ?>" alt="Student" style="width:84px;height:84px;object-fit:cover;border-radius:50%;border:1px solid #eee;" decoding="async">
             <div>
               <h4 class="mb-1"><?php echo $stuNameEsc; ?></h4>
               <div class="text-muted"><?php echo $stuEmailEsc; ?></div>

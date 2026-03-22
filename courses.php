@@ -90,7 +90,7 @@ if ($trackId > 0) {
               <div class="card course-card track-course-card">
                 <div class="course-card-media">
                   <?php if ($courseImgSrc !== ''): ?>
-                    <img src="<?php echo htmlspecialchars($courseImgSrc); ?>" class="card-img-top" alt="<?php echo htmlspecialchars((string)$row['course_name']); ?>" />
+                    <img src="<?php echo htmlspecialchars($courseImgSrc); ?>" class="card-img-top" alt="<?php echo htmlspecialchars((string)$row['course_name']); ?>" loading="lazy" decoding="async" />
                   <?php else: ?>
                     <div class="track-course-placeholder">
                       <span>Image Unavailable</span>
@@ -140,7 +140,7 @@ if (isset($t['track_img'])) { $timg = trim((string)$t['track_img']); }
 ?>
 <?php if ($timg !== ''): ?>
   <div class="course-card-media">
-    <img src="<?php echo htmlspecialchars($timg); ?>" class="card-img-top" alt="Track">
+    <img src="<?php echo htmlspecialchars($timg); ?>" class="card-img-top" alt="Track" loading="lazy" decoding="async">
   </div>
 <?php else: ?>
   <div class="course-card-media">

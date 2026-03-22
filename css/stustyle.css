@@ -580,3 +580,28 @@ body.page-feedback {
     margin-left: 0 !important;
   }
 }
+
+@media (max-width: 767.98px) {
+  .student-topbar .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .student-dashboard-shell {
+    margin-bottom: 2rem !important;
+  }
+
+  .student-sidebar {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .student-sidebar .img-thumbnail {
+    width: 92px;
+    height: 92px;
+  }
+
+  .student-sidebar .nav-link {
+    padding: 0.72rem 0.85rem;
+    font-size: 0.95rem;
+  }
+}

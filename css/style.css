@@ -4647,3 +4647,222 @@ h1, h2, h3, h4, h5, h6,
     max-height: 210px !important;
   }
 }
+
+/* ===== Mobile performance and usability pass ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ch-navbar .navbar-collapse {
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 991.98px) {
+  .ch-navbar .container,
+  .ch-navbar-shell {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .ch-navbar .navbar-brand {
+    font-size: 1.35rem !important;
+  }
+
+  .ch-navbar .navbar-text {
+    display: none !important;
+  }
+
+  .ch-navbar .navbar-toggler {
+    padding: 0.35rem 0.55rem !important;
+    border-color: rgba(125, 211, 252, 0.32) !important;
+    background: rgba(8, 17, 29, 0.78) !important;
+  }
+
+  .ch-navbar .navbar-collapse {
+    margin-top: 0.85rem !important;
+    padding: 0.9rem 1rem !important;
+    border-radius: 18px !important;
+    background: rgba(8, 17, 29, 0.94) !important;
+    border: 1px solid rgba(125, 211, 252, 0.16) !important;
+    box-shadow: 0 18px 40px rgba(2, 8, 23, 0.28) !important;
+    backdrop-filter: blur(10px);
+  }
+
+  .ch-navbar .custom-nav-item + .custom-nav-item {
+    margin-top: 0.2rem !important;
+  }
+
+  .home-hero {
+    min-height: auto !important;
+    padding: 112px 0 68px !important;
+  }
+
+  .hero-stage {
+    min-height: auto !important;
+    padding: 0 6px !important;
+  }
+
+  .vid-content,
+  .hero-content {
+    max-width: 100% !important;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.2rem, 9vw, 3.4rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .hero-content p,
+  .courses-page-subtitle,
+  .auth-subtitle {
+    font-size: 0.98rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .courses-page,
+  .auth-page {
+    padding-top: 5rem !important;
+  }
+
+  .auth-shell {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .auth-intro {
+    margin-bottom: 1.8rem !important;
+  }
+
+  .auth-intro h1,
+  .courses-page-title {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .auth-card {
+    padding: 1.35rem !important;
+    border-radius: 24px !important;
+  }
+
+  .auth-card .form-control,
+  .auth-card .form-select,
+  .auth-submit-btn {
+    min-height: 48px !important;
+  }
+
+  .courses-page .courses-page-header,
+  .courses-page .courses-page-actions {
+    max-width: 960px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .course-details-shell {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .course-details-card,
+  .course-lessons-card {
+    border-radius: 24px !important;
+  }
+
+  .ch-footer {
+    margin-top: 3rem !important;
+  }
+
+  .ch-footer .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .ch-footer-row {
+    row-gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-hero {
+    padding: 96px 0 56px !important;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 1rem !important;
+  }
+
+  .hero-btn,
+  .auth-submit-btn,
+  .course-card-cta,
+  .courses-back-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .auth-page,
+  .courses-page {
+    padding-top: 4.5rem !important;
+  }
+
+  .auth-card {
+    padding: 1.15rem !important;
+  }
+
+  .auth-card-copy,
+  .card-text,
+  .course-details-copy,
+  .course-lessons-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .track-course-card .card-title,
+  .course-card .card-title,
+  .track-card .card-title,
+  .courses-page .track-course-card .card-title {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .courses-page .track-courses-grid,
+  .courses-page .courses-grid {
+    gap: 22px !important;
+  }
+
+  .courses-page .course-card-media {
+    height: 196px !important;
+    min-height: 196px !important;
+    max-height: 196px !important;
+  }
+
+  .course-details-banner {
+    min-height: 160px !important;
+    object-fit: cover !important;
+  }
+
+  .course-details-image {
+    max-height: 240px !important;
+    object-fit: contain !important;
+  }
+
+  .ch-footer {
+    padding-top: 2.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .ch-footer-brand-lockup {
+    gap: 0.85rem !important;
+  }
+
+  .ch-footer-brand {
+    font-size: 1.55rem !important;
+  }
+
+  .ch-footer-text,
+  .ch-footer-copy,
+  .ch-footer-links a {
+    font-size: 0.95rem !important;
+  }
+}

@@ -1,26 +1,7 @@
 <?php
-session_name('FAYENADMINSESSID');
-session_set_cookie_params([
-  'lifetime' => 0,
-  'path' => '/',
-  'domain' => '',
-  'secure' => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
-  'httponly' => true,
-  'samesite' => 'Lax'
-]);
-if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
-
-@file_put_contents('/tmp/fayen_admin_debug.log',
-  "DASHBOARD ENTER\n".
-  "time=".date('c')."\n".
-  "sid=".session_id()."\n".
-  "session=".print_r($_SESSION, true)."\n".
-  "cookie=".print_r($_COOKIE, true)."\n\n",
-  FILE_APPEND
-);
+require_once __DIR__ . '/adminInclude/session.php';
 
 if (!isset($_SESSION['admin_email'])) {
-  @file_put_contents('/tmp/fayen_admin_debug.log', "DASHBOARD REDIRECT index.php\n\n", FILE_APPEND);
   header('Location: index.php');
   exit();
 }

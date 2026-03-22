@@ -97,7 +97,7 @@ include('./mainInclude/header.php');
 </main>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/ajaxrequest.js?v=2"></script>
+<script src="js/ajaxrequest.js?v=3"></script>
 <script>
   (function () {
     var ok = (typeof window.addStu === 'function');

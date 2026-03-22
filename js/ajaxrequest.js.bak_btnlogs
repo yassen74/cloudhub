@@ -6,7 +6,6 @@ $(document).ready(function() {
     $.ajax({
       url: "Student/addstudent.php",
       type: "post",
-      dataType: "json",
       data: {
         checkemail: "checkmail",
         stuemail: stuemail
@@ -25,10 +24,6 @@ $(document).ready(function() {
         if (stuemail == "") {
           $("#statusMsg2").html('<small style="color:red;"> Please Enter Email ! </small>');
         }
-      },
-      error: function(xhr) {
-        $("#statusMsg2").html('<small style="color:red;"> Email check failed. </small>');
-        console.log("checkemail ajax error:", xhr.status, xhr.responseText);
       }
     });
   });

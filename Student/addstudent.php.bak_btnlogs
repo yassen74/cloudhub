@@ -9,6 +9,10 @@ header('Content-type: application/json');
 function json_out($v) { echo json_encode($v); exit; }
 function is_valid_email($email) { return filter_var($email, FILTER_VALIDATE_EMAIL) !== false; }
 
+/**
+ * Email exists check
+ * returns: 0 or 1
+ */
 if (isset($_POST['stuemail']) && isset($_POST['checkemail'])) {
   $stuemail = trim((string)$_POST['stuemail']);
   if ($stuemail === '' || !is_valid_email($stuemail)) {
@@ -25,6 +29,10 @@ if (isset($_POST['stuemail']) && isset($_POST['checkemail'])) {
   json_out($exists);
 }
 
+/**
+ * Signup
+ * returns: "OK" or JSON error
+ */
 if (isset($_POST['stusignup'], $_POST['stuname'], $_POST['stuemail'], $_POST['stupass'])) {
   $stuname  = trim((string)$_POST['stuname']);
   $stuemail = trim((string)$_POST['stuemail']);
@@ -50,6 +58,7 @@ if (isset($_POST['stusignup'], $_POST['stuname'], $_POST['stuemail'], $_POST['st
   $default_img = "../image/stu/student1.jpg";
   $hash = password_hash($stupass, PASSWORD_BCRYPT);
 
+  // إدخال بسيط ومتوافق مع أغلب السكيمات
   $stmt = $conn->prepare("INSERT INTO student (stu_name, stu_email, stu_pass, stu_occ, stu_img) VALUES (?, ?, ?, ?, ?)");
   if (!$stmt) {
     json_out(["status" => "error", "message" => "Insert prepare failed: " . $conn->error]);
@@ -66,6 +75,55 @@ if (isset($_POST['stusignup'], $_POST['stuname'], $_POST['stuemail'], $_POST['st
 
   $stmt->close();
   json_out(["status" => "ok", "message" => "Registration successful."]);
+}
+
+/**
+ * Legacy login branch if called here
+ */
+if (!isset($_SESSION['is_login'])) {
+  if (isset($_POST['checkLogemail'], $_POST['stuLogEmail'], $_POST['stuLogPass'])) {
+    $stuLogEmail = trim((string)$_POST['stuLogEmail']);
+    $stuLogPass  = (string)$_POST['stuLogPass'];
+
+    if ($stuLogEmail === '' || $stuLogPass === '' || !is_valid_email($stuLogEmail)) {
+      json_out(0);
+    }
+
+    $stmt = $conn->prepare("SELECT stu_id, stu_pass FROM student WHERE stu_email = ? LIMIT 1");
+    if (!$stmt) json_out(0);
+    $stmt->bind_param("s", $stuLogEmail);
+    $stmt->execute();
+    $res = $stmt->get_result();
+    $row = ($res && $res->num_rows === 1) ? $res->fetch_assoc() : null;
+    $stmt->close();
+
+    if (!$row) json_out(0);
+
+    $stored = (string)$row['stu_pass'];
+    $ok = false;
+
+    if (password_verify($stuLogPass, $stored)) {
+      $ok = true;
+    } else if (hash_equals($stored, $stuLogPass)) {
+      $ok = true;
+      $newHash = password_hash($stuLogPass, PASSWORD_BCRYPT);
+      $up = $conn->prepare("UPDATE student SET stu_pass = ? WHERE stu_id = ? LIMIT 1");
+      if ($up) {
+        $sid = (int)$row['stu_id'];
+        $up->bind_param("si", $newHash, $sid);
+        $up->execute();
+        $up->close();
+      }
+    }
+
+    if ($ok) {
+      $_SESSION['is_login'] = true;
+      $_SESSION['stuLogEmail'] = $stuLogEmail;
+      $_SESSION['stu_id'] = (int)$row['stu_id'];
+      json_out(1);
+    }
+    json_out(0);
+  }
 }
 
 json_out(["status" => "error", "message" => "Invalid request."]);

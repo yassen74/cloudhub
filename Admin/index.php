@@ -1,5 +1,5 @@
 <?php
-if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
+require_once __DIR__ . '/adminInclude/session.php';
 if (isset($_SESSION['admin_email'])) {
   header('Location: adminDashboard.php');
   exit();
