@@ -21,7 +21,7 @@ include('../dbConnection.php');
  <link rel="stylesheet" href="../css/bootstrap.min.css">
 
  <!-- Font Awesome CSS -->
- <link rel="stylesheet" href="../css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">

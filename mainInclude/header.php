@@ -1,5 +1,23 @@
 <?php
-if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
+if (!function_exists('fayen_debug_log')) {
+    function fayen_debug_log(string $message): void
+    {
+        $uri = $_SERVER['REQUEST_URI'] ?? 'cli';
+        error_log('[FayenDebug] ' . $uri . ' ' . $message);
+    }
+}
+
+if (PHP_SAPI !== 'cli' && session_status() !== PHP_SESSION_ACTIVE) {
+    $sessionStart = microtime(true);
+    $sessionOk = @session_start();
+    $sessionMs = (int) round((microtime(true) - $sessionStart) * 1000);
+
+    if (!$sessionOk) {
+        fayen_debug_log('session_start failed');
+    } elseif ($sessionMs >= 500) {
+        fayen_debug_log('slow session_start ' . $sessionMs . 'ms');
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +30,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +41,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
     <link rel="stylesheet" type="text/css" href="css/testyslider.css">
 
     <!-- Custom Style CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1001" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1002" />
     <title>CloudHub</title>
   </head>
   <body>

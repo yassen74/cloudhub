@@ -2,6 +2,24 @@
 include('./dbConnection.php');
 include('./mainInclude/header.php');
 
+function track_course_image_src(array $row): string
+{
+  $raw = isset($row['course_img']) ? trim((string)$row['course_img']) : '';
+  $raw = str_replace('\\', '/', $raw);
+  $file = $raw !== '' ? basename($raw) : '';
+
+  if ($file === '') {
+    return '';
+  }
+
+  $fsPath = __DIR__ . '/image/courseimg/' . $file;
+  if (!is_file($fsPath)) {
+    return '';
+  }
+
+  return 'image/courseimg/' . rawurlencode($file);
+}
+
 $trackId = 0;
 if (isset($_GET['track_id']) && $_GET['track_id'] !== '') {
   $trackId = (int)$_GET['track_id'];
@@ -47,34 +65,50 @@ if ($trackId > 0) {
 <div class="container py-5 courses-page">
 
   <?php if ($trackId > 0 && $track): ?>
-    <h1 class="text-center"><?php echo htmlspecialchars($track['track_name']); ?></h1>
-    <p class="text-center text-muted mb-4"><?php echo htmlspecialchars($track['track_desc']); ?></p>
-
-    <div class="text-center mb-4">
-      <a class="btn btn-outline-dark btn-sm" href="courses.php">Back to Tracks</a>
+    <div class="courses-page-header courses-page-header-track">
+      <span class="courses-page-eyebrow">CloudHub Track</span>
+      <h1 class="courses-page-title"><?php echo htmlspecialchars($track['track_name']); ?></h1>
+      <p class="courses-page-subtitle"><?php echo htmlspecialchars($track['track_desc']); ?></p>
     </div>
 
-    <div class="row mt-4">
+    <div class="courses-page-actions">
+      <a class="btn btn-outline-dark btn-sm courses-back-btn" href="courses.php">
+        <span class="courses-back-btn-icon" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+        <span>Back to Tracks</span>
+      </a>
+    </div>
+
+    <div class="row mt-4 courses-grid track-courses-grid">
       <?php if (count($courses) > 0): ?>
         <?php foreach ($courses as $row): ?>
           <?php
             $course_id = (int)$row['course_id'];
-            $img = str_replace('..', '.', (string)$row['course_img']);
+            $courseImgSrc = track_course_image_src($row);
           ?>
-          <div class="col-sm-4 mb-4">
-            <a href="coursedetails.php?course_id=<?php echo $course_id; ?>" class="btn course-card-link" style="text-align:left; padding:0px; width:100%;">
-              <div class="card h-100">
-                <img src="<?php echo htmlspecialchars($img); ?>" class="card-img-top" alt="course" />
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course-item track-course-item">
+            <a href="coursedetails.php?course_id=<?php echo $course_id; ?>" class="course-card-link course-card-anchor track-course-anchor">
+              <div class="card course-card track-course-card">
+                <div class="course-card-media">
+                  <?php if ($courseImgSrc !== ''): ?>
+                    <img src="<?php echo htmlspecialchars($courseImgSrc); ?>" class="card-img-top" alt="<?php echo htmlspecialchars((string)$row['course_name']); ?>" />
+                  <?php else: ?>
+                    <div class="track-course-placeholder">
+                      <span>Image Unavailable</span>
+                    </div>
+                  <?php endif; ?>
+                </div>
                 <div class="card-body">
+                  <span class="courses-track-badge">Track Course</span>
                   <h5 class="card-title"><?php echo htmlspecialchars($row['course_name']); ?></h5>
                   <p class="card-text"><?php echo htmlspecialchars($row['course_desc']); ?></p>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text d-inline">
-                    Price: <small><del>&#8377 <?php echo (int)$row['course_original_price']; ?></del></small>
-                    <span class="font-weight-bolder">&#8377 <?php echo (int)$row['course_price']; ?></span>
+                  <p class="card-text course-price-line d-inline">
+                    <span class="course-price-label">Price</span>
+                    <small><del>&#8377 <?php echo (int)$row['course_original_price']; ?></del></small>
+                    <span class="font-weight-bolder course-price-current">&#8377 <?php echo (int)$row['course_price']; ?></span>
                   </p>
-                  <a class="btn btn-primary text-white font-weight-bolder float-right" href="coursedetails.php?course_id=<?php echo $course_id; ?>">Enroll</a>
+                  <a class="btn btn-primary text-white font-weight-bolder float-right course-card-cta" href="coursedetails.php?course_id=<?php echo $course_id; ?>">Enroll</a>
                 </div>
               </div>
             </a>
@@ -88,31 +122,39 @@ if ($trackId > 0) {
     </div>
 
   <?php else: ?>
-    <h1 class="text-center">Tracks</h1>
-    <p class="text-center text-muted mb-4">Choose a track to view its courses</p>
+    <div class="courses-page-header">
+      <span class="courses-page-eyebrow">Learning Paths</span>
+      <h1 class="courses-page-title">Tracks</h1>
+      <p class="courses-page-subtitle">Choose a track to view its courses</p>
+    </div>
 
-    <div class="row mt-4">
+    <div class="row mt-4 courses-grid">
       <?php if (count($tracks) > 0): ?>
         <?php foreach ($tracks as $t): ?>
-          <div class="col-sm-6 col-lg-3 mb-4">
-            <a href="courses.php?track_id=<?php echo (int)$t['track_id']; ?>" class="btn course-card-link" style="text-align:left; padding:0px; width:100%;">
-              <div class="card h-100">
+          <div class="col-sm-6 col-lg-3 mb-4 course-item">
+            <a href="courses.php?track_id=<?php echo (int)$t['track_id']; ?>" class="btn course-card-link course-card-anchor">
+              <div class="card h-100 course-card">
 <?php
 $timg = '';
 if (isset($t['track_img'])) { $timg = trim((string)$t['track_img']); }
 ?>
 <?php if ($timg !== ''): ?>
-  <img src="<?php echo htmlspecialchars($timg); ?>" class="card-img-top" style="height:180px;object-fit:cover;" alt="Track">
+  <div class="course-card-media">
+    <img src="<?php echo htmlspecialchars($timg); ?>" class="card-img-top" alt="Track">
+  </div>
 <?php else: ?>
-  <div style="height:180px;background:#f3f4f6;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center;color:#6b7280;font-size:14px;">No image</div>
+  <div class="course-card-media">
+    <div class="track-card-placeholder">No image</div>
+  </div>
 <?php endif; ?>
 
 <div class="card-body">
+                  <span class="courses-track-badge">Learning Track</span>
                   <h5 class="card-title"><?php echo htmlspecialchars($t['track_name']); ?></h5>
                   <p class="card-text"><?php echo htmlspecialchars($t['track_desc']); ?></p>
                 </div>
                 <div class="card-footer">
-                  <span class="text-primary font-weight-bolder">View Courses</span>
+                  <span class="btn course-card-linktext">View Courses</span>
                 </div>
               </div>
             </a>

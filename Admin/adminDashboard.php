@@ -1,19 +1,37 @@
 <?php
-if (!isset($_SESSION)) {
-  session_start();
+session_name('FAYENADMINSESSID');
+session_set_cookie_params([
+  'lifetime' => 0,
+  'path' => '/',
+  'domain' => '',
+  'secure' => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
+  'httponly' => true,
+  'samesite' => 'Lax'
+]);
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
+
+@file_put_contents('/tmp/fayen_admin_debug.log',
+  "DASHBOARD ENTER\n".
+  "time=".date('c')."\n".
+  "sid=".session_id()."\n".
+  "session=".print_r($_SESSION, true)."\n".
+  "cookie=".print_r($_COOKIE, true)."\n\n",
+  FILE_APPEND
+);
+
+if (!isset($_SESSION['admin_email'])) {
+  @file_put_contents('/tmp/fayen_admin_debug.log', "DASHBOARD REDIRECT index.php\n\n", FILE_APPEND);
+  header('Location: index.php');
+  exit();
 }
+
 define('TITLE', 'Dashboard');
 define('PAGE', 'dashboard');
 
 include('../dbConnection.php');
 include('./adminInclude/header.php');
 
-if (isset($_SESSION['is_admin_login'])) {
-  $adminEmail = $_SESSION['adminLogEmail'];
-} else {
-  echo "<script> location.href='../index.php'; </script>";
-  exit;
-}
+$adminEmail = $_SESSION['admin_email'];
 
 $totalcourse = 0;
 $totalstu = 0;
@@ -31,7 +49,6 @@ if ($r = $conn->query("SELECT COUNT(*) AS c FROM courseorder")) {
 
 if (isset($_REQUEST['delete'])) {
   $id = isset($_REQUEST['id']) ? (int)$_REQUEST['id'] : 0;
-
   if ($id > 0) {
     $del = $conn->prepare("DELETE FROM courseorder WHERE co_id = ? LIMIT 1");
     if ($del) {
@@ -50,9 +67,7 @@ if (isset($_REQUEST['delete'])) {
         <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
           <div class="card-header">Courses</div>
           <div class="card-body">
-            <h4 class="card-title">
-              <?php echo $totalcourse; ?>
-            </h4>
+            <h4 class="card-title"><?php echo $totalcourse; ?></h4>
             <a class="btn text-white" href="courses.php">View</a>
           </div>
         </div>
@@ -61,9 +76,7 @@ if (isset($_REQUEST['delete'])) {
         <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
           <div class="card-header">Students</div>
           <div class="card-body">
-            <h4 class="card-title">
-              <?php echo $totalstu; ?>
-            </h4>
+            <h4 class="card-title"><?php echo $totalstu; ?></h4>
             <a class="btn text-white" href="students.php">View</a>
           </div>
         </div>
@@ -72,16 +85,14 @@ if (isset($_REQUEST['delete'])) {
         <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
           <div class="card-header">Sold</div>
           <div class="card-body">
-            <h4 class="card-title">
-              <?php echo $totalsold; ?>
-            </h4>
-            <a class="btn text-white" href="sellreport.php">View</a>
+            <h4 class="card-title"><?php echo $totalsold; ?></h4>
+            <a class="btn text-white" href="sellReport.php">View</a>
           </div>
         </div>
       </div>
     </div>
     <div class="mx-5 mt-5 text-center">
-      <p class=" bg-dark text-white p-2">Course Ordered</p>
+      <p class="bg-dark text-white p-2">Course Ordered</p>
       <?php
       $sql = "SELECT * FROM courseorder";
       $result = $conn->query($sql);
@@ -117,9 +128,4 @@ if (isset($_REQUEST['delete'])) {
   </div>
   </div>
   </div>
-
-  </div>
- </div>
-<?php
-include('./adminInclude/footer.php');
-?>
+<?php include('./adminInclude/footer.php'); ?>

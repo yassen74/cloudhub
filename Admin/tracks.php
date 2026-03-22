@@ -1,15 +1,10 @@
 <?php
-if (!isset($_SESSION)) { session_start(); }
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
 define('TITLE', 'Tracks');
 define('PAGE', 'tracks');
 
 include('../dbConnection.php');
 include('./adminInclude/header.php');
-
-if (!isset($_SESSION['is_admin_login'])) {
-  echo "<script> location.href='../index.php'; </script>";
-  exit;
-}
 
 if (isset($_POST['delete']) && isset($_POST['id'])) {
   $id = (int)$_POST['id'];

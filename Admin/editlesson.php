@@ -1,15 +1,10 @@
 <?php
-if (!isset($_SESSION)) { session_start(); }
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
 define('TITLE', 'Edit Module');
 define('PAGE', 'lessons');
 
 include('../dbConnection.php');
 include('./adminInclude/header.php');
-
-if (!isset($_SESSION['is_admin_login'])) {
-  echo "<script> location.href='../index.php'; </script>";
-  exit;
-}
 
 function youtube_embed_url(string $url): string {
   $u = trim($url);

@@ -8,5 +8,3 @@ resources:
   - configmap.yaml
   - service.yaml
   - deployment.yaml
-  - mysql-deployment.yaml
-  - mysql-service.yaml

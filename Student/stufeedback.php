@@ -47,33 +47,84 @@ if(isset($_POST['submitFeedbackBtn'])){
 ?>
 
 <div class="col-sm-9 col-md-10 mt-4">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-8">
-      <div class="card feedback-card border-0">
-        <div class="card-body p-4">
-          <h4 class="feedback-title mb-2">Send Feedback</h4>
-          <p class="feedback-subtitle mb-4">Tell us what you liked and what we can improve.</p>
-          <?php if(!$isLoggedIn) { ?>
-            <div class="alert alert-info" role="alert">You can open this page, but you need to login to submit feedback.</div>
-          <?php } ?>
+  <section class="student-feedback-section">
+    <div class="feedback-page-shell">
+      <div class="feedback-surface">
+        <div class="feedback-page-header">
+          <span class="feedback-eyebrow">CloudHub Feedback</span>
+          <h1 class="feedback-hero-title">Share feedback about your learning experience.</h1>
+          <p class="feedback-hero-copy">Use this form to report friction, suggest improvements, or tell us what is working well. Help us refine content, improve the UI, and keep CloudHub feeling polished across every learning flow.</p>
+          <div class="feedback-hero-meta" aria-label="Feedback page highlights">
+            <span class="feedback-hero-pill"><i class="fas fa-bolt" aria-hidden="true"></i> Product improvements</span>
+            <span class="feedback-hero-pill"><i class="fas fa-layer-group" aria-hidden="true"></i> Course clarity</span>
+            <span class="feedback-hero-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> Better usability</span>
+          </div>
+        </div>
 
-          <form method="POST">
-            <div class="form-group">
-              <label for="f_content" class="feedback-label">Your Feedback</label>
-              <textarea class="form-control feedback-textarea" id="f_content" name="f_content" rows="6" required><?php echo htmlspecialchars($fContent, ENT_QUOTES, 'UTF-8'); ?></textarea>
+        <div class="row feedback-layout-row">
+          <div class="col-12 col-xl-4 col-lg-5 mb-4 mb-lg-0">
+            <div class="feedback-guidance-card" aria-label="Feedback guidance">
+              <h2 class="feedback-side-title">What makes feedback useful</h2>
+              <div class="feedback-feature-grid">
+                <article class="feedback-feature-card">
+                  <span class="feedback-feature-icon"><i class="fas fa-crosshairs" aria-hidden="true"></i></span>
+                  <h2>Be specific</h2>
+                  <p>Mention the course, page, lesson, or action you were taking.</p>
+                </article>
+                <article class="feedback-feature-card">
+                  <span class="feedback-feature-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+                  <h2>Describe the impact</h2>
+                  <p>Explain whether it affected readability, navigation, learning flow, or trust.</p>
+                </article>
+                <article class="feedback-feature-card">
+                  <span class="feedback-feature-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
+                  <h2>Suggest the better version</h2>
+                  <p>If you have an idea for a cleaner UI or clearer content, include it.</p>
+                </article>
+              </div>
+              <div class="feedback-side-note">
+                <strong>CloudHub quality loop</strong>
+                <span>Your feedback helps shape future content updates and interface improvements.</span>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary feedback-btn mt-2" name="submitFeedbackBtn">Submit</button>
-            <button type="reset" class="btn btn-outline-secondary feedback-btn mt-2 ml-2">Reset</button>
-            <?php if($msg !== '') { echo $msg; } ?>
-          </form>
+          </div>
+
+          <div class="col-12 col-xl-8 col-lg-7">
+            <div class="card feedback-card border-0">
+              <div class="card-body p-4">
+                <div class="feedback-header">
+                  <span class="feedback-form-kicker">Feedback Form</span>
+                  <h4 class="feedback-title mb-2">Send Feedback</h4>
+                  <p class="feedback-subtitle mb-4">Clear feedback helps us improve the platform, content quality, and overall course usability.</p>
+                </div>
+                <?php if(!$isLoggedIn) { ?>
+                  <div class="alert alert-info" role="alert">You can open this page, but you need to login to submit feedback.</div>
+                <?php } ?>
+
+                <form method="POST">
+                  <div class="form-group">
+                    <label for="f_content" class="feedback-label">Your Feedback</label>
+                    <p class="feedback-helper-text" id="feedbackHelp">Include course names, lesson details, readability problems, broken UI, or improvement suggestions.</p>
+                    <textarea class="form-control feedback-textarea" id="f_content" name="f_content" rows="8" aria-describedby="feedbackHelp" required placeholder="Write your feedback here..."><?php echo htmlspecialchars($fContent, ENT_QUOTES, 'UTF-8'); ?></textarea>
+                  </div>
+                  <div class="feedback-actions">
+                    <button type="submit" class="btn btn-primary feedback-btn feedback-submit-btn mt-2" name="submitFeedbackBtn">Submit Feedback</button>
+                    <button type="reset" class="btn btn-outline-secondary feedback-btn feedback-reset-btn mt-2 ml-2">Clear Form</button>
+                  </div>
+                  <?php if($msg !== '') { echo $msg; } ?>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
 </div> <!-- Close Row Div from header file -->
+</div> <!-- Close student dashboard shell from header file -->
 
 <?php
-// footer removed for feedback page');
+include('./stuInclude/footer.php');
 ?>

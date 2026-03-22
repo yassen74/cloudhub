@@ -35,3 +35,39 @@ variable "private_subnet_2_cidr" {
   type    = string
   default = "10.0.4.0/24"
 }
+
+variable "db_name" {
+  description = "RDS database name"
+  type        = string
+  default     = "lms_db"
+}
+
+variable "db_username" {
+  description = "RDS master username"
+  type        = string
+  default     = "itverse"
+}
+
+variable "db_password" {
+  description = "RDS master password"
+  type        = string
+  default     = "itverse123"
+  sensitive   = true
+}
+
+variable "db_instance_class" {
+  description = "RDS instance class"
+  type        = string
+  default     = "db.t3.micro"
+}
+
+variable "db_allocated_storage" {
+  description = "RDS allocated storage in GB"
+  type        = number
+  default     = 20
+}
+
+variable "alert_email" {
+  description = "Email for CloudWatch alerts"
+  type        = string
+}

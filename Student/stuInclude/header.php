@@ -29,6 +29,8 @@ if (!isset($pageTitle) || !is_string($pageTitle) || $pageTitle === '') {
 }
 if (!defined('CloudHub_PAGE_TITLE')) { define('CloudHub_PAGE_TITLE', $pageTitle); }
 
+$pageClass = 'page-' . preg_replace('/[^a-z0-9_-]+/i', '-', (string)PAGE);
+
 include_once('../dbConnection.php');
 
  if(isset($_SESSION['is_login'])){
@@ -63,26 +65,26 @@ include_once('../dbConnection.php');
  <link rel="stylesheet" href="../css/bootstrap.min.css">
 
  <!-- Font Awesome CSS -->
- <link rel="stylesheet" href="../css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
  <!-- Custom CSS -->
- <link rel="stylesheet" href="../css/stustyle.css">
+ <link rel="stylesheet" href="../css/stustyle.css?v=1002">
 
 </head>
 
-<body>
+<body class="student-dashboard <?php echo htmlspecialchars($pageClass, ENT_QUOTES, 'UTF-8'); ?>">
  <!-- Top Navbar -->
- <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow" style="background-color: #225470;">
+ <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow student-topbar" style="background-color: #225470;">
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="../index.php">CloudHub</a>
  </nav>
 
  <!-- Side Bar -->
- <div class="container-fluid mb-5 " style="margin-top:40px;">
+ <div class="container-fluid mb-5 student-dashboard-shell" style="margin-top:40px;">
   <div class="row">
-   <nav class="col-sm-2 bg-light sidebar py-5 d-print-none">
+   <nav class="col-sm-2 bg-light sidebar py-5 d-print-none student-sidebar">
     <div class="sidebar-sticky">
      <ul class="nav flex-column">
       <li class="nav-item mb-3">

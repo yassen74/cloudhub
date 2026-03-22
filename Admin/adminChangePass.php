@@ -1,18 +1,11 @@
 <?php
-if(!isset($_SESSION)){ 
-  session_start(); 
-}
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
 define('TITLE', 'Change Password');
 define('PAGE', 'changepass');
 include('./adminInclude/header.php'); 
 include('../dbConnection.php');
 
- if(isset($_SESSION['is_admin_login'])){
-  $adminEmail = $_SESSION['adminLogEmail'];
- } else {
-  echo "<script> location.href='../index.php'; </script>";
- }
- $adminEmail = $_SESSION['adminLogEmail'];
+$adminEmail = $_SESSION['admin_email'];
  if(isset($_REQUEST['adminPassUpdatebtn'])){
   if(($_REQUEST['adminPass'] == "")){
    // msg displayed if required field missing

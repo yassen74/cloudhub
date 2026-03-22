@@ -3,8 +3,15 @@
     <div class="row ch-footer-row">
       <section class="col-lg-5 col-md-12 ch-footer-col ch-footer-col-brand">
         <p class="ch-footer-kicker">Cloud learning platform</p>
-        <h2 class="ch-footer-brand">CloudHub</h2>
-        <p class="ch-footer-tag">Learn And Achieve</p>
+        <div class="ch-footer-brand-lockup">
+          <span class="ch-footer-brand-mark" aria-hidden="true">
+            <i class="fas fa-cloud"></i>
+          </span>
+          <div class="ch-footer-brand-copy">
+            <h2 class="ch-footer-brand">CloudHub</h2>
+            <p class="ch-footer-tag">Learn And Achieve</p>
+          </div>
+        </div>
         <p class="ch-footer-text">
           A modern LMS for cloud, DevOps, cybersecurity, and practical technology learning.
         </p>
@@ -13,19 +20,19 @@
       <nav class="col-lg-3 col-md-6 col-sm-6 ch-footer-col" aria-label="Footer quick links">
         <h6 class="ch-footer-title">Quick Links</h6>
         <ul class="ch-footer-links">
-          <li><a href="index.php">Home</a></li>
-          <li><a href="courses.php">Courses</a></li>
-          <li><a href="contact.php">Contact</a></li>
-          <li><a href="loginorsignup.php#login">Get Started</a></li>
+          <li><a href="index.php"><span>Home</span></a></li>
+          <li><a href="courses.php"><span>Courses</span></a></li>
+          <li><a href="contact.php"><span>Contact</span></a></li>
+          <li><a href="loginorsignup.php#login"><span>Get Started</span></a></li>
         </ul>
       </nav>
 
       <nav class="col-lg-2 col-md-6 col-sm-6 ch-footer-col" aria-label="Footer resources">
         <h6 class="ch-footer-title">Resources</h6>
         <ul class="ch-footer-links">
-          <li><a href="paymentstatus.php">Payment Status</a></li>
-          <li><a href="Student/stufeedback.php">Feedback</a></li>
-          <li><a href="loginorsignup.php#signup">Register</a></li>
+          <li><a href="paymentstatus.php"><span>Payment Status</span></a></li>
+          <li><a href="Student/stufeedback.php"><span>Feedback</span></a></li>
+          <li><a href="loginorsignup.php#signup"><span>Register</span></a></li>
         </ul>
       </nav>
 

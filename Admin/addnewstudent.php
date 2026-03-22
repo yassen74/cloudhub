@@ -1,16 +1,10 @@
 <?php
-if(!isset($_SESSION)){ 
-  session_start(); 
-}
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
 define('TITLE', 'Add Student');
 include('./adminInclude/header.php'); 
 include('../dbConnection.php');
 
- if(isset($_SESSION['is_admin_login'])){
-  $adminEmail = $_SESSION['adminLogEmail'];
- } else {
-  echo "<script> location.href='../index.php'; </script>";
- }
+$adminEmail = $_SESSION['admin_email'];
  if(isset($_REQUEST['newStuSubmitBtn'])){
   // Checking for Empty Fields
   if(($_REQUEST['stu_name'] == "") || ($_REQUEST['stu_email'] == "") || ($_REQUEST['stu_pass'] == "") || ($_REQUEST['stu_occ'] == "")){
