@@ -26,9 +26,19 @@ jobs:
 
       - name: PHP syntax check
         run: |
-          find . -name "*.php" -exec php -l {} \;
+          set -e
+          while IFS= read -r -d '' file; do
+            echo "Linting $file"
+            php -l "$file"
+          done < <(
+            find . -name "*.php" \
+              -not -path "./_legacy/*" \
+              -not -path "./LMS-main/*" \
+              -not -path "./backups/*" \
+              -not -name "*.bak*" \
+              -print0
+          )
 
-      # --- Terraform Section ---
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
@@ -44,15 +54,18 @@ jobs:
         run: |
           if [ -d terraform ]; then
             terraform -chdir=terraform init -backend=false
+          else
+            echo "No terraform directory found"
           fi
 
       - name: Terraform Validate
         run: |
           if [ -d terraform ]; then
             terraform -chdir=terraform validate
+          else
+            echo "No terraform directory found"
           fi
 
-      # --- Docker Build ---
       - name: Build Docker image
         run: |
           IMAGE_TAG=${{ github.sha }}
@@ -62,4 +75,5 @@ jobs:
             docker build -f dockerfile -t fayen:$IMAGE_TAG .
           else
             echo "Dockerfile not found"
+            exit 1
           fi
