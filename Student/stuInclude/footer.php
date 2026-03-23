@@ -2,6 +2,7 @@
 if (!defined('FAYEN_FOOTER_EMBED')) {
   define('FAYEN_FOOTER_EMBED', true);
 }
+$footerBasePath = '../';
 include __DIR__ . '/../../mainInclude/footer.php';
 ?>
 
@@ -14,6 +15,6 @@ include __DIR__ . '/../../mainInclude/footer.php';
 <script type="text/javascript" src="/js/all.min.js"></script>
 
 <!-- Custom JavaScript -->
-<script type="text/javascript" src="/js/custom.js?v=1003"></script>
+<script type="text/javascript" src="/js/custom.js?v=1004"></script>
 </body>
 </html>

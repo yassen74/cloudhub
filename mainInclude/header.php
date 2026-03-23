@@ -18,6 +18,9 @@ if (PHP_SAPI !== 'cli' && session_status() !== PHP_SESSION_ACTIVE) {
         fayen_debug_log('slow session_start ' . $sessionMs . 'ms');
     }
 }
+
+$isStudentLoggedIn = !empty($_SESSION['stu_email']) || !empty($_SESSION['stuLogEmail']);
+$myProfileHref = $isStudentLoggedIn ? 'Student/myprofile.php' : 'loginorsignup.php#login';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +44,7 @@ if (PHP_SAPI !== 'cli' && session_status() !== PHP_SESSION_ACTIVE) {
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Custom Style CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1003" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1007" />
     <title>CloudHub</title>
   </head>
   <body>
@@ -60,6 +63,12 @@ if (PHP_SAPI !== 'cli' && session_status() !== PHP_SESSION_ACTIVE) {
           <li class="nav-item custom-nav-item"><a href="paymentstatus.php" class="nav-link">Payment Status</a></li>
           <li class="nav-item custom-nav-item"><a href="Student/stufeedback.php" class="nav-link">Feedback</a></li>
           <li class="nav-item custom-nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+          <li class="nav-item custom-nav-item custom-nav-item-profile">
+            <a href="<?php echo htmlspecialchars($myProfileHref, ENT_QUOTES, 'UTF-8'); ?>" class="nav-link custom-nav-profile-link">
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
+              <span>My Profile</span>
+            </a>
+          </li>
         </ul>
       </div></div>
     </nav> <!-- End Navigation -->

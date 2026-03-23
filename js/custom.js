@@ -13,11 +13,12 @@ $(document).ready(function() {
     );
   }
 
-  var $navbar = $(".navbar");
-  if ($navbar.length) {
+  var $navbar = $(".navbar.ch-navbar");
+  var hasHomeHero = $(".home-hero").length > 0;
+  if ($navbar.length && hasHomeHero) {
     var ticking = false;
     var syncNavbar = function() {
-      $navbar.css("background-color", $(window).scrollTop() >= 600 ? "#225470" : "transparent");
+      $navbar.css("background-color", $(window).scrollTop() >= 80 ? "rgba(7, 17, 29, 0.92)" : "rgba(7, 17, 29, 0.52)");
       ticking = false;
     };
 
@@ -34,6 +35,8 @@ $(document).ready(function() {
         setTimeout(syncNavbar, 16);
       }
     });
+  } else if ($navbar.length) {
+    $navbar.css("background-color", "rgba(7, 17, 29, 0.92)");
   }
 
   var $playlistItems = $("#playlist li");

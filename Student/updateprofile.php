@@ -1,8 +1,10 @@
 <?php
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+  session_start();
+}
 require_once __DIR__ . '/../dbConnection.php';
 
-if (empty($_SESSION['is_login']) || empty($_SESSION['stu_id']) || empty($_SESSION['stuLogEmail'])) {
+if (empty($_SESSION['is_login']) || (empty($_SESSION['stuLogEmail']) && empty($_SESSION['stu_email']))) {
   header("Location: ../loginorsignup.php");
   exit;
 }
@@ -12,11 +14,34 @@ if (!isset($_POST['update_profile'])) {
   exit;
 }
 
-$stuId = (int)$_SESSION['stu_id'];
-$currentEmail = (string)$_SESSION['stuLogEmail'];
+$stuId = isset($_SESSION['stu_id']) ? (int) $_SESSION['stu_id'] : 0;
+$currentEmail = trim((string)($_SESSION['stu_email'] ?? $_SESSION['stuLogEmail'] ?? ''));
+
+if ($currentEmail === '') {
+  header("Location: ../loginorsignup.php");
+  exit;
+}
+
+if ($stuId <= 0) {
+  $resolveStmt = $conn->prepare("SELECT stu_id FROM student WHERE stu_email = ? LIMIT 1");
+  $resolveStmt->bind_param("s", $currentEmail);
+  $resolveStmt->execute();
+  $resolveResult = $resolveStmt->get_result()->fetch_assoc();
+  $resolveStmt->close();
+  $stuId = isset($resolveResult['stu_id']) ? (int) $resolveResult['stu_id'] : 0;
+  if ($stuId > 0) {
+    $_SESSION['stu_id'] = $stuId;
+  }
+}
+
+if ($stuId <= 0) {
+  header("Location: myprofile.php?err=Student%20account%20not%20found");
+  exit;
+}
 
 $name = isset($_POST['stu_name']) ? trim((string)$_POST['stu_name']) : '';
 $email = isset($_POST['stu_email']) ? trim((string)$_POST['stu_email']) : '';
+$occupation = isset($_POST['stu_occ']) ? trim((string)$_POST['stu_occ']) : '';
 $newPass = isset($_POST['stu_pass']) ? (string)$_POST['stu_pass'] : '';
 
 if ($name === '' || $email === '') {
@@ -91,17 +116,17 @@ if ($newPass !== '') {
 $conn->begin_transaction();
 try {
   if ($passHash !== null && $imgUpdate !== null) {
-    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=?, stu_pass=?, stu_img=? WHERE stu_id=? LIMIT 1");
-    $st->bind_param("ssssi", $name, $email, $passHash, $imgUpdate, $stuId);
+    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=?, stu_occ=?, stu_pass=?, stu_img=? WHERE stu_id=? LIMIT 1");
+    $st->bind_param("sssssi", $name, $email, $occupation, $passHash, $imgUpdate, $stuId);
   } elseif ($passHash !== null) {
-    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=?, stu_pass=? WHERE stu_id=? LIMIT 1");
-    $st->bind_param("sssi", $name, $email, $passHash, $stuId);
+    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=?, stu_occ=?, stu_pass=? WHERE stu_id=? LIMIT 1");
+    $st->bind_param("ssssi", $name, $email, $occupation, $passHash, $stuId);
   } elseif ($imgUpdate !== null) {
-    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=?, stu_img=? WHERE stu_id=? LIMIT 1");
-    $st->bind_param("sssi", $name, $email, $imgUpdate, $stuId);
+    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=?, stu_occ=?, stu_img=? WHERE stu_id=? LIMIT 1");
+    $st->bind_param("ssssi", $name, $email, $occupation, $imgUpdate, $stuId);
   } else {
-    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=? WHERE stu_id=? LIMIT 1");
-    $st->bind_param("ssi", $name, $email, $stuId);
+    $st = $conn->prepare("UPDATE student SET stu_name=?, stu_email=?, stu_occ=? WHERE stu_id=? LIMIT 1");
+    $st->bind_param("sssi", $name, $email, $occupation, $stuId);
   }
 
   $st->execute();
@@ -115,6 +140,10 @@ try {
 }
 
 $_SESSION['stuLogEmail'] = $email;
+$_SESSION['stu_email'] = $email;
+if ($imgUpdate !== null) {
+  $_SESSION['stu_img'] = $imgUpdate;
+}
 
-header("Location: myprofile.php?ok=1");
+header("Location: myprofile.php?ok=1#profile-editor");
 exit;

@@ -11,6 +11,11 @@ include('./mainInclude/header.php');
       <p class="auth-subtitle">
         Continue your learning journey or register for a new student account with a cleaner, more polished experience.
       </p>
+      <div class="auth-intro-highlights" aria-label="CloudHub student access benefits">
+        <span class="auth-intro-pill"><i class="fas fa-bolt" aria-hidden="true"></i>Fast access</span>
+        <span class="auth-intro-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i>Secure student sign-in</span>
+        <span class="auth-intro-pill"><i class="fas fa-layer-group" aria-hidden="true"></i>Track-based learning</span>
+      </div>
     </div>
 
     <div class="row auth-row">
@@ -97,7 +102,7 @@ include('./mainInclude/header.php');
 </main>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/ajaxrequest.js?v=3"></script>
+<script src="js/ajaxrequest.js?v=5"></script>
 <script>
   (function () {
     var ok = (typeof window.addStu === 'function');

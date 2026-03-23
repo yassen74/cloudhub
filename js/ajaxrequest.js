@@ -121,7 +121,7 @@ function checkStuLogin() {
       },
       success: function(data) {
         if (data === 1 || data === "1") {
-          window.location.href = "Student/myprofile.php";
+          window.location.replace("Student/myprofile.php");
         } else {
           $("#statusLogMsg").html('<small style="color:red;">Invalid email or password</small>');
         }

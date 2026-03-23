@@ -9,10 +9,31 @@ require_once __DIR__ . '/dbConnection.php';
 
 function post(string $k, string $d=''): string { return isset($_POST[$k]) ? trim((string)$_POST[$k]) : $d; }
 
-$stuEmail = (string)($_SESSION['stuLogEmail'] ?? '');
+$stuEmail = (string)($_SESSION['stu_email'] ?? $_SESSION['stuLogEmail'] ?? '');
 if ($stuEmail === '') {
     header('Location: loginorsignup.php');
     exit;
+}
+
+$stuId = isset($_SESSION['stu_id']) ? (int) $_SESSION['stu_id'] : 0;
+if ($stuId <= 0) {
+    $resolveStmt = $conn->prepare("SELECT stu_id, stu_email FROM student WHERE stu_email = ? LIMIT 1");
+    if ($resolveStmt) {
+        $resolveStmt->bind_param('s', $stuEmail);
+        $resolveStmt->execute();
+        $resolveResult = $resolveStmt->get_result();
+        $resolveRow = $resolveResult ? $resolveResult->fetch_assoc() : null;
+        $resolveStmt->close();
+        if ($resolveRow) {
+            $stuId = isset($resolveRow['stu_id']) ? (int) $resolveRow['stu_id'] : 0;
+            if (!empty($resolveRow['stu_email'])) {
+                $stuEmail = trim((string) $resolveRow['stu_email']);
+            }
+            $_SESSION['stu_id'] = $stuId;
+            $_SESSION['stu_email'] = $stuEmail;
+            $_SESSION['stuLogEmail'] = $stuEmail;
+        }
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -109,15 +130,19 @@ try {
 
         $val = null;
 
-        if (strpos($lower, 'order') !== false && strpos($lower, 'id') !== false) $val = $orderId;
-        if (strpos($lower, 'course') !== false && strpos($lower, 'id') !== false) $val = $courseId;
+        if ($lower === 'order_id' || (strpos($lower, 'order') !== false && strpos($lower, 'id') !== false)) $val = $orderId;
+        if ($lower === 'course_id' || (strpos($lower, 'course') !== false && strpos($lower, 'id') !== false)) $val = $courseId;
+        if ($lower === 'stu_id') $val = (string) $stuId;
         if (strpos($lower, 'email') !== false) $val = $stuEmail;
         if (strpos($lower, 'amount') !== false || strpos($lower, 'price') !== false) $val = $amount;
         if (strpos($lower, 'status') !== false) $val = $status;
         if (strpos($lower, 'method') !== false) $val = $method;
-        if (strpos($lower, 'date') !== false || strpos($lower, 'time') !== false || strpos($lower, 'created') !== false) $val = $created;
+        if ((strpos($lower, 'date') !== false || strpos($lower, 'time') !== false || strpos($lower, 'created') !== false) && $lower !== 'updated_at') $val = $created;
 
         if ($val === null && $isRequired) {
+            if ($lower === 'stu_id') {
+                throw new RuntimeException('Student ID could not be resolved for checkout.');
+            }
             $val = default_for_column($c);
         }
 

@@ -13,6 +13,13 @@ if (!defined('PAGE')) {
 if (!isset($pageTitle) || !is_string($pageTitle) || $pageTitle === '') {
     $pageTitle = 'CloudHub';
 }
+$defaultStuImg = '../image/stu/student1.jpg';
+$stu_display_name = isset($stu_display_name) && is_string($stu_display_name) && trim($stu_display_name) !== ''
+    ? trim($stu_display_name)
+    : 'Student';
+$stu_display_email = isset($stu_display_email) && is_string($stu_display_email)
+    ? trim($stu_display_email)
+    : '';
 // Student image fallback
 if (!isset($stu_img) || !is_string($stu_img) || trim($stu_img) === '') {
     // try common session keys if available
@@ -20,7 +27,7 @@ if (!isset($stu_img) || !is_string($stu_img) || trim($stu_img) === '') {
 }
 if (!is_string($stu_img)) { $stu_img = ''; }
 if (trim($stu_img) === '') {
-    $stu_img = '../image/stu_default.png';
+    $stu_img = $defaultStuImg;
 }
 
 // Safe fallback title (do not rely on undefined constants)
@@ -30,25 +37,44 @@ if (!isset($pageTitle) || !is_string($pageTitle) || $pageTitle === '') {
 if (!defined('CloudHub_PAGE_TITLE')) { define('CloudHub_PAGE_TITLE', $pageTitle); }
 
 $pageClass = 'page-' . preg_replace('/[^a-z0-9_-]+/i', '-', (string)PAGE);
+$studentCompactShell = (PAGE === 'feedback');
+$studentShellClosingMarkup = $studentCompactShell ? '</div>' : '</div></div>';
 
 include_once('../dbConnection.php');
 
- if(isset($_SESSION['is_login'])){
-  $stuLogEmail = $_SESSION['stuLogEmail'];
- } 
- // else {
- //  echo "<script> location.href='../index.php'; </script>";
- // }
- if(isset($stuLogEmail)){
-  $sql = "SELECT stu_img FROM student WHERE stu_email = '$stuLogEmail'";
-  $result = $conn->query($sql);
-  if ($result && $result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    if (!empty($row['stu_img'])) {
-      $stu_img = $row['stu_img'];
+$stuLogEmail = '';
+if (!empty($_SESSION['stu_email']) && is_string($_SESSION['stu_email'])) {
+  $stuLogEmail = trim($_SESSION['stu_email']);
+} elseif (!empty($_SESSION['stuLogEmail']) && is_string($_SESSION['stuLogEmail'])) {
+  $stuLogEmail = trim($_SESSION['stuLogEmail']);
+}
+
+if ($stuLogEmail !== '' && ($stu_img === $defaultStuImg || $stu_display_name === 'Student' || $stu_display_email === '')) {
+  $stmt = $conn->prepare("SELECT stu_img, stu_name, stu_email FROM student WHERE stu_email = ? LIMIT 1");
+  if ($stmt) {
+    $stmt->bind_param("s", $stuLogEmail);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result && $result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+      if (!empty($row['stu_img'])) {
+        $stu_img = (string) $row['stu_img'];
+      }
+      if (!empty($row['stu_name'])) {
+        $stu_display_name = trim((string) $row['stu_name']);
+      }
+      if (!empty($row['stu_email'])) {
+        $stu_display_email = trim((string) $row['stu_email']);
+      }
     }
+    $stmt->close();
   }
- }
+}
+
+if (trim($stu_img) === '') {
+  $stu_img = $defaultStuImg;
+}
+$_SESSION['stu_img'] = $stu_img;
 ?>
 
 <!DOCTYPE html>
@@ -74,8 +100,11 @@ include_once('../dbConnection.php');
  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
+ <!-- Shared Site CSS -->
+ <link rel="stylesheet" href="../css/style.css?v=1007">
+
  <!-- Custom CSS -->
- <link rel="stylesheet" href="../css/stustyle.css?v=1003">
+ <link rel="stylesheet" href="../css/stustyle.css?v=1008">
 
 </head>
 
@@ -85,36 +114,45 @@ include_once('../dbConnection.php');
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="../index.php">CloudHub</a>
  </nav>
 
+<?php if ($studentCompactShell): ?>
+ <div class="container-fluid student-dashboard-shell student-dashboard-shell-compact" style="margin-top:40px;">
+<?php else: ?>
  <!-- Side Bar -->
  <div class="container-fluid mb-5 student-dashboard-shell" style="margin-top:40px;">
   <div class="row">
    <nav class="col-sm-2 bg-light sidebar py-5 d-print-none student-sidebar">
-    <div class="sidebar-sticky">
+   <div class="sidebar-sticky">
      <ul class="nav flex-column">
       <li class="nav-item mb-3">
-      <img src="<?php echo $stu_img ?>" alt="studentimage" class="img-thumbnail rounded-circle" decoding="async">
+        <div class="student-sidebar-profile">
+          <img src="<?php echo htmlspecialchars($stu_img, ENT_QUOTES, 'UTF-8'); ?>" alt="studentimage" class="img-thumbnail rounded-circle" decoding="async" onerror="this.onerror=null;this.src='../image/stu/student1.jpg';">
+          <div class="student-sidebar-identity">
+            <strong class="student-sidebar-name"><?php echo htmlspecialchars($stu_display_name, ENT_QUOTES, 'UTF-8'); ?></strong>
+            <span class="student-sidebar-email"><?php echo htmlspecialchars($stu_display_email !== '' ? $stu_display_email : $stuLogEmail, ENT_QUOTES, 'UTF-8'); ?></span>
+          </div>
+        </div>
       </li>
       <li class="nav-item">
-       <a class="nav-link <?php if(PAGE == 'profile') {echo 'active';} ?>" href="studentProfile.php">
+       <a class="nav-link <?php if(PAGE == 'profile') {echo 'active';} ?>" href="myprofile.php">
         <i class="fas fa-user"></i>
         Profile <span class="sr-only">(current)</span>
        </a>
       </li>
       <li class="nav-item">
        <a class="nav-link <?php if(PAGE == 'mycourse') {echo 'active';} ?>" href="myCourse.php">
-        <i class="fab fa-accessible-icon"></i>
+        <i class="fas fa-play-circle"></i>
         My Courses
        </a>
       </li>
       <li class="nav-item">
        <a class="nav-link <?php if(PAGE == 'feedback') {echo 'active';} ?>" href="stufeedback.php">
-        <i class="fab fa-accessible-icon"></i>
+        <i class="fas fa-comment-dots"></i>
         Feedback
        </a>
       </li>
       <li class="nav-item">
        <a class="nav-link <?php if(PAGE == 'studentChangePass') {echo 'active';} ?>" href="studentChangePass.php">
-        <i class="fas fa-key"></i>
+        <i class="fas fa-shield-alt"></i>
         Change Password
        </a>
       </li>
@@ -127,3 +165,4 @@ include_once('../dbConnection.php');
      </ul>
     </div>
    </nav>
+<?php endif; ?>

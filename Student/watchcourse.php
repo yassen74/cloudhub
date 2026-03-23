@@ -76,6 +76,6 @@ include('../dbConnection.php');
     <!-- <script type="text/javascript" src="..js/ajaxrequest.js"></script> -->
 
     <!-- Custom JavaScript -->
-    <script type="text/javascript" src="../js/custom.js?v=1003"></script>
+    <script type="text/javascript" src="../js/custom.js?v=1004"></script>
 </body>
 </html>

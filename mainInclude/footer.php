@@ -1,3 +1,6 @@
+<?php
+$footerBasePath = isset($footerBasePath) && is_string($footerBasePath) ? $footerBasePath : '';
+?>
 <footer class="ch-footer" role="contentinfo">
   <div class="container">
     <div class="row ch-footer-row">
@@ -20,19 +23,19 @@
       <nav class="col-lg-3 col-md-6 col-sm-6 ch-footer-col" aria-label="Footer quick links">
         <h6 class="ch-footer-title">Quick Links</h6>
         <ul class="ch-footer-links">
-          <li><a href="index.php"><span>Home</span></a></li>
-          <li><a href="courses.php"><span>Courses</span></a></li>
-          <li><a href="contact.php"><span>Contact</span></a></li>
-          <li><a href="loginorsignup.php#login"><span>Get Started</span></a></li>
+          <li><a href="<?php echo htmlspecialchars($footerBasePath . 'index.php', ENT_QUOTES, 'UTF-8'); ?>"><span>Home</span></a></li>
+          <li><a href="<?php echo htmlspecialchars($footerBasePath . 'courses.php', ENT_QUOTES, 'UTF-8'); ?>"><span>Courses</span></a></li>
+          <li><a href="<?php echo htmlspecialchars($footerBasePath . 'contact.php', ENT_QUOTES, 'UTF-8'); ?>"><span>Contact</span></a></li>
+          <li><a href="<?php echo htmlspecialchars($footerBasePath . 'loginorsignup.php#login', ENT_QUOTES, 'UTF-8'); ?>"><span>Get Started</span></a></li>
         </ul>
       </nav>
 
       <nav class="col-lg-2 col-md-6 col-sm-6 ch-footer-col" aria-label="Footer resources">
         <h6 class="ch-footer-title">Resources</h6>
         <ul class="ch-footer-links">
-          <li><a href="paymentstatus.php"><span>Payment Status</span></a></li>
-          <li><a href="Student/stufeedback.php"><span>Feedback</span></a></li>
-          <li><a href="loginorsignup.php#signup"><span>Register</span></a></li>
+          <li><a href="<?php echo htmlspecialchars($footerBasePath . 'paymentstatus.php', ENT_QUOTES, 'UTF-8'); ?>"><span>Payment Status</span></a></li>
+          <li><a href="<?php echo htmlspecialchars($footerBasePath . 'Student/stufeedback.php', ENT_QUOTES, 'UTF-8'); ?>"><span>Feedback</span></a></li>
+          <li><a href="<?php echo htmlspecialchars($footerBasePath . 'loginorsignup.php#signup', ENT_QUOTES, 'UTF-8'); ?>"><span>Register</span></a></li>
         </ul>
       </nav>
 
@@ -64,7 +67,7 @@
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/popper.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/custom.js?v=1003"></script>
+<script type="text/javascript" src="/js/custom.js?v=1004"></script>
 </body>
 </html>
 <?php endif; ?>

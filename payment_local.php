@@ -37,15 +37,36 @@ function detect_courseorder_columns(mysqli $conn): array {
     return $cols;
 }
 
+function resolve_student_id_from_email(mysqli $conn, string $email): int {
+    if ($email === '') {
+        return 0;
+    }
+
+    $stmt = $conn->prepare("SELECT stu_id FROM student WHERE stu_email = ? LIMIT 1");
+    if (!$stmt) {
+        return 0;
+    }
+
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $res = $stmt->get_result();
+    $row = $res ? $res->fetch_assoc() : null;
+    $stmt->close();
+
+    return isset($row['stu_id']) ? (int) $row['stu_id'] : 0;
+}
+
 function insert_courseorder_best_effort(mysqli $conn, string $orderId, string $courseId, string $email, string $amount, string $status): void {
     $cols = detect_courseorder_columns($conn);
     if (!$cols) return;
+    $stuId = resolve_student_id_from_email($conn, $email);
 
     $colsLower = array_map('strtolower', $cols);
 
     $map = [
         'order_id'   => ['order_id','orderid','ord_id'],
         'course_id'  => ['course_id','courseid','cid'],
+        'stu_id'     => ['stu_id'],
         'stu_email'  => ['stu_email','stuemail','email'],
         'amount'     => ['amount','amount_paid','txnamount','price'],
         'status'     => ['status','txn_status','payment_status'],
@@ -55,6 +76,7 @@ function insert_courseorder_best_effort(mysqli $conn, string $orderId, string $c
     $values = [
         'order_id'   => $orderId,
         'course_id'  => $courseId,
+        'stu_id'     => (string)$stuId,
         'stu_email'  => $email,
         'amount'     => $amount,
         'status'     => $status,
@@ -90,6 +112,7 @@ function insert_courseorder_best_effort(mysqli $conn, string $orderId, string $c
 
 $courseId = req('course_id', req('courseid', req('cid', '')));
 $email = req('buyer_email', '');
+if ($email === '' && !empty($_SESSION['stu_email'])) $email = (string)$_SESSION['stu_email'];
 if ($email === '' && !empty($_SESSION['stuLogEmail'])) $email = (string)$_SESSION['stuLogEmail'];
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $courseId === '') {
