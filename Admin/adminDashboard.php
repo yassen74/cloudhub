@@ -31,7 +31,7 @@ if ($r = $conn->query("SELECT COUNT(*) AS c FROM courseorder")) {
 if (isset($_REQUEST['delete'])) {
   $id = isset($_REQUEST['id']) ? (int)$_REQUEST['id'] : 0;
   if ($id > 0) {
-    $del = $conn->prepare("DELETE FROM courseorder WHERE co_id = ? LIMIT 1");
+    $del = $conn->prepare("DELETE FROM courseorder WHERE order_id = ? LIMIT 1");
     if ($del) {
       $del->bind_param("i", $id);
       $del->execute();
@@ -75,7 +75,17 @@ if (isset($_REQUEST['delete'])) {
     <div class="mx-5 mt-5 text-center">
       <p class="bg-dark text-white p-2">Course Ordered</p>
       <?php
-      $sql = "SELECT * FROM courseorder";
+      $sql = "
+        SELECT
+          o.order_id,
+          o.course_id,
+          o.order_date,
+          o.order_amount,
+          s.stu_email
+        FROM courseorder o
+        LEFT JOIN student s ON s.stu_id = o.stu_id
+        ORDER BY o.order_date DESC, o.order_id DESC
+      ";
       $result = $conn->query($sql);
       if ($result && $result->num_rows > 0) {
         echo '<table class="table">
@@ -92,12 +102,12 @@ if (isset($_REQUEST['delete'])) {
           <tbody>';
         while ($row = $result->fetch_assoc()) {
           echo '<tr>';
-          echo '<th scope="row">' . $row["order_id"] . '</th>';
-          echo '<td>' . $row["course_id"] . '</td>';
-          echo '<td>' . $row["stu_email"] . '</td>';
-          echo '<td>' . $row["order_date"] . '</td>';
-          echo '<td>' . $row["amount"] . '</td>';
-          echo '<td><form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . (int)$row["co_id"] . '><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>';
+          echo '<th scope="row">' . (int)($row["order_id"] ?? 0) . '</th>';
+          echo '<td>' . (int)($row["course_id"] ?? 0) . '</td>';
+          echo '<td>' . htmlspecialchars((string)($row["stu_email"] ?? ''), ENT_QUOTES, 'UTF-8') . '</td>';
+          echo '<td>' . htmlspecialchars((string)($row["order_date"] ?? ''), ENT_QUOTES, 'UTF-8') . '</td>';
+          echo '<td>' . htmlspecialchars((string)($row["order_amount"] ?? ''), ENT_QUOTES, 'UTF-8') . '</td>';
+          echo '<td><form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . (int)($row["order_id"] ?? 0) . '><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>';
           echo '</tr>';
         }
         echo '</tbody></table>';

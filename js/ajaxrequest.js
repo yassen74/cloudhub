@@ -51,6 +51,7 @@ function addStu() {
     var stuname = $("#stuname").val().trim();
     var stuemail = $("#stuemail").val().trim();
     var stupass = $("#stupass").val();
+    var preferredTrack = ($("#preferred_track").val() || "").trim();
 
     $("#statusMsg1, #statusMsg2, #statusMsg3, #successMsg").html("");
 
@@ -66,6 +67,10 @@ function addStu() {
       $("#statusMsg3").html('<small style="color:red;">Password must be at least 6 characters</small>');
       return;
     }
+    if (!preferredTrack) {
+      $("#successMsg").html('<span style="color:red;">Please select a track.</span>');
+      return;
+    }
 
     $.ajax({
       url: "Student/addstudent.php",
@@ -75,7 +80,8 @@ function addStu() {
         stusignup: 1,
         stuname: stuname,
         stuemail: stuemail,
-        stupass: stupass
+        stupass: stupass,
+        preferred_track: preferredTrack
       },
       success: function(data) {
         if (data && data.status === "ok") {

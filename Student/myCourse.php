@@ -79,206 +79,60 @@ function detect_courseorder_student_column(mysqli $conn): ?string {
   return null;
 }
 
-function detect_student_track_columns(mysqli $conn): array {
-  static $cachedColumns = null;
-  if (is_array($cachedColumns)) {
-    return $cachedColumns;
-  }
+function resolve_student_track(mysqli $conn, int $stuId, string $stuEmail): array {
+  $studentTrackName = '';
+  $lookupByStuId = $stuId > 0;
+  $sql = "SELECT stu_occ FROM student WHERE " . ($lookupByStuId ? "stu_id = ?" : "stu_email = ?") . " LIMIT 1";
+  $stmt = $conn->prepare($sql);
 
-  $supported = ['track_id', 'preferred_track', 'selected_track', 'track_name'];
-  $detected = [];
-  $res = $conn->query("SHOW COLUMNS FROM student");
-
-  if ($res) {
-    while ($row = $res->fetch_assoc()) {
-      $field = isset($row['Field']) ? strtolower((string) $row['Field']) : '';
-      if ($field !== '' && in_array($field, $supported, true)) {
-        $detected[$field] = (string) $row['Field'];
-      }
-    }
-    $res->close();
-  }
-
-  $cachedColumns = $detected;
-  return $cachedColumns;
-}
-
-function available_track_tables(mysqli $conn): array {
-  static $cachedTables = null;
-  if (is_array($cachedTables)) {
-    return $cachedTables;
-  }
-
-  $tables = [];
-  foreach (['tracks', 'track'] as $candidate) {
-    $safeTable = $conn->real_escape_string($candidate);
-    $res = $conn->query("SHOW TABLES LIKE '{$safeTable}'");
-    if ($res) {
-      $exists = $res->num_rows > 0;
-      $res->close();
-      if ($exists) {
-        $tables[] = $candidate;
-      }
-    }
-  }
-
-  $cachedTables = $tables;
-  return $cachedTables;
-}
-
-function normalize_track_name(string $trackName): string {
-  $normalized = strtolower(trim($trackName));
-  $aliases = [
-    'ai' => 'AI',
-    'artificial intelligence' => 'AI',
-    'cyber security' => 'Cyber Security',
-    'cybersecurity' => 'Cyber Security',
-    'aws cloud' => 'AWS Cloud',
-    'data science' => 'Data Science',
-    'devops' => 'DevOps',
-    'networking' => 'Networking',
-    'operating systems' => 'Operating Systems',
-    'programming' => 'Programming',
-  ];
-
-  return $aliases[$normalized] ?? trim($trackName);
-}
-
-function resolve_track_name_by_id(mysqli $conn, int $trackId): string {
-  if ($trackId <= 0) {
-    return '';
-  }
-
-  foreach (available_track_tables($conn) as $table) {
-    if (!in_array($table, ['track', 'tracks'], true)) {
-      continue;
-    }
-
-    $stmt = $conn->prepare("SELECT track_name FROM {$table} WHERE track_id = ? LIMIT 1");
-    if (!$stmt) {
-      continue;
-    }
-
-    $stmt->bind_param('i', $trackId);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result ? $result->fetch_assoc() : null;
-    if ($result) {
-      $result->close();
-    }
-    $stmt->close();
-
-    if ($row && !empty($row['track_name'])) {
-      return trim((string) $row['track_name']);
-    }
-  }
-
-  return '';
-}
-
-function resolve_track_id_by_name(mysqli $conn, string $trackName): array {
-  $trackName = normalize_track_name($trackName);
-  if ($trackName === '') {
+  if (!$stmt) {
     return [0, ''];
   }
 
-  foreach (available_track_tables($conn) as $table) {
-    if (!in_array($table, ['track', 'tracks'], true)) {
-      continue;
-    }
-
-    $stmt = $conn->prepare("SELECT track_id, track_name FROM {$table} WHERE LOWER(track_name) = LOWER(?) LIMIT 1");
-    if (!$stmt) {
-      continue;
-    }
-
-    $stmt->bind_param('s', $trackName);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result ? $result->fetch_assoc() : null;
-    if ($result) {
-      $result->close();
-    }
-    $stmt->close();
-
-    if ($row) {
-      return [
-        isset($row['track_id']) ? (int) $row['track_id'] : 0,
-        isset($row['track_name']) ? trim((string) $row['track_name']) : '',
-      ];
-    }
+  if ($lookupByStuId) {
+    $stmt->bind_param('i', $stuId);
+  } else {
+    $stmt->bind_param('s', $stuEmail);
   }
 
-  return [0, ''];
-}
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $row = $result ? $result->fetch_assoc() : null;
+  if ($result) {
+    $result->close();
+  }
+  $stmt->close();
 
-function resolve_student_track(mysqli $conn, int $stuId, string $stuEmail): array {
-  $trackId = isset($_SESSION['track_id']) ? (int) $_SESSION['track_id'] : 0;
-  $trackName = '';
-
-  foreach (['preferred_track', 'selected_track', 'track_name'] as $sessionKey) {
-    if ($trackName === '' && isset($_SESSION[$sessionKey]) && is_string($_SESSION[$sessionKey])) {
-      $trackName = trim((string) $_SESSION[$sessionKey]);
-    }
+  if ($row && !empty($row['stu_occ'])) {
+    $studentTrackName = trim((string) $row['stu_occ']);
   }
 
-  $trackFields = detect_student_track_columns($conn);
-  if (!empty($trackFields) && ($stuId > 0 || $stuEmail !== '')) {
-    $selectParts = [];
-    foreach ($trackFields as $alias => $field) {
-      $safeField = str_replace('`', '``', $field);
-      $selectParts[] = "`{$safeField}` AS `{$alias}`";
-    }
-
-    $lookupByStuId = $stuId > 0;
-    $sql = "SELECT " . implode(', ', $selectParts) . " FROM student WHERE " . ($lookupByStuId ? "stu_id = ?" : "stu_email = ?") . " LIMIT 1";
-    $stmt = $conn->prepare($sql);
-
-    if ($stmt) {
-      if ($lookupByStuId) {
-        $stmt->bind_param('i', $stuId);
-      } else {
-        $stmt->bind_param('s', $stuEmail);
-      }
-
-      $stmt->execute();
-      $result = $stmt->get_result();
-      $row = $result ? $result->fetch_assoc() : null;
-      if ($result) {
-        $result->close();
-      }
-      $stmt->close();
-
-      if ($row) {
-        if ($trackId <= 0 && isset($row['track_id'])) {
-          $trackId = (int) $row['track_id'];
-        }
-
-        if ($trackName === '') {
-          foreach (['preferred_track', 'selected_track', 'track_name'] as $alias) {
-            if (!empty($row[$alias])) {
-              $trackName = trim((string) $row[$alias]);
-              break;
-            }
-          }
-        }
-      }
-    }
+  if ($studentTrackName === '') {
+    return [0, ''];
   }
 
-  if ($trackId > 0) {
-    $resolvedTrackName = resolve_track_name_by_id($conn, $trackId);
-    if ($resolvedTrackName !== '') {
-      $trackName = $resolvedTrackName;
-    }
-    return [$trackId, $trackName];
+  $trackStmt = $conn->prepare("SELECT track_id, track_name FROM tracks WHERE track_name = ? LIMIT 1");
+  if (!$trackStmt) {
+    return [0, $studentTrackName];
   }
 
-  if ($trackName !== '') {
-    return resolve_track_id_by_name($conn, $trackName);
+  $trackStmt->bind_param('s', $studentTrackName);
+  $trackStmt->execute();
+  $trackResult = $trackStmt->get_result();
+  $trackRow = $trackResult ? $trackResult->fetch_assoc() : null;
+  if ($trackResult) {
+    $trackResult->close();
+  }
+  $trackStmt->close();
+
+  if (!$trackRow) {
+    return [0, $studentTrackName];
   }
 
-  return [0, ''];
+  return [
+    isset($trackRow['track_id']) ? (int) $trackRow['track_id'] : 0,
+    isset($trackRow['track_name']) ? trim((string) $trackRow['track_name']) : $studentTrackName,
+  ];
 }
 
 function course_image_src(array $row): string {
@@ -381,29 +235,7 @@ if ($stuId > 0) {
   [$recommendedTrackId, $recommendedTrackName] = resolve_student_track($conn, $stuId, $stuEmail);
 
   if ($recommendedTrackId > 0) {
-    $enrolledCourseIds = [];
-    foreach ($courseRows as $courseRow) {
-      if (isset($courseRow['course_id'])) {
-        $enrolledCourseIds[] = (int) $courseRow['course_id'];
-      }
-    }
-
-    $enrolledCourseIds = array_values(array_filter(array_unique($enrolledCourseIds), static function ($courseId) {
-      return $courseId > 0;
-    }));
-
-    $excludeSql = '';
-    if (!empty($enrolledCourseIds)) {
-      $excludeSql = ' AND c.course_id NOT IN (' . implode(',', $enrolledCourseIds) . ')';
-    }
-
-    $recommendSql = "
-    SELECT c.course_id, c.course_name, c.course_desc, c.course_price, c.course_img
-    FROM course c
-    WHERE c.track_id = ?{$excludeSql}
-    ORDER BY c.course_id DESC
-    LIMIT 4
-    ";
+    $recommendSql = "SELECT * FROM course WHERE track_id = ? ORDER BY course_id ASC";
     $recommendationStmt = $conn->prepare($recommendSql);
 
     if ($recommendationStmt) {
@@ -648,18 +480,105 @@ body {
   box-shadow:0 18px 30px rgba(15,23,42,0.08);
 }
 
-.recommendations-section{
-  margin-top:42px;
+.recommendations-shell{
+  margin-top:44px;
+  padding:28px;
+  border-radius:32px;
+  background:linear-gradient(145deg, #08111d 0%, #10263f 58%, #13365b 100%);
+  border:1px solid rgba(125,211,252,0.18);
+  box-shadow:0 30px 56px rgba(2,8,23,0.22);
 }
 
-.recommendations-heading{
-  margin-bottom:18px;
+.recommendations-shell .recommendations-copy{
+  max-width:760px;
 }
 
-.recommendation-subtitle{
-  color:#64748b;
+.recommendations-shell .recommendations-heading{
+  align-items:flex-start;
+  margin-bottom:20px;
+}
+
+.recommendations-shell .page-kicker{
+  color:#7dd3fc !important;
+}
+
+.recommendations-shell .recommendations-title{
+  color:#f8fbff;
+  margin-bottom:0.55rem;
+}
+
+.recommendations-shell .recommendation-subtitle{
+  color:rgba(226,232,240,0.88) !important;
   margin:0;
-  line-height:1.7;
+  line-height:1.75;
+}
+
+.recommendations-shell .recommendations-grid{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap:22px !important;
+  align-items:stretch;
+  width:100%;
+  max-width:1080px;
+}
+
+.recommendations-shell .recommendation-card{
+  width:auto !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:16px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  justify-content:flex-start !important;
+  gap:14px !important;
+  min-height:100%;
+  border-radius:24px;
+  background:linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border:1px solid rgba(191,219,254,0.8);
+  box-shadow:0 18px 36px rgba(15,23,42,0.12);
+}
+
+.recommendations-shell .recommendation-card .course-img{
+  width:100% !important;
+  height:180px !important;
+  border-radius:18px;
+  object-fit:cover;
+}
+
+.recommendations-shell .recommendation-card .course-info{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  flex:1;
+}
+
+.recommendations-shell .recommendation-card .course-info h5{
+  font-size:1.08rem;
+  line-height:1.45;
+  margin-bottom:0;
+  color:#0f172a;
+}
+
+.recommendations-shell .recommendation-card .course-info p{
+  margin-bottom:0 !important;
+  font-size:0.94rem;
+  color:#5b6b82 !important;
+}
+
+.recommendations-shell .recommendation-card .course-info strong{
+  align-self:flex-start;
+}
+
+.recommendations-shell .recommendation-card .btn-primary{
+  width:100%;
+  min-height:46px;
+  margin-top:auto;
+}
+
+.recommendations-shell .empty-state{
+  max-width:none;
+  margin:0;
 }
 
 @media (max-width: 767.98px) {
@@ -708,6 +627,31 @@ body {
   .course-card .btn{
     width:100%;
     min-height:44px;
+  }
+
+  .recommendations-shell{
+    padding:20px 16px;
+  }
+
+  .recommendations-shell .recommendations-grid{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  .recommendations-shell .recommendation-card .course-img{
+    height:180px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .recommendations-shell .recommendations-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .recommendations-shell .recommendations-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
   }
 }
 </style>
@@ -764,11 +708,11 @@ body {
   </div>
 <?php endforeach; ?>
 
-<section class="recommendations-section">
+<section class="recommendations-section recommendations-shell">
   <div class="page-heading recommendations-heading">
-    <div>
+    <div class="recommendations-copy">
       <span class="page-kicker">Track Suggestions</span>
-      <h2>Recommended Courses</h2>
+      <h2 class="recommendations-title">Recommended Courses</h2>
       <p class="recommendation-subtitle">
         <?php if ($recommendedTrackName !== ''): ?>
           Courses related to your selected track: <?php echo htmlspecialchars($recommendedTrackName, ENT_QUOTES, 'UTF-8'); ?>.
@@ -785,19 +729,21 @@ body {
       <p>We will show related courses here as soon as your selected track is available and there are matching courses beyond your current enrollments.</p>
     </div>
   <?php else: ?>
-    <?php foreach ($recommendedRows as $row):
-      $imgPath = course_image_src($row);
-    ?>
-      <div class="course-card">
-        <img src="<?php echo htmlspecialchars($imgPath, ENT_QUOTES, 'UTF-8'); ?>" class="course-img" alt="Recommended course" loading="lazy" decoding="async">
-        <div class="course-info">
-          <h5><?php echo htmlspecialchars((string)$row['course_name'], ENT_QUOTES, 'UTF-8'); ?></h5>
-          <p class="text-muted mb-1"><?php echo htmlspecialchars((string)$row['course_desc'], ENT_QUOTES, 'UTF-8'); ?></p>
-          <strong>₹ <?php echo htmlspecialchars((string)$row['course_price'], ENT_QUOTES, 'UTF-8'); ?></strong>
-        </div>
-        <a href="../coursedetails.php?course_id=<?php echo urlencode((string)$row['course_id']); ?>" class="btn btn-primary btn-sm">View Course</a>
-      </div>
-    <?php endforeach; ?>
+    <div class="recommendations-grid">
+      <?php foreach ($recommendedRows as $row):
+        $imgPath = course_image_src($row);
+      ?>
+        <article class="course-card recommendation-card">
+          <img src="<?php echo htmlspecialchars($imgPath, ENT_QUOTES, 'UTF-8'); ?>" class="course-img" alt="Recommended course" loading="lazy" decoding="async">
+          <div class="course-info">
+            <h5><?php echo htmlspecialchars((string)$row['course_name'], ENT_QUOTES, 'UTF-8'); ?></h5>
+            <p class="text-muted mb-1"><?php echo htmlspecialchars((string)$row['course_desc'], ENT_QUOTES, 'UTF-8'); ?></p>
+            <strong>₹ <?php echo htmlspecialchars((string)$row['course_price'], ENT_QUOTES, 'UTF-8'); ?></strong>
+          </div>
+          <a href="../coursedetails.php?course_id=<?php echo urlencode((string)$row['course_id']); ?>" class="btn btn-primary btn-sm">View Course</a>
+        </article>
+      <?php endforeach; ?>
+    </div>
   <?php endif; ?>
 </section>
 
