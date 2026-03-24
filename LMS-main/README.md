@@ -1,2 +1,0 @@
-# LMS
-MY Graduation project
