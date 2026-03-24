@@ -1,0 +1,154 @@
+name: Fayen Full CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show workspace
+        run: |
+          pwd
+          ls -la
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Prepare audit directory
+        run: mkdir -p ci-artifacts
+
+      - name: List PHP files to lint
+        run: |
+          find . -name "*.php" \
+            -not -path "./_legacy/*" \
+            -not -path "./LMS-main/*" \
+            -not -path "./backups/*" \
+            -not -path "./_db_backups/*" \
+            -not -path "./_docker_logs/*" \
+            -not -name "*.bak*" \
+            | sort | tee ci-artifacts/php-files.txt
+
+      - name: PHP syntax check
+        run: |
+          set -e
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            echo "Linting $file"
+            php -l "$file"
+          done < ci-artifacts/php-files.txt
+
+      - name: Check important project files
+        run: |
+          set -e
+          required_files=(
+            "Dockerfile"
+            "dbConnection.php"
+            "studentRegistration.php"
+            "index.php"
+            "k8s/base/deployment.yaml"
+            "k8s/base/service.yaml"
+          )
+
+          for f in "${required_files[@]}"; do
+            if [ ! -e "$f" ]; then
+              echo "Missing required file: $f"
+              exit 1
+            fi
+            echo "Found: $f"
+          done
+
+      - name: Basic YAML presence checks
+        run: |
+          set -e
+          grep -q "kind: Deployment" k8s/base/deployment.yaml
+          grep -q "kind: Service" k8s/base/service.yaml
+          grep -q "image:" k8s/base/deployment.yaml
+          grep -q "replicas:" k8s/base/deployment.yaml
+          echo "Kubernetes manifest checks passed"
+
+      - name: Detect risky image tags in manifests
+        run: |
+          echo "Checking image references..."
+          grep -RIn "image:" k8s || true
+          if grep -RInE 'image: .*:latest' k8s; then
+            echo "Warning: latest tag found in Kubernetes manifests"
+          else
+            echo "No latest tag found in Kubernetes manifests"
+          fi
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Format Check
+        run: |
+          if [ -d terraform ]; then
+            terraform -chdir=terraform fmt -check
+          else
+            echo "No terraform directory found"
+          fi
+
+      - name: Terraform Init
+        run: |
+          if [ -d terraform ]; then
+            terraform -chdir=terraform init -backend=false
+          else
+            echo "No terraform directory found"
+          fi
+
+      - name: Terraform Validate
+        run: |
+          if [ -d terraform ]; then
+            terraform -chdir=terraform validate
+          else
+            echo "No terraform directory found"
+          fi
+
+      - name: Docker build check
+        run: |
+          set -e
+          IMAGE_TAG=${{ github.sha }}
+          if [ -f Dockerfile ]; then
+            docker build -t fayen:${IMAGE_TAG} .
+          elif [ -f dockerfile ]; then
+            docker build -f dockerfile -t fayen:${IMAGE_TAG} .
+          else
+            echo "Dockerfile not found"
+            exit 1
+          fi
+
+      - name: Generate CI summary
+        run: |
+          {
+            echo "Fayen Full CI Summary"
+            echo "Commit: ${{ github.sha }}"
+            echo "Branch/Ref: ${{ github.ref }}"
+            echo
+            echo "Key checks completed:"
+            echo "- PHP syntax check"
+            echo "- Required files presence"
+            echo "- Kubernetes manifest sanity checks"
+            echo "- Terraform fmt/init/validate"
+            echo "- Docker build"
+          } > ci-artifacts/summary.txt
+
+          cat ci-artifacts/summary.txt
+
+      - name: Upload CI artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: fayen-ci-artifacts
+          path: ci-artifacts/
