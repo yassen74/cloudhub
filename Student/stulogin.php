@@ -4,22 +4,36 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 require_once __DIR__ . '/../dbConnection.php';
 
-header('Content-Type: application/json; charset=UTF-8');
+function wants_json_response(): bool {
+  $requestedWith = $_SERVER['HTTP_X_REQUESTED_WITH'] ?? '';
+  if (is_string($requestedWith) && strcasecmp($requestedWith, 'XMLHttpRequest') === 0) {
+    return true;
+  }
+
+  $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
+  return is_string($accept) && stripos($accept, 'application/json') !== false;
+}
 
 function out($v) {
   echo json_encode($v);
   exit;
 }
 
-if (!isset($_POST['checkLogemail'], $_POST['checkLogpass'])) {
-  out(0);
+$expectsJson = wants_json_response();
+if ($expectsJson) {
+  header('Content-Type: application/json; charset=UTF-8');
 }
 
-$email = trim((string)$_POST['checkLogemail']);
-$pass  = (string)$_POST['checkLogpass'];
+$email = trim((string)($_POST['checkLogemail'] ?? $_POST['stuLogEmail'] ?? ''));
+$pass  = (string)($_POST['checkLogpass'] ?? $_POST['stuLogPass'] ?? '');
 
 if ($email === '' || $pass === '') {
-  out(0);
+  if ($expectsJson) {
+    out(0);
+  }
+
+  header('Location: ../loginorsignup.php#login');
+  exit;
 }
 
 $stmt = $conn->prepare("SELECT stu_id, stu_pass FROM student WHERE stu_email = ? LIMIT 1");
@@ -30,7 +44,12 @@ $row = $res ? $res->fetch_assoc() : null;
 $stmt->close();
 
 if (!$row) {
-  out(0);
+  if ($expectsJson) {
+    out(0);
+  }
+
+  header('Location: ../loginorsignup.php#login');
+  exit;
 }
 
 $stuId = (int)$row['stu_id'];
@@ -53,7 +72,12 @@ if (password_verify($pass, $dbPass)) {
 }
 
 if (!$ok) {
-  out(0);
+  if ($expectsJson) {
+    out(0);
+  }
+
+  header('Location: ../loginorsignup.php#login');
+  exit;
 }
 
 $_SESSION['is_login'] = true;
@@ -61,4 +85,9 @@ $_SESSION['stuLogEmail'] = $email;
 $_SESSION['stu_email'] = $email;
 $_SESSION['stu_id'] = $stuId;
 
-out(1);
+if ($expectsJson) {
+  out(1);
+}
+
+header('Location: myprofile.php');
+exit;

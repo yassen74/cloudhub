@@ -44,7 +44,7 @@ $myProfileHref = $isStudentLoggedIn ? 'Student/myprofile.php' : 'loginorsignup.p
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Custom Style CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1007" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1009" />
     <title>CloudHub</title>
   </head>
   <body>

@@ -707,7 +707,7 @@ body.page-profile {
 
 .student-profile-shell {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.7rem;
 }
 
 .page-profile .student-profile-shell {
@@ -732,7 +732,7 @@ body.page-profile {
 }
 
 .student-profile-hero {
-  padding: 1.6rem;
+  padding: 1.9rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -792,7 +792,7 @@ body.page-profile {
 
 .student-profile-subtitle {
   max-width: 760px;
-  color: rgba(226, 232, 240, 0.86);
+  color: rgba(226, 232, 240, 0.92);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -831,12 +831,17 @@ body.page-profile {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.55rem;
   min-width: 176px;
   border-radius: 999px;
   padding: 0.9rem 1.35rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   text-decoration: none !important;
+}
+
+.student-profile-action-btn i {
+  font-size: 0.96rem;
 }
 
 .student-profile-action-primary {
@@ -870,7 +875,7 @@ body.page-profile {
 }
 
 .student-profile-card {
-  padding: 1.45rem;
+  padding: 1.65rem;
   height: 100%;
 }
 
@@ -887,14 +892,14 @@ body.page-profile {
 }
 
 .student-profile-card-head p {
-  color: #bfd0e1;
+  color: #d6e3f2;
   line-height: 1.75;
   margin-bottom: 0;
 }
 
 .student-profile-stat-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
   margin: 1.35rem 0;
 }
@@ -914,8 +919,13 @@ body.page-profile {
   margin-bottom: 0.4rem;
 }
 
+.student-profile-stat-focus strong {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
 .student-profile-stat span {
-  color: #bfd0e1;
+  color: #d6e3f2;
   font-size: 0.92rem;
 }
 
@@ -977,6 +987,10 @@ body.page-profile {
   margin-top: 1.3rem;
 }
 
+.profile-dashboard-row {
+  row-gap: 1.5rem;
+}
+
 .student-form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1008,7 +1022,7 @@ body.page-profile {
 .student-form-note {
   display: block;
   margin-top: 0.55rem;
-  color: #9fb3c8;
+  color: #c6d4e3;
   line-height: 1.6;
 }
 

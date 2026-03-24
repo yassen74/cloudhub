@@ -179,8 +179,8 @@ include __DIR__ . '/stuInclude/header.php';
         </div>
 
         <div class="student-profile-actions">
-          <a href="myCourse.php" class="btn student-profile-action-btn student-profile-action-primary">My Courses</a>
-          <a href="studentChangePass.php" class="btn student-profile-action-btn student-profile-action-secondary">Change Password</a>
+          <a href="myCourse.php" class="btn student-profile-action-btn student-profile-action-primary"><i class="fas fa-play-circle" aria-hidden="true"></i><span>My Courses</span></a>
+          <a href="studentChangePass.php" class="btn student-profile-action-btn student-profile-action-secondary"><i class="fas fa-shield-alt" aria-hidden="true"></i><span>Change Password</span></a>
         </div>
       </div>
 
@@ -211,6 +211,10 @@ include __DIR__ . '/stuInclude/header.php';
                 <div class="student-profile-stat">
                   <strong><?php echo $feedbackCount; ?></strong>
                   <span>Feedback notes</span>
+                </div>
+                <div class="student-profile-stat student-profile-stat-focus">
+                  <strong><?php echo htmlspecialchars($stuOcc !== '' ? $stuOcc : 'General', ENT_QUOTES, 'UTF-8'); ?></strong>
+                  <span>Learning focus</span>
                 </div>
               </div>
 

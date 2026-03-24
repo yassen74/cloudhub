@@ -101,10 +101,10 @@ $_SESSION['stu_img'] = $stu_img;
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
  <!-- Shared Site CSS -->
- <link rel="stylesheet" href="../css/style.css?v=1007">
+ <link rel="stylesheet" href="../css/style.css?v=1009">
 
  <!-- Custom CSS -->
- <link rel="stylesheet" href="../css/stustyle.css?v=1008">
+ <link rel="stylesheet" href="../css/stustyle.css?v=1010">
 
 </head>
 

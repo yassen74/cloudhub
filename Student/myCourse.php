@@ -366,16 +366,24 @@ body {
 
 .page-heading h2{
   font-size:clamp(2rem, 3vw, 2.75rem);
-  font-weight:800;
+  font-weight:700;
   letter-spacing:-0.03em;
   margin-bottom:0.6rem;
+  color:#ffffff;
 }
 
 .page-subtitle{
   max-width:700px;
   margin:0;
-  color:#5b6b82;
+  color:#cbd5f5;
+  opacity:1;
+  font-weight:500;
   line-height:1.75;
+}
+
+.page-heading .text-muted{
+  color:#cbd5f5 !important;
+  opacity:1 !important;
 }
 
 .browse-link-btn{
@@ -419,10 +427,13 @@ body {
   font-weight:800;
   font-size:1.32rem;
   margin-bottom:0.5rem;
+  color:#08111d;
 }
 
 .course-info p{
-  color:#5b6b82 !important;
+  color:#334155 !important;
+  opacity:1 !important;
+  font-weight:500;
   line-height:1.7;
 }
 
@@ -469,7 +480,7 @@ body {
 }
 
 .empty-state p{
-  color:#64748b;
+  color:#475569;
   margin-bottom:18px;
   line-height:1.75;
 }
@@ -563,7 +574,8 @@ body {
 .recommendations-shell .recommendation-card .course-info p{
   margin-bottom:0 !important;
   font-size:0.94rem;
-  color:#5b6b82 !important;
+  color:#334155 !important;
+  opacity:1 !important;
 }
 
 .recommendations-shell .recommendation-card .course-info strong{
