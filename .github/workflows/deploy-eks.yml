@@ -63,6 +63,10 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Ensure Kubernetes resources exist
+        run: |
+          kubectl apply -k k8s/base
+
       - name: Deploy new image to EKS
         run: |
           kubectl set image deployment/${DEPLOYMENT_NAME} \
