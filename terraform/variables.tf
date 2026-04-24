@@ -70,5 +70,5 @@ variable "db_allocated_storage" {
 variable "alert_email" {
   description = "Email for CloudWatch alerts"
   type        = string
-  default = "yassenashraf372@gmail.com"
+  default     = "yassenashraf372@gmail.com"
 }
