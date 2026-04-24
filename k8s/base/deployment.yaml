@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fayen-deployment
-  namespace: fayen
+  name: cloudhub-deployment
+  namespace: cloudhub
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: fayen
+      app: cloudhub
   template:
     metadata:
       labels:
-        app: fayen
+        app: cloudhub
     spec:
       containers:
-        - name: fayen
-          image: yassenmeckawy74/fayen-lms@sha256:2825478702131ac32eef0d70d2c4f97e8516c0c449cd0c85dca73a1e85c77765
+        - name: cloudhub
+          image: yassenmeckawy74/fayen-lms:cloudhub-latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
           envFrom:
             - configMapRef:
-                name: fayen-config
+                name: cloudhub-config
             - secretRef:
-                name: fayen-secret
+                name: cloudhub-secret
           readinessProbe:
             httpGet:
               path: /index.php

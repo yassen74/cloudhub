@@ -5669,3 +5669,228 @@ select.form-control:focus {
     margin-top: 3rem !important;
   }
 }
+
+
+
+
+
+/* ===== ULTRA PAYMENT UI ===== */
+.payment-modern-wrap{
+background:linear-gradient(135deg,#050d1a 0%,#071b31 45%,#06111f 100%);
+padding:90px 20px 120px;
+display:flex;
+justify-content:center;
+}
+
+.payment-modern-card{
+width:min(820px,100%);
+background:linear-gradient(180deg,rgba(18,40,70,.96),rgba(9,22,42,.96));
+border:1px solid rgba(77,201,255,.25);
+border-radius:30px;
+padding:50px;
+color:#fff;
+box-shadow:0 40px 100px rgba(0,0,0,.6);
+}
+
+.payment-modern-badge{
+margin:auto;
+width:max-content;
+padding:10px 20px;
+border-radius:999px;
+background:rgba(44,189,232,.15);
+color:#40e0ff;
+font-weight:900;
+letter-spacing:.08em;
+margin-bottom:20px;
+}
+
+.payment-modern-card h2{
+text-align:center;
+font-size:48px;
+font-weight:900;
+margin-bottom:10px;
+background:linear-gradient(90deg,#fff,#7cecff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.payment-modern-card p{
+text-align:center;
+color:#c5d6e8;
+margin-bottom:35px;
+}
+
+/* ===== FORM FIX ===== */
+.payment-modern-form{
+display:flex;
+gap:20px;
+align-items:center;
+background:rgba(255,255,255,.04);
+padding:20px;
+border-radius:20px;
+}
+
+/* input */
+.payment-modern-input input{
+flex:1;
+height:60px;
+border-radius:16px;
+border:none;
+padding:0 20px;
+font-size:16px;
+}
+
+/* ===== BUTTON FIX (المهم) ===== */
+.payment-modern-btn{
+height:60px;
+padding:0 30px;
+border-radius:16px;
+border:none;
+background:linear-gradient(90deg,#2563eb,#22d3ee);
+color:#fff;
+font-weight:900;
+cursor:pointer;
+white-space:nowrap;
+}
+
+/* ===== SPACE FIX ===== */
+.payment-modern-row{
+width:100%;
+}
+
+
+
+/* CLOUDHUB PROFESSIONAL PAYMENT PAGE */
+.payment-modern-wrap{
+  min-height:620px;
+  padding:95px 20px 130px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(34,211,238,.13), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(37,99,235,.16), transparent 30%),
+    linear-gradient(135deg,#050d1a 0%,#07182c 48%,#040b16 100%);
+}
+
+.payment-modern-card{
+  width:min(900px,100%);
+  padding:56px 58px 48px;
+  border-radius:34px;
+  color:#fff;
+  background:linear-gradient(180deg,rgba(17,39,70,.96),rgba(8,20,39,.98));
+  border:1px solid rgba(56,189,248,.32);
+  box-shadow:
+    0 35px 100px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.payment-modern-badge{
+  width:max-content;
+  margin:0 auto 22px;
+  padding:10px 22px;
+  border-radius:999px;
+  background:rgba(14,165,233,.16);
+  border:1px solid rgba(56,189,248,.35);
+  color:#38dfff;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.payment-modern-card h2{
+  text-align:center;
+  margin:0 0 10px;
+  font-size:52px;
+  font-weight:950;
+  letter-spacing:-1px;
+  background:linear-gradient(90deg,#fff 0%,#86efff 75%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.payment-modern-card p{
+  max-width:600px;
+  margin:0 auto 38px;
+  color:#c7d7e8;
+  text-align:center;
+  font-size:17px;
+  line-height:1.7;
+}
+
+.payment-pro-form{
+  padding:24px;
+  border-radius:26px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.payment-pro-label{
+  display:block;
+  margin-bottom:12px;
+  color:#edf7ff;
+  font-size:16px;
+  font-weight:850;
+}
+
+.payment-pro-control{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 175px;
+  gap:16px;
+  align-items:center;
+}
+
+.payment-pro-input{
+  height:62px;
+  width:100%;
+  border:1px solid rgba(96,165,250,.45);
+  border-radius:18px;
+  background:#f8fbff;
+  color:#0f172a;
+  padding:0 20px;
+  font-size:16px;
+  outline:none;
+  box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.payment-pro-input:focus{
+  border-color:#22d3ee;
+  box-shadow:0 0 0 5px rgba(34,211,238,.18);
+}
+
+.payment-pro-btn{
+  height:62px;
+  border:0;
+  border-radius:18px;
+  background:linear-gradient(90deg,#2563eb,#22d3ee);
+  color:#fff;
+  font-size:16px;
+  font-weight:950;
+  cursor:pointer;
+  box-shadow:0 18px 34px rgba(34,211,238,.25);
+  transition:.18s ease;
+}
+
+.payment-pro-btn:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.08);
+}
+
+.payment-modern-card::after{
+  content:"Secure • Instant • Printable receipt";
+  display:block;
+  margin-top:24px;
+  color:#9fb3c8;
+  text-align:center;
+  font-size:14px;
+}
+
+@media(max-width:760px){
+  .payment-modern-card{padding:36px 24px}
+  .payment-modern-card h2{font-size:38px}
+  .payment-pro-control{grid-template-columns:1fr}
+  .payment-pro-btn{width:100%}
+}

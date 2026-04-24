@@ -1,16 +1,16 @@
 resources:
   - ../../base
 
-namespace: fayen
+namespace: cloudhub
 
 images:
-  - name: yassenmeckawy74/fayen
+  - name: yassenmeckawy74/cloudhub
     newTag: latest
 
 patches:
   - target:
       kind: Deployment
-      name: fayen-deployment
+      name: cloudhub-deployment
     patch: |
       - op: replace
         path: /spec/replicas

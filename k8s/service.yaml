@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fayen-service
-  namespace: fayen
+  name: cloudhub-service
+  namespace: cloudhub
 spec:
   type: ClusterIP
   selector:
-    app: fayen
+    app: cloudhub
   ports:
     - port: 80
       targetPort: 80

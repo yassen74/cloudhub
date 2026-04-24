@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "project_name" {
   description = "Project Name"
   type        = string
-  default     = "fayen"
+  default     = "cloudhub"
 }
 
 variable "vpc_cidr" {
@@ -70,4 +70,5 @@ variable "db_allocated_storage" {
 variable "alert_email" {
   description = "Email for CloudWatch alerts"
   type        = string
+  default = "yassenashraf372@gmail.com"
 }

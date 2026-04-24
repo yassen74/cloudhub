@@ -13,10 +13,35 @@ resource "aws_security_group" "fayen_rds_sg" {
   vpc_id      = aws_vpc.main.id
 
   ingress {
-    description = "MySQL from EKS node security group"
+    description = "MySQL from EKS/VPC"
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
+    cidr_blocks = [var.vpc_cidr]
+  }
+
+  ingress {
+    description = "MySQL from EKS VPC"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["192.168.0.0/16"]
+  }
+
+  ingress {
+    description = "MySQL from EKS node public IP 1"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["98.92.61.166/32"]
+  }
+
+  ingress {
+    description = "MySQL from EKS node public IP 2"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["44.201.170.122/32"]
   }
 
   ingress {
@@ -24,7 +49,7 @@ resource "aws_security_group" "fayen_rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["156.201.124.156/32"]
+    cidr_blocks = ["156.201.15.1/32"]
   }
 
   egress {

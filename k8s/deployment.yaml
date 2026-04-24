@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fayen-deployment
-  namespace: fayen
+  name: cloudhub-deployment
+  namespace: cloudhub
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: fayen
+      app: cloudhub
   template:
     metadata:
       labels:
-        app: fayen
+        app: cloudhub
     spec:
       containers:
-        - name: fayen
-          image: yassenmeckawy74/fayen-lms:latest
+        - name: cloudhub
+          image: yassenmeckawy74/cloudhub-lms:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80

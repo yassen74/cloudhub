@@ -123,7 +123,7 @@ if ($trackId > 0) {
 
   <?php else: ?>
     <div class="courses-page-header">
-      <span class="courses-page-eyebrow"></span>
+      <span class="courses-page-eyebrow">Learning Paths</span>
       <h1 class="courses-page-title">Tracks</h1>
       <p class="courses-page-subtitle">Choose a track to view its courses</p>
     </div>

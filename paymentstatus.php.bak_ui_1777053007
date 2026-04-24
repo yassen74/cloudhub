@@ -40,30 +40,18 @@ ob_start();
      </div> 
    </div> <!-- End Course Page Banner -->
    <div class="container">
-     <section class="payment-modern-wrap">
-  <div class="payment-modern-card">
-    <div class="payment-modern-badge">Secure Payment Lookup</div>
-    <h2>Payment Status</h2>
-    <p>Enter your order ID to view the payment receipt and transaction details.</p>
-     
-<form method="post" action="" class="payment-pro-form">
-  <label class="payment-pro-label">Order ID</label>
-  <div class="payment-pro-control">
-    <input
-      type="text"
-      name="ORDER_ID"
-      id="ORDER_ID"
-      class="payment-pro-input"
-      placeholder="Enter your order ID"
-      autocomplete="off"
-      value="<?php echo $ORDER_ID ?>"
-    >
-    <button class="payment-pro-btn" type="submit">
-      View Status
-    </button>
-  </div>
-</form>
-</div></section>
+     <h2 class="text-center my-4">Payment Status </h2>
+     <form method="post" action="">
+     <div class="form-group row">
+        <label class="offset-sm-3 col-form-label">Order ID: </label>
+        <div>
+          <input class="form-control mx-3" id="ORDER_ID" tabindex="1" maxlength="20" size="20" name="ORDER_ID" autocomplete="off" value="<?php echo $ORDER_ID ?>">
+        </div>
+        <div>
+          <input class="btn btn-primary mx-4" value="View" type="submit"	onclick="">
+        </div>
+      </div>
+     </form>
     </div>
     <div class="container">
     <?php
