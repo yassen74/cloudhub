@@ -1,4 +1,4 @@
-name: CloudHub CI/CD
+name: CloudHub Production Deploy
 
 on:
   push:
@@ -17,7 +17,7 @@ env:
   IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/fayen-lms
 
 jobs:
-  ci-cd:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
