@@ -3,7 +3,7 @@ require_once __DIR__ . '/session.php';
 
 if (!isset($_SESSION['admin_email'])) {
   header('Location: index.php');
-  exit();
+  exit;
 }
 if (!defined('PAGE')) { define('PAGE', ''); }
 ?>

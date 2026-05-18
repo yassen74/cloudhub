@@ -18,7 +18,6 @@
   // following files need to be included
   require_once __DIR__ . '/../PaytmKit/lib/config_paytm.php';
   require_once __DIR__ . '/../PaytmKit/lib/encdec_paytm.php';
-  include __DIR__ . '/adminInclude/header.php';
 
   
 	$ORDER_ID = "";
@@ -40,6 +39,8 @@
 		// Call the PG's getTxnStatusNew() function for verifying the transaction status.
 		$responseParamList = getTxnStatusNew($requestParamList);
 	} 
+
+  include __DIR__ . '/adminInclude/header.php';
 
 ?>  
    <div class="container">
