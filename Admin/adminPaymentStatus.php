@@ -1,16 +1,24 @@
-<?php ob_start(); error_reporting(0); ini_set("display_errors",0); ?>
 <?php
   define('TITLE', 'Payment Status');
   define('PAGE', 'paymentstatus');
-  include('./adminInclude/header.php'); 
+
+  require_once __DIR__ . '/adminInclude/session.php';
+
+  if (!isset($_SESSION['admin_email'])) {
+    header('Location: index.php');
+    exit;
+  }
+
   header("Pragma: no-cache");
   header("Cache-Control: no-cache");
   header("Expires: 0");
-  include('../dbConnection.php');
+
+  require_once __DIR__ . '/../dbConnection.php';
  
   // following files need to be included
-  require_once("../PaytmKit/lib/config_paytm.php");
-  require_once("../PaytmKit/lib/encdec_paytm.php");
+  require_once __DIR__ . '/../PaytmKit/lib/config_paytm.php';
+  require_once __DIR__ . '/../PaytmKit/lib/encdec_paytm.php';
+  include __DIR__ . '/adminInclude/header.php';
 
   
 	$ORDER_ID = "";

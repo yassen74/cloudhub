@@ -5,7 +5,7 @@ require_once __DIR__ . '/../dbConnection.php';
 
 if (!isset($_POST['checkLogemail'])) {
   header('Location: index.php?err=1');
-  exit();
+  exit;
 }
 
 $email = trim($_POST['adminLogEmail'] ?? '');
@@ -13,7 +13,7 @@ $pass  = (string)($_POST['adminLogPass'] ?? '');
 
 if ($email === '' || $pass === '') {
   header('Location: index.php?err=1');
-  exit();
+  exit;
 }
 
 $pass_md5 = md5($pass);
@@ -21,7 +21,7 @@ $pass_md5 = md5($pass);
 $stmt = $conn->prepare("SELECT admin_id, admin_name, admin_email, admin_pass FROM admin WHERE admin_email = ? LIMIT 1");
 if (!$stmt) {
   header('Location: index.php?err=1');
-  exit();
+  exit;
 }
 
 $stmt->bind_param("s", $email);
@@ -34,10 +34,11 @@ if ($row && (hash_equals($row['admin_pass'], $pass) || hash_equals($row['admin_p
   $_SESSION['admin_id'] = (int)$row['admin_id'];
   $_SESSION['admin_email'] = $row['admin_email'];
   $_SESSION['admin_name'] = $row['admin_name'] ?: 'Admin';
+  session_write_close();
 
   header('Location: adminDashboard.php');
-  exit();
+  exit;
 }
 
 header('Location: index.php?err=1');
-exit();
+exit;

@@ -84,6 +84,8 @@ $_SESSION['is_login'] = true;
 $_SESSION['stuLogEmail'] = $email;
 $_SESSION['stu_email'] = $email;
 $_SESSION['stu_id'] = $stuId;
+session_regenerate_id(true);
+session_write_close();
 
 if ($expectsJson) {
   out(1);
